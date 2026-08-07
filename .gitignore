@@ -1,0 +1,12 @@
+# Dokumen kerja internal — tidak ikut ke repo publik.
+# Sengaja di-ignore sebelum pernah di-commit: sekali masuk riwayat git, ia tidak
+# bisa ditarik kembali setelah repo dipublikasikan.
+/CLAUDE.md
+/PLAN.md
+/PROGRESS.md
+/SECURE.md
+/ORCHESTRATION.md
+/DECISION.md
+
+# Kredensial lokal — nilai asli tidak boleh masuk riwayat git.
+compose/.env
