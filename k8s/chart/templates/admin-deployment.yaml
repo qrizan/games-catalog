@@ -1,0 +1,62 @@
+{{- if not .Values.bootstrapOnly }}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: admin
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: admin
+spec:
+  replicas: {{ .Values.admin.replicas }}
+  selector:
+    matchLabels:
+      app: admin
+  template:
+    metadata:
+      labels:
+        app: admin
+    spec:
+      automountServiceAccountToken: false
+      imagePullSecrets:
+        - name: {{ .Values.admin.imagePullSecret }}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: {{ .Values.admin.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.admin.securityContext.runAsGroup }}
+      containers:
+        - name: admin
+          image: "{{ .Values.admin.image.repository }}:{{ .Values.admin.image.tag }}@{{ .Values.admin.image.digest }}"
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
+          ports:
+            - name: http
+              containerPort: 8080
+          env:
+            - name: API_URL
+              value: "{{ .Values.admin.apiUrl }}"
+          readinessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            timeoutSeconds: 3
+          livenessProbe:
+            httpGet:
+              path: /
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 10
+            timeoutSeconds: 3
+          resources:
+            requests:
+              cpu: {{ .Values.admin.resources.requests.cpu }}
+              memory: {{ .Values.admin.resources.requests.memory }}
+            limits:
+              cpu: {{ .Values.admin.resources.limits.cpu }}
+              memory: {{ .Values.admin.resources.limits.memory }}
+{{- end }}

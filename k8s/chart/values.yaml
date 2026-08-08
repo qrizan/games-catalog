@@ -1,0 +1,101 @@
+namespace: default
+
+bootstrapOnly: false
+
+ingress:
+  className: nginx
+  adminHost: admin.localhost
+  publicHost: catalog.localhost
+
+postgres:
+  image:
+    repository: postgres
+    tag: 18-alpine
+    digest: sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15
+  credentialsSecretName: postgres-credentials
+  securityContext:
+    runAsUser: 70
+    runAsGroup: 70
+    fsGroup: 70
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 256Mi
+  storage: 1Gi
+
+api:
+  image:
+    repository: ghcr.io/qrizan/nestjs-swagger-prisma
+    tag: 0.0.1-rc.4
+    digest: sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870
+  imagePullSecret: ghcr-pull-secret
+  postgresCredentialsSecretName: postgres-credentials
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
+  jwtSecretName: api-secrets
+  jwtExpiresIn: "3600"
+  corsOrigins: ""
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 256Mi
+  hpa:
+    minReplicas: 1
+    maxReplicas: 5
+    targetCPUUtilizationPercentage: 60
+
+admin:
+  image:
+    repository: ghcr.io/qrizan/react-shadcn-redux
+    tag: 0.0.1-rc.2
+    digest: sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985
+  imagePullSecret: ghcr-pull-secret
+  securityContext:
+    runAsUser: 101
+    runAsGroup: 101
+  apiUrl: /api
+  replicas: 1
+  resources:
+    requests:
+      cpu: 50m
+      memory: 32Mi
+    limits:
+      cpu: 200m
+      memory: 64Mi
+
+public:
+  image:
+    repository: ghcr.io/qrizan/nextjs-chakra-reactquery
+    tag: 0.0.1-rc.4
+    digest: sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8
+  imagePullSecret: ghcr-pull-secret
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
+  apiUrl: /api
+  apiBackendInternal: http://api:3000
+  replicas: 1
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 256Mi
+
+migrate:
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 250m
+      memory: 256Mi

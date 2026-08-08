@@ -1,0 +1,16 @@
+{{- if not .Values.bootstrapOnly }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: public
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: public
+spec:
+  selector:
+    app: public
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+{{- end }}

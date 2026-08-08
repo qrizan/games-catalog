@@ -1,0 +1,64 @@
+{{- if not .Values.bootstrapOnly }}
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: games-catalog-migrate
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: migrate
+  annotations:
+    "helm.sh/hook": pre-install,pre-upgrade
+    "helm.sh/hook-weight": "0"
+    "helm.sh/hook-delete-policy": before-hook-creation,hook-succeeded
+spec:
+  backoffLimit: 0
+  template:
+    metadata:
+      labels:
+        app: migrate
+    spec:
+      restartPolicy: Never
+      automountServiceAccountToken: false
+      imagePullSecrets:
+        - name: {{ .Values.api.imagePullSecret }}
+      securityContext:
+        runAsNonRoot: true
+        runAsUser: {{ .Values.api.securityContext.runAsUser }}
+        runAsGroup: {{ .Values.api.securityContext.runAsGroup }}
+      initContainers:
+        - name: wait-for-postgres
+          image: "{{ .Values.postgres.image.repository }}:{{ .Values.postgres.image.tag }}@{{ .Values.postgres.image.digest }}"
+          command: ["sh", "-c", "until pg_isready -h postgres -p 5432 -U $POSTGRES_USER -d $POSTGRES_DB; do echo waiting for postgres; sleep 2; done"]
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
+          envFrom:
+            - secretRef:
+                name: {{ .Values.api.postgresCredentialsSecretName }}
+      containers:
+        - name: migrate
+          image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}@{{ .Values.api.image.digest }}"
+          command: ["node_modules/.bin/prisma", "migrate", "deploy"]
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop: ["ALL"]
+            seccompProfile:
+              type: RuntimeDefault
+          envFrom:
+            - secretRef:
+                name: {{ .Values.api.postgresCredentialsSecretName }}
+          env:
+            - name: DATABASE_URL
+              value: "postgresql://$(POSTGRES_USER):$(POSTGRES_PASSWORD)@postgres:5432/$(POSTGRES_DB)?schema=public"
+          resources:
+            requests:
+              cpu: {{ .Values.migrate.resources.requests.cpu }}
+              memory: {{ .Values.migrate.resources.requests.memory }}
+            limits:
+              cpu: {{ .Values.migrate.resources.limits.cpu }}
+              memory: {{ .Values.migrate.resources.limits.memory }}
+{{- end }}

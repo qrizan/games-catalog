@@ -1,0 +1,16 @@
+{{- if not .Values.bootstrapOnly }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: admin
+  namespace: {{ .Values.namespace }}
+  labels:
+    app: admin
+spec:
+  selector:
+    app: admin
+  ports:
+    - name: http
+      port: 8080
+      targetPort: http
+{{- end }}

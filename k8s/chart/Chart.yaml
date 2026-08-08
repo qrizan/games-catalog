@@ -1,0 +1,5 @@
+apiVersion: v2
+name: games-catalog
+description: Orkestrasi games-catalog di Kubernetes — Postgres, migrasi Prisma, api, admin, public, Ingress, HPA
+type: application
+version: 0.1.0
