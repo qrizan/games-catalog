@@ -1,0 +1,28 @@
+{{- if not .Values.bootstrapOnly }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasources
+  namespace: {{ .Values.namespace }}
+data:
+  datasource.yaml: |
+{{ .Files.Get "files/grafana/datasource.yaml" | indent 4 }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboard-provider
+  namespace: {{ .Values.namespace }}
+data:
+  dashboard-provider.yaml: |
+{{ .Files.Get "files/grafana/dashboard-provider.yaml" | indent 4 }}
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboards
+  namespace: {{ .Values.namespace }}
+data:
+  api-red.json: |
+{{ .Files.Get "files/grafana/api-red.json" | indent 4 }}
+{{- end }}

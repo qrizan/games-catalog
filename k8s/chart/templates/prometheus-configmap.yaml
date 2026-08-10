@@ -1,0 +1,12 @@
+{{- if not .Values.bootstrapOnly }}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+  namespace: {{ .Values.namespace }}
+data:
+  prometheus.yml: |
+{{ .Files.Get "files/prometheus/prometheus.yml" | indent 4 }}
+  alerts.yml: |
+{{ .Files.Get "files/prometheus/alerts.yml" | indent 4 }}
+{{- end }}

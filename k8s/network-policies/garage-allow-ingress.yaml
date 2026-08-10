@@ -1,25 +1,19 @@
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: api-allow-app
+  name: garage-allow-ingress
   namespace: default
 spec:
   podSelector:
     matchLabels:
-      app: api
+      app: garage
   policyTypes:
     - Ingress
   ingress:
     - from:
-        - podSelector:
-            matchLabels:
-              app: public
-        - podSelector:
-            matchLabels:
-              app: prometheus
         - namespaceSelector:
             matchLabels:
               kubernetes.io/metadata.name: ingress-nginx
       ports:
         - protocol: TCP
-          port: 3000
+          port: 3902

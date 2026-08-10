@@ -7,6 +7,7 @@
 /SECURE.md
 /ORCHESTRATION.md
 /DECISION.md
+/GCP.md
 
 # Kredensial lokal — nilai asli tidak boleh masuk riwayat git.
 compose/.env

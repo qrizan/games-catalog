@@ -6,6 +6,28 @@ ingress:
   className: nginx
   adminHost: admin.localhost
   publicHost: catalog.localhost
+  assetsHost: assets.localhost   # harus <garage.bucket>.<garage.rootDomain tanpa titik depan>
+  grafanaHost: grafana.localhost
+
+garage:
+  image:
+    repository: dxflrs/garage
+    tag: v2.3.0
+    digest: sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690
+  credentialsSecretName: garage-credentials
+  bucket: assets
+  rootDomain: .localhost
+  securityContext:
+    runAsUser: 1000
+    runAsGroup: 1000
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 256Mi
+  storage: 1Gi
 
 postgres:
   image:
@@ -99,3 +121,37 @@ migrate:
     limits:
       cpu: 250m
       memory: 256Mi
+
+prometheus:
+  image:
+    repository: prom/prometheus
+    tag: v3.13.2
+    digest: sha256:508729e0e2d18e11fd742a5a5ca70e557b940a93948c3c95fd0123a6fd538b69
+  securityContext:
+    runAsUser: 65534   # "nobody" di image quay.io/prometheus/busybox, sama dengan default chart resmi prometheus-community
+    runAsGroup: 65534
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+grafana:
+  image:
+    repository: grafana/grafana
+    tag: "13.1.3"
+    digest: sha256:ab5cb380e3ff3172d6c8bd2e7cfd31cce977d2881b260e1f5bc089bf0b759b43
+  credentialsSecretName: grafana-credentials
+  securityContext:
+    runAsUser: 472   # user "grafana" default image resmi, sama dengan default chart grafana-community/helm-charts
+    runAsGroup: 472
+    fsGroup: 472
+  resources:
+    requests:
+      cpu: 100m
+      memory: 128Mi
+    limits:
+      cpu: 250m
+      memory: 512Mi   # 256Mi terbukti OOMKilled (exit 137) saat load Home dashboard pertama kali, 2026-08-09

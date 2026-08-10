@@ -1,0 +1,32 @@
+groups:
+  - name: api-red
+    rules:
+      - alert: HighErrorRate
+        expr: |
+          rate(http_requests_total{app="api", status=~"5.."}[5m])
+          / rate(http_requests_total{app="api"}[5m]) > 0.05
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Error rate api di atas 5%"
+          description: "{{ $value | humanizePercentage }} request ke api gagal (status 5xx) dalam 5 menit terakhir."
+
+      - alert: HighLatencyP95
+        expr: |
+          histogram_quantile(0.95, rate(http_request_duration_seconds_bucket{app="api"}[5m])) > 1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "p95 latency api di atas 1 detik"
+          description: "p95 durasi request api {{ $value }}s dalam 5 menit terakhir."
+
+      - alert: APIDown
+        expr: up{job="kubernetes-pods", app="api"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "api tidak terjangkau Prometheus"
+          description: "Target scrape api down selama lebih dari 1 menit."
