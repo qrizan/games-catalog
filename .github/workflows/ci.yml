@@ -1,0 +1,68 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+# Action dipin ke commit SHA; komentar versi di sebelahnya untuk keterbacaan.
+
+jobs:
+  chart:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: azure/setup-helm@9bc31f4ebc9c6b171d7bfbaa5d006ae7abdb4310 # v5.0.1
+        with:
+          # dipin: hasil render tidak boleh berubah karena rilis Helm baru
+          version: v4.2.3
+
+      - name: Lint
+        run: helm lint k8s/chart
+
+      - name: Render tahap bootstrap
+        # Tahap 1 hanya boleh memunculkan Postgres. Kalau guard bootstrapOnly
+        # bocor, migrate Job ikut ter-render dan instalasi ke cluster kosong
+        # gagal connect ke Postgres yang belum ada.
+        run: |
+          helm template games-catalog k8s/chart --namespace default \
+            --set bootstrapOnly=true > /tmp/bootstrap.yaml
+          count=$(grep -c '^kind:' /tmp/bootstrap.yaml || true)   # grep exit 1 saat nol cocok
+          if [[ "$count" -ne 2 ]]; then
+            echo "GAGAL: tahap bootstrap merender $count resource, harus 2 (StatefulSet + Service Postgres)"
+            grep '^kind:' /tmp/bootstrap.yaml
+            exit 1
+          fi
+          grep -q 'name: postgres' /tmp/bootstrap.yaml || {
+            echo "GAGAL: tahap bootstrap tidak memuat Postgres"; exit 1; }
+
+      - name: Render tahap penuh
+        # Regresi guard: jumlah resource jalur normal tidak boleh berkurang
+        # diam-diam karena satu template ikut terbungkus if.
+        run: |
+          helm template games-catalog k8s/chart --namespace default > /tmp/full.yaml
+          count=$(grep -c '^kind:' /tmp/full.yaml || true)
+          if [[ "$count" -ne 29 ]]; then
+            echo "GAGAL: jalur normal merender $count resource, harus 29"
+            grep '^kind:' /tmp/full.yaml | sort | uniq -c
+            exit 1
+          fi
+
+      - name: Tidak ada Secret di chart
+        # Secret dibuat imperatif; manifest Secret di chart berarti nilainya
+        # ikut masuk riwayat git.
+        run: |
+          if grep -rn '^kind: Secret' k8s/chart/templates/; then
+            echo "GAGAL: chart memuat manifest Secret"
+            exit 1
+          fi

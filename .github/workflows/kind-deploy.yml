@@ -1,0 +1,146 @@
+name: Deploy ke kind
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: read
+
+concurrency:
+  group: kind-deploy-${{ github.ref }}
+  cancel-in-progress: true
+
+# Action dipin ke commit SHA; binary dipin ke versi + sha256.
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    env:
+      KIND_VERSION: v0.32.0
+      KIND_SHA256: 50030de23cf40a18505f20426f6a8506bedf13c6e509244bd1fa9463721b0f54
+      KUBECTL_VERSION: v1.34.6
+      KUBECTL_SHA256: 3166155b17198c0af34ff5a360bd4d9d58db98bafadc6f3c2a57ae560563cd6b
+
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: azure/setup-helm@9bc31f4ebc9c6b171d7bfbaa5d006ae7abdb4310 # v5.0.1
+        with:
+          version: v4.2.3
+
+      - name: Install kind dan kubectl
+        run: |
+          curl -fsSLo kind \
+            "https://github.com/kubernetes-sigs/kind/releases/download/${KIND_VERSION}/kind-linux-amd64"
+          echo "${KIND_SHA256}  kind" | sha256sum -c -
+          curl -fsSLo kubectl \
+            "https://dl.k8s.io/release/${KUBECTL_VERSION}/bin/linux/amd64/kubectl"
+          echo "${KUBECTL_SHA256}  kubectl" | sha256sum -c -
+          chmod +x kind kubectl
+          sudo mv kind kubectl /usr/local/bin/
+
+      - name: Buat cluster
+        # config yang sama dengan yang dipakai lokal, node image berdigest
+        run: kind create cluster --config k8s/kind-config.yaml
+
+      - name: imagePullSecrets untuk GHCR
+        # kalau step ini gagal auth, package aplikasi belum diberi akses ke repo
+        # ini di setelan package GHCR
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHCR_USER: ${{ github.actor }}   # lewat env, tidak diinterpolasi ke shell
+        run: |
+          kubectl apply -f k8s/namespace.yaml
+          kubectl create secret docker-registry ghcr-pull-secret -n default \
+            --docker-server=ghcr.io \
+            --docker-username="$GHCR_USER" \
+            --docker-password="$GHCR_TOKEN" \
+            --dry-run=client -o yaml | kubectl apply -f -
+
+      - name: ingress-nginx dan NetworkPolicy
+        run: |
+          kubectl apply -f k8s/ingress-nginx/deploy.yaml
+          kubectl apply -f k8s/network-policies/
+          kubectl rollout status deployment/ingress-nginx-controller \
+            -n ingress-nginx --timeout=300s
+
+      - name: Secret
+        # nilai ephemeral, dibuang bersama cluster. JWT minimal 32 karakter,
+        # RPC secret Garage 32 byte hex.
+        run: |
+          kubectl create secret generic postgres-credentials -n default \
+            --from-literal=POSTGRES_USER=games \
+            --from-literal=POSTGRES_PASSWORD="$(openssl rand -hex 16)" \
+            --from-literal=POSTGRES_DB=games \
+            --dry-run=client -o yaml | kubectl apply -f -
+          kubectl create secret generic api-secrets -n default \
+            --from-literal=JWT_SECRET="$(openssl rand -hex 32)" \
+            --dry-run=client -o yaml | kubectl apply -f -
+          kubectl create secret generic garage-credentials -n default \
+            --from-literal=GARAGE_RPC_SECRET="$(openssl rand -hex 32)" \
+            --from-literal=GARAGE_ADMIN_TOKEN="$(openssl rand -hex 32)" \
+            --from-literal=GARAGE_DEFAULT_ACCESS_KEY="$(openssl rand -hex 16)" \
+            --from-literal=GARAGE_DEFAULT_SECRET_KEY="$(openssl rand -hex 32)" \
+            --dry-run=client -o yaml | kubectl apply -f -
+          kubectl create secret generic grafana-credentials -n default \
+            --from-literal=GF_SECURITY_ADMIN_USER=admin \
+            --from-literal=GF_SECURITY_ADMIN_PASSWORD="$(openssl rand -hex 16)" \
+            --dry-run=client -o yaml | kubectl apply -f -
+
+      - name: Bootstrap Helm dua tahap
+        # tahap 2 wajib menulis bootstrapOnly=false eksplisit: --set revisi
+        # sebelumnya terbawa ke upgrade berikutnya
+        run: |
+          helm upgrade --install games-catalog k8s/chart --namespace default \
+            --set bootstrapOnly=true
+          kubectl wait --for=condition=Ready pod/postgres-0 -n default --timeout=300s
+          kubectl exec postgres-0 -n default -- pg_isready
+          helm upgrade games-catalog k8s/chart --namespace default \
+            --set bootstrapOnly=false --timeout 10m
+          helm get values games-catalog -n default
+
+      - name: Bootstrap website bucket Garage
+        run: |
+          kubectl wait --for=condition=Ready pod/garage-0 -n default --timeout=300s
+          kubectl exec garage-0 -n default -- /garage bucket website --allow assets
+
+      - name: Rollout
+        run: |
+          for d in api admin public prometheus grafana; do
+            kubectl rollout status "deployment/$d" -n default --timeout=300s
+          done
+          kubectl get pods,hpa,ingress -n default
+
+      - name: Endpoint lewat Ingress
+        # runner tidak menjamin resolusi *.localhost, jadi dipetakan eksplisit
+        run: |
+          echo "127.0.0.1 admin.localhost catalog.localhost grafana.localhost assets.localhost" \
+            | sudo tee -a /etc/hosts
+          for url in admin.localhost/ admin.localhost/api/health/ready \
+                     catalog.localhost/ catalog.localhost/api/health/ready \
+                     grafana.localhost/api/health; do
+            code=000
+            for i in $(seq 1 20); do
+              code=$(curl -s -o /dev/null -w "%{http_code}" "$url") || code=000
+              [[ "$code" == "200" ]] && break
+              sleep 3
+            done
+            if [[ "$code" != "200" ]]; then
+              echo "GAGAL: $url -> $code (harus 200)"
+              exit 1
+            fi
+            echo "OK: $url -> 200"
+          done
+
+      - name: Diagnostik kalau gagal
+        if: failure()
+        run: |
+          kubectl get pods -A
+          kubectl describe pods -n default
+          kubectl logs -n default -l app=api --tail=100 || true
