@@ -6,8 +6,14 @@
 /PROGRESS.md
 /SECURE.md
 /ORCHESTRATION.md
-/DECISION.md
 /GCP.md
+/REPRODUCE.md
+/README.md
+/ARCHITECTURE.md
+/DECISION.md
 
 # Kredensial lokal — nilai asli tidak boleh masuk riwayat git.
 compose/.env
+
+# Log run yang belum selesai; hanya run sukses yang jadi scripts/output.txt
+scripts/output.txt.partial

@@ -38,6 +38,13 @@ spec:
           envFrom:
             - secretRef:
                 name: {{ .Values.api.postgresCredentialsSecretName }}
+          resources:
+            requests:
+              cpu: {{ .Values.migrate.waitForPostgres.resources.requests.cpu }}
+              memory: {{ .Values.migrate.waitForPostgres.resources.requests.memory }}
+            limits:
+              cpu: {{ .Values.migrate.waitForPostgres.resources.limits.cpu }}
+              memory: {{ .Values.migrate.waitForPostgres.resources.limits.memory }}
       containers:
         - name: migrate
           image: "{{ .Values.api.image.repository }}:{{ .Values.api.image.tag }}@{{ .Values.api.image.digest }}"

@@ -1,8 +1,117 @@
 #!/usr/bin/env bash
 # clean-slate test: k8s/ + compose/, cleanup dulu lalu provisioning sequential
 set -euo pipefail
-cd "$(dirname "$0")/.."
+REPO_ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$REPO_ROOT"
 NODE=games-catalog-control-plane
+
+# Log ditulis ke .partial dulu dan baru menggantikan output.txt kalau run selesai sukses. 
+# Tanpa ini, run yang gagal di tengah menimpa bukti run terakhir yang baik.
+# absolut: langkah 9 cd ke compose/ dan tidak kembali, path relatif membuat mv di trap salah alamat
+OUTPUT_LOG_FINAL="$REPO_ROOT/scripts/output.txt"
+OUTPUT_LOG="$REPO_ROOT/scripts/output.txt.partial"
+DOCKER_CONFIG_JSON="$HOME/.docker/config.json"
+
+# --- preflight ---------------------------------------------------------------
+# seluruhnya dijalankan sebelum langkah destruktif mana pun dan sebelum output dialihkan. 
+# konsekuensinya disengaja: kalau prasyarat kurang, cluster lama tetap utuh dan output.txt run sebelumnya tidak tertimpa.
+MISSING=()
+for bin in kind kubectl helm docker jq sed tee curl timeout k6; do
+  if ! command -v "$bin" >/dev/null 2>&1; then
+    MISSING+=("$bin")
+  fi
+done
+if [[ ${#MISSING[@]} -gt 0 ]]; then
+  echo "GAGAL: perintah tidak ditemukan: ${MISSING[*]}"
+  exit 1
+fi
+if [[ ! -f compose/.env ]]; then
+  echo "GAGAL: compose/.env tidak ada, salin dari compose/.env.example lalu isi nilainya"
+  exit 1
+fi
+set -a; source compose/.env; set +a
+if [[ ! -f "$DOCKER_CONFIG_JSON" ]]; then
+  echo "GAGAL: $DOCKER_CONFIG_JSON tidak ada, jalankan 'docker login ghcr.io' dulu"
+  exit 1
+fi
+# -e: jq keluar non-zero kalau hasilnya null, jadi key yang tidak ada ikut tertangkap
+GHCR_AUTH=$(jq -er '.auths["ghcr.io"].auth' "$DOCKER_CONFIG_JSON") \
+  || { echo "GAGAL: entri auth ghcr.io tidak ada di $DOCKER_CONFIG_JSON, jalankan 'docker login ghcr.io' dulu"; exit 1; }
+
+# kind membuat docker network-nya dengan --ipv6 walau ipFamily di config ipv4
+# (kubernetes-sigs/kind#2496). Di host tanpa default route IPv6, node jadi punya
+# alamat IPv6 tapi tidak bisa keluar: registry.k8s.io punya A dan AAAA sekaligus,
+# containerd sesekali menempuh AAAA lalu mati "network is unreachable" di tengah
+# pull. Racy, jadi bisa lolos beberapa run sebelum muncul.
+if ! ip -6 route show default | grep -q .; then
+  if docker network inspect kind >/dev/null 2>&1 \
+     && [[ "$(docker network inspect kind -f '{{.EnableIPv6}}')" == "true" ]]; then
+    echo "GAGAL: host tidak punya default route IPv6, tapi docker network 'kind' IPv6-nya aktif."
+    echo "       Pull dari registry.k8s.io akan gagal acak di tengah jalan. Perbaiki dulu:"
+    echo "         kind delete cluster --name games-catalog"
+    echo "         docker network rm kind"
+    echo "         docker network create kind"
+    exit 1
+  fi
+fi
+
+# --- redact log --------------------------------------------------------------
+# Seluruh output disalin ke scripts/output.txt sebagai bukti yang ikut di-commit.
+# Nilai rahasia disamarkan dari cara tulisnya, bukan disunting setelahnya:
+# "garage bucket website" mencetak access key bucket ke stdout dengan sendirinya.
+#
+# Daftar variabel dibaca dari compose/.env, tidak diketik ulang di sini. Daftar
+# manual berarti secret baru di .env diam-diam lolos sampai ada yang ingat
+# menambahkannya; dibaca langsung, kelas kesalahan itu tidak ada.
+mapfile -t REDACT_VARS < <(sed -nE 's/^[[:space:]]*([A-Za-z_][A-Za-z0-9_]*)=.*/\1/p' compose/.env)
+REDACT_VARS+=(GHCR_AUTH)   # bukan dari .env, dibaca dari config docker di preflight
+if [[ ${#REDACT_VARS[@]} -lt 2 ]]; then
+  echo "GAGAL: tidak ada variabel terbaca dari compose/.env, redact log tidak bisa dijamin"
+  exit 1
+fi
+REDACT_ARGS=()
+REDACT_COUNT=0   # dihitung terpisah: tiap nilai menyumbang dua elemen ke REDACT_ARGS
+SKIPPED_VARS=()
+for v in "${REDACT_VARS[@]}"; do
+  val="${!v:-}"
+  # nilai <8 karakter dilewati: sependek itu ikut cocok sebagai substring nama
+  # host/resource dan akan merusak log tanpa menutup rahasia apa pun
+  if [[ ${#val} -lt 8 ]]; then
+    SKIPPED_VARS+=("$v")
+  fi
+  if [[ ${#val} -ge 8 ]]; then
+    REDACT_COUNT=$((REDACT_COUNT + 1))
+    # metachar BRE di-escape dulu; tanpa ini nilai ber-"." atau "*" jadi wildcard
+    # (over-redact) dan yang ber-"[" gagal cocok sama sekali (under-redact)
+    esc=$(printf '%s' "$val" | sed 's/[][\.*^$|]/\\&/g')
+    REDACT_ARGS+=(-e "s|${esc}|<REDACTED:${v}>|g")
+  fi
+done
+# sed -u supaya baris diteruskan saat itu juga, bukan menunggu buffer penuh
+if [[ ${#REDACT_ARGS[@]} -gt 0 ]]; then
+  exec > >(sed -u "${REDACT_ARGS[@]}" | tee "$OUTPUT_LOG") 2>&1
+else
+  exec > >(tee "$OUTPUT_LOG") 2>&1
+fi
+
+finish() {
+  local rc=$?
+  if [[ $rc -eq 0 ]]; then
+    # rename dalam filesystem yang sama: fd yang sedang terbuka ikut pindah inode,
+    # jadi baris apa pun setelah ini tetap masuk ke file yang benar
+    mv -f "$OUTPUT_LOG" "$OUTPUT_LOG_FINAL"
+  else
+    echo "GAGAL: run berhenti dengan exit $rc. Log run ini ada di $OUTPUT_LOG;"
+    echo "       $OUTPUT_LOG_FINAL dari run sukses terakhir tidak diubah."
+  fi
+}
+trap finish EXIT
+
+echo "### 0. preflight ###"
+echo "OK: kind, kubectl, helm, docker, jq, sed, tee, curl, timeout, k6 tersedia"
+echo "OK: compose/.env terbaca, kredensial ghcr.io ditemukan"
+echo "OK: $REDACT_COUNT nilai disamarkan di log ini"
+echo "CATATAN: ${SKIPPED_VARS[*]:-tidak ada} dilewati karena <8 karakter, nilainya akan tampil apa adanya"
 
 echo "### 1. cleanup ###"
 # hapus cluster, stack compose, image yang di-pin — supaya langkah 3/9 pull dari registry, bukan cache lokal
@@ -22,9 +131,11 @@ echo "### 2. cluster kind ###"
 kind create cluster --config k8s/kind-config.yaml
 kubectl config current-context
 kubectl cluster-info --context kind-games-catalog
+# allocatable node: dasar maxReplicas HPA di values.yaml
+kubectl get node "$NODE" -o custom-columns=NODE:.metadata.name,CPU:.status.allocatable.cpu,MEM:.status.allocatable.memory
 
 echo "### 3. pre-pull image ke node, sequential ###"
-GHCR_AUTH=$(jq -r '.auths["ghcr.io"].auth' "$HOME/.docker/config.json") || { echo "GAGAL: tidak bisa baca kredensial ghcr.io dari $HOME/.docker/config.json"; exit 1; }
+# GHCR_AUTH sudah dibaca di preflight supaya ikut daftar redact log
 declare -A IMAGES=(
   [ingress-controller]="registry.k8s.io/ingress-nginx/controller:v1.15.1@sha256:594ceea76b01c592858f803f9ff4d2cb40542cae2060410b2c95f75907d659e1"
   [webhook-certgen]="registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.6.9@sha256:01038e7de14b78d702d2849c3aad72fd25903c4765af63cf16aa3398f5d5f2dd"
@@ -57,29 +168,36 @@ for name in "${ORDER[@]}"; do
 done
 
 echo "### 4. namespace PSA, imagePullSecrets, ingress-nginx, NetworkPolicy ###"
-kubectl apply -f k8s/namespace.yaml   # S-26: PSA restricted, harus sebelum Pod apa pun dibuat di default
+kubectl apply -f k8s/namespace.yaml   # PSA restricted, harus sebelum Pod apa pun dibuat di default
+# create+apply, bukan create polos: create polos gagal AlreadyExists kalau
+# langkah ini pernah dijalankan ulang terhadap cluster yang sudah hidup
 kubectl create secret docker-registry ghcr-pull-secret \
-  --from-file=.dockerconfigjson="$HOME/.docker/config.json" -n default   # $HOME, bukan ~
+  --from-file=.dockerconfigjson="$DOCKER_CONFIG_JSON" -n default \
+  --dry-run=client -o yaml | kubectl apply -f -
 kubectl apply -f k8s/ingress-nginx/deploy.yaml
 kubectl apply -f k8s/network-policies/
 kubectl rollout status deployment/ingress-nginx-controller -n ingress-nginx --timeout=180s
 
 echo "### 5. secret Postgres + JWT + Garage + Grafana ###"
-set -a; source compose/.env; set +a
+# compose/.env sudah di-source di kepala skrip untuk keperluan redact log
 kubectl create secret generic postgres-credentials -n default \
   --from-literal=POSTGRES_USER="$POSTGRES_USER" \
   --from-literal=POSTGRES_PASSWORD="$POSTGRES_PASSWORD" \
-  --from-literal=POSTGRES_DB="$POSTGRES_DB"
+  --from-literal=POSTGRES_DB="$POSTGRES_DB" \
+  --dry-run=client -o yaml | kubectl apply -f -
 kubectl create secret generic api-secrets -n default \
-  --from-literal=JWT_SECRET="$JWT_SECRET"
+  --from-literal=JWT_SECRET="$JWT_SECRET" \
+  --dry-run=client -o yaml | kubectl apply -f -
 kubectl create secret generic garage-credentials -n default \
   --from-literal=GARAGE_RPC_SECRET="$GARAGE_RPC_SECRET" \
   --from-literal=GARAGE_ADMIN_TOKEN="$GARAGE_ADMIN_TOKEN" \
   --from-literal=GARAGE_DEFAULT_ACCESS_KEY="$GARAGE_DEFAULT_ACCESS_KEY" \
-  --from-literal=GARAGE_DEFAULT_SECRET_KEY="$GARAGE_DEFAULT_SECRET_KEY"
+  --from-literal=GARAGE_DEFAULT_SECRET_KEY="$GARAGE_DEFAULT_SECRET_KEY" \
+  --dry-run=client -o yaml | kubectl apply -f -
 kubectl create secret generic grafana-credentials -n default \
   --from-literal=GF_SECURITY_ADMIN_USER="$GF_SECURITY_ADMIN_USER" \
-  --from-literal=GF_SECURITY_ADMIN_PASSWORD="$GF_SECURITY_ADMIN_PASSWORD"
+  --from-literal=GF_SECURITY_ADMIN_PASSWORD="$GF_SECURITY_ADMIN_PASSWORD" \
+  --dry-run=client -o yaml | kubectl apply -f -
 
 echo "### 6. helm bootstrap dua tahap ###"
 # tahap 1: install postgres saja. tahap 2: upgrade sisanya — migrate jadi hook pre-upgrade,
@@ -130,11 +248,18 @@ fi
 echo "OK: assets.localhost/ -> $code (bucket kosong)"
 
 echo "### 8. metrics-server ###"
-# prasyarat HPA — api-hpa.yaml butuh ini untuk baca metrik CPU pod
+# prasyarat HPA - api-hpa.yaml butuh ini untuk baca metrik CPU pod
 # pin ke v0.9.0 (sama dengan image yang di-pre-pull), bukan "latest" — hindari drift versi antara pre-pull dan manifest
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/download/v0.9.0/components.yaml
-kubectl patch deployment metrics-server -n kube-system --type='json' \
-  -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
+# "op":"add" ke args/- menambah tanpa syarat, jadi patch dua kali menumpuk flag.
+# Dijaga dengan pengecekan lebih dulu supaya langkah ini aman diulang.
+if kubectl get deployment metrics-server -n kube-system \
+     -o jsonpath='{.spec.template.spec.containers[0].args}' | grep -q -- '--kubelet-insecure-tls'; then
+  echo "OK: metrics-server sudah punya --kubelet-insecure-tls, patch dilewati"
+else
+  kubectl patch deployment metrics-server -n kube-system --type='json' \
+    -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
+fi
 kubectl rollout status deployment/metrics-server -n kube-system --timeout=180s
 ok=1
 expected=$(kubectl get pods -n default --no-headers | wc -l) || { echo "GAGAL: kubectl get pods gagal, tidak bisa hitung jumlah pod"; exit 1; }
@@ -154,8 +279,16 @@ fi
 kubectl top pods -n default
 echo "OK: metrics-server mengembalikan data untuk semua $expected pod"
 
-echo "### k8s selesai. k6 manual: k6 run k8s/k6/load-test.js"
-echo "### buka 'kubectl get hpa api -n default -w' dulu di terminal lain ###"
+echo "### 8b. load test k6 + respons HPA ###"
+kubectl get hpa api -n default
+k6 run k8s/k6/load-test.js   # threshold http_req_failed<1% jadi gate lewat set -e
+kubectl get hpa api -n default   # scale-down stabilization 300s, puncak masih terbaca di sini
+replicas=$(kubectl get deployment api -n default -o jsonpath='{.status.replicas}') || { echo "GAGAL: kubectl get deployment api gagal"; exit 1; }
+if [[ "$replicas" -le 1 ]]; then
+  echo "GAGAL: replica api tetap $replicas setelah beban, HPA tidak merespons"
+  exit 1
+fi
+echo "OK: replica api $replicas setelah beban"
 
 echo "### 9. compose/ ###"
 # stack terpisah dari k8s — image sudah dihapus di langkah 1, jadi pull ini juga dari nol
