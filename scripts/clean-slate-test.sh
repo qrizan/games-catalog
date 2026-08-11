@@ -24,7 +24,7 @@ kubectl config current-context
 kubectl cluster-info --context kind-games-catalog
 
 echo "### 3. pre-pull image ke node, sequential ###"
-GHCR_AUTH=$(jq -r '.auths["ghcr.io"].auth' "$HOME/.docker/config.json")
+GHCR_AUTH=$(jq -r '.auths["ghcr.io"].auth' "$HOME/.docker/config.json") || { echo "GAGAL: tidak bisa baca kredensial ghcr.io dari $HOME/.docker/config.json"; exit 1; }
 declare -A IMAGES=(
   [ingress-controller]="registry.k8s.io/ingress-nginx/controller:v1.15.1@sha256:594ceea76b01c592858f803f9ff4d2cb40542cae2060410b2c95f75907d659e1"
   [webhook-certgen]="registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.6.9@sha256:01038e7de14b78d702d2849c3aad72fd25903c4765af63cf16aa3398f5d5f2dd"
@@ -106,7 +106,7 @@ kubectl get pods,hpa,ingress -n default
 for url in "admin.localhost/" "admin.localhost/api/health/ready" "catalog.localhost/" "catalog.localhost/api/health/ready" "grafana.localhost/api/health"; do
   code=000
   for i in $(seq 1 10); do   # retry: ingress-nginx sync lag setelah endpoint baru Ready
-    code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+    code=$(curl -s -o /dev/null -w "%{http_code}" "$url") || code=000
     [[ "$code" == "200" ]] && break
     sleep 3
   done
@@ -119,7 +119,7 @@ done
 # bucket assets kosong sehabis clean-slate, jadi 404 yang diharapkan
 code=000
 for i in $(seq 1 10); do
-  code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost/")
+  code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost/") || code=000
   [[ "$code" == "404" ]] && break
   sleep 3
 done
@@ -137,10 +137,10 @@ kubectl patch deployment metrics-server -n kube-system --type='json' \
   -p='[{"op":"add","path":"/spec/template/spec/containers/0/args/-","value":"--kubelet-insecure-tls"}]'
 kubectl rollout status deployment/metrics-server -n kube-system --timeout=180s
 ok=1
-expected=$(kubectl get pods -n default --no-headers | wc -l)
+expected=$(kubectl get pods -n default --no-headers | wc -l) || { echo "GAGAL: kubectl get pods gagal, tidak bisa hitung jumlah pod"; exit 1; }
 got=0
 for i in $(seq 1 15); do   # retry: metrics-server perlu satu siklus scrape kubelet dulu per pod
-  got=$(kubectl top pods -n default --no-headers 2>/dev/null | wc -l)
+  got=$(kubectl top pods -n default --no-headers 2>/dev/null | wc -l) || got=0
   if [[ "$got" -eq "$expected" ]]; then
     ok=0
     break
@@ -171,13 +171,13 @@ echo "### 9c. verifikasi status container ###"
 declare -A EXPECT_HEALTHY=([postgres]=1 [admin]=1 [api]=1 [public]=1 [garage]=1)
 for svc in postgres admin api public garage proxy; do
   cname="compose-${svc}-1"
-  state=$(docker inspect -f '{{.State.Status}}' "$cname")
+  state=$(docker inspect -f '{{.State.Status}}' "$cname") || { echo "GAGAL: docker inspect $cname gagal (container mungkin tidak ada)"; exit 1; }
   if [[ "$state" != "running" ]]; then
     echo "GAGAL: $svc state=$state (harus running)"
     exit 1
   fi
   if [[ -n "${EXPECT_HEALTHY[$svc]:-}" ]]; then
-    health=$(docker inspect -f '{{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}' "$cname")
+    health=$(docker inspect -f '{{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}' "$cname") || { echo "GAGAL: docker inspect $cname gagal saat cek health"; exit 1; }
     if [[ "$health" != "healthy" ]]; then
       echo "GAGAL: $svc health=$health (harus healthy)"
       exit 1
@@ -187,8 +187,8 @@ for svc in postgres admin api public garage proxy; do
     echo "OK: $svc running"
   fi
 done
-mstate=$(docker inspect -f '{{.State.Status}}' compose-migrate-1)
-mexit=$(docker inspect -f '{{.State.ExitCode}}' compose-migrate-1)
+mstate=$(docker inspect -f '{{.State.Status}}' compose-migrate-1) || { echo "GAGAL: docker inspect compose-migrate-1 gagal"; exit 1; }
+mexit=$(docker inspect -f '{{.State.ExitCode}}' compose-migrate-1) || { echo "GAGAL: docker inspect compose-migrate-1 gagal saat cek exit code"; exit 1; }
 if [[ "$mstate" != "exited" || "$mexit" != "0" ]]; then
   echo "GAGAL: migrate state=$mstate exitcode=$mexit (harus exited/0)"
   exit 1
@@ -199,7 +199,7 @@ echo "### 9d. verifikasi endpoint ###"
 for url in "admin.localhost:8080/" "admin.localhost:8080/api/health/ready" "catalog.localhost:8080/" "catalog.localhost:8080/api/health/ready"; do
   code=000
   for i in $(seq 1 10); do
-    code=$(curl -s -o /dev/null -w "%{http_code}" "$url")
+    code=$(curl -s -o /dev/null -w "%{http_code}" "$url") || code=000
     [[ "$code" == "200" ]] && break
     sleep 2
   done
@@ -211,7 +211,7 @@ for url in "admin.localhost:8080/" "admin.localhost:8080/api/health/ready" "cata
 done
 code=000
 for i in $(seq 1 10); do
-  code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost:8080/")
+  code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost:8080/") || code=000
   [[ "$code" == "404" ]] && break
   sleep 2
 done
