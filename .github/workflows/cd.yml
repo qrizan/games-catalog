@@ -1,0 +1,122 @@
+name: CD
+
+# Dipicu rilis di repo aplikasi lewat repository_dispatch. Hasilnya bukan deploy
+# melainkan PR berisi bump digest: belum ada cluster yang hidup terus untuk
+# dituju. Step helm upgrade menyusul di ujung workflow ini begitu ada.
+#
+# Payload datang dari luar repo ini, jadi tiap field divalidasi sebelum dipakai
+# dan tidak ada satu pun yang diinterpolasi langsung ke dalam shell.
+on:
+  repository_dispatch:
+    types: [app-released]
+
+permissions:
+  contents: read
+  packages: read
+
+concurrency:
+  group: cd-${{ github.event.client_payload.repo }}
+
+# Action dipin ke commit SHA; komentar versi di sebelahnya untuk keterbacaan.
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    env:
+      APP_REPO: ${{ github.event.client_payload.repo }}
+      GIT_TAG: ${{ github.event.client_payload.git_tag }}
+      IMAGE_TAG: ${{ github.event.client_payload.image_tag }}
+      DIGEST: ${{ github.event.client_payload.digest }}
+
+    steps:
+      - name: Validasi payload
+        # Allowlist, bukan sanitasi. Nilai ini menentukan image mana yang
+        # dipercaya masuk ke chart, jadi yang tidak dikenal ditolak.
+        run: |
+          case "$APP_REPO" in
+            nestjs-swagger-prisma|react-shadcn-redux|nextjs-chakra-reactquery) ;;
+            *) echo "GAGAL: repo '$APP_REPO' bukan salah satu dari tiga repo aplikasi"; exit 1 ;;
+          esac
+          [[ "$DIGEST" =~ ^sha256:[0-9a-f]{64}$ ]] \
+            || { echo "GAGAL: digest tidak berbentuk sha256"; exit 1; }
+          [[ "$IMAGE_TAG" =~ ^[A-Za-z0-9][A-Za-z0-9._-]{0,127}$ ]] \
+            || { echo "GAGAL: image tag tidak valid"; exit 1; }
+          [[ "$GIT_TAG" =~ ^v[A-Za-z0-9._-]{1,127}$ ]] \
+            || { echo "GAGAL: git tag tidak valid"; exit 1; }
+          echo "OK: $APP_REPO $GIT_TAG -> $IMAGE_TAG @ $DIGEST"
+
+      - uses: actions/create-github-app-token@bcd2ba49218906704ab6c1aa796996da409d3eb1 # v3.2.0
+        id: app-token
+        with:
+          app-id: ${{ vars.CD_APP_ID }}
+          private-key: ${{ secrets.CD_APP_PRIVATE_KEY }}
+
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # token App, bukan GITHUB_TOKEN: PR yang dibuat GITHUB_TOKEN tidak
+          # memicu workflow lain, sehingga PR bump akan lahir tanpa satu pun cek
+          token: ${{ steps.app-token.outputs.token }}
+
+      - uses: sigstore/cosign-installer@6f9f17788090df1f26f669e9d70d6ae9567deba6 # v4.1.2
+
+      - name: Verifikasi signature image
+        # Bukan sekadar "ada signature": identitas penandatangan diikat ke
+        # workflow rilis pada tag itu. Signature tersimpan sebagai artefak di
+        # package yang sama, jadi registry-nya perlu login lebih dulu.
+        env:
+          GHCR_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GHCR_USER: ${{ github.repository_owner }}
+        run: |
+          echo "$GHCR_TOKEN" | cosign login ghcr.io -u "$GHCR_USER" --password-stdin
+          cosign verify \
+            --certificate-oidc-issuer https://token.actions.githubusercontent.com \
+            --certificate-identity "https://github.com/${GHCR_USER}/${APP_REPO}/.github/workflows/release.yml@refs/tags/${GIT_TAG}" \
+            "ghcr.io/${GHCR_USER}/${APP_REPO}@${DIGEST}"
+
+      - name: Bump digest di seluruh tempat ia dipin
+        id: bump
+        # Keluar 2 berarti digest itu sudah terpasang. Bukan kegagalan, tapi juga
+        # tidak ada yang perlu di-PR-kan.
+        run: |
+          set +e
+          python3 .github/scripts/bump-image.py "$APP_REPO" "$IMAGE_TAG" "$DIGEST"
+          rc=$?
+          set -e
+          if [[ $rc -eq 2 ]]; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          [[ $rc -eq 0 ]] || exit $rc
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Buka PR
+        if: steps.bump.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: |
+          branch="bump/${APP_REPO}-${IMAGE_TAG}"
+          git config user.name "games-catalog-cd[bot]"
+          git config user.email "games-catalog-cd[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add k8s/chart/values.yaml compose/docker-compose.yml scripts/clean-slate-test.sh
+          git commit -m "Bump ${APP_REPO} to ${IMAGE_TAG}" \
+            -m "Digest ${DIGEST}, signature verified against ${GIT_TAG}."
+          # rilis ulang tag yang sama menimpa branch-nya, bukan gagal
+          git push --force origin "$branch"
+          if gh pr view "$branch" --json number >/dev/null 2>&1; then
+            echo "PR untuk $branch sudah ada, branch-nya diperbarui"
+            exit 0
+          fi
+          cat > "$RUNNER_TEMP/pr-body.md" <<EOF
+          Released as ${GIT_TAG} in ${APP_REPO}.
+
+          Digest \`${DIGEST}\`, cosign signature verified against the release workflow at that tag.
+
+          Chart lint, render assertions, and the kind deploy run as checks on this pull request.
+          EOF
+          gh pr create \
+            --base main --head "$branch" \
+            --title "Bump ${APP_REPO} to ${IMAGE_TAG}" \
+            --body-file "$RUNNER_TEMP/pr-body.md"
