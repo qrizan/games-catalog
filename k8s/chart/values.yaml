@@ -52,8 +52,8 @@ postgres:
 api:
   image:
     repository: ghcr.io/qrizan/nestjs-swagger-prisma
-    tag: 0.0.1-rc.4
-    digest: sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870
+    tag: 0.0.2
+    digest: sha256:5d4e2db57864f8ab0da3523333bf16e84cafcb10daa36ebcb4c869f95a4b0640
   imagePullSecret: ghcr-pull-secret
   postgresCredentialsSecretName: postgres-credentials
   s3:

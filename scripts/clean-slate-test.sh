@@ -118,7 +118,7 @@ echo "### 1. cleanup ###"
 kind delete cluster --name games-catalog || true
 (cd compose && docker compose down -v) || true
 for img in \
-  "ghcr.io/qrizan/nestjs-swagger-prisma:0.0.1-rc.4@sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870" \
+  "ghcr.io/qrizan/nestjs-swagger-prisma:0.0.2@sha256:5d4e2db57864f8ab0da3523333bf16e84cafcb10daa36ebcb4c869f95a4b0640" \
   "ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985" \
   "ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8" \
   "postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15" \
@@ -141,7 +141,7 @@ declare -A IMAGES=(
   [webhook-certgen]="registry.k8s.io/ingress-nginx/kube-webhook-certgen:v1.6.9@sha256:01038e7de14b78d702d2849c3aad72fd25903c4765af63cf16aa3398f5d5f2dd"
   [metrics-server]="registry.k8s.io/metrics-server/metrics-server:v0.9.0@sha256:25d291fde59974547bac6f07fa9d6cf6f5bedd1f19d60c893311c5e741e0a42f"
   [postgres]="postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15"
-  [api]="ghcr.io/qrizan/nestjs-swagger-prisma:0.0.1-rc.4@sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870"
+  [api]="ghcr.io/qrizan/nestjs-swagger-prisma:0.0.2@sha256:5d4e2db57864f8ab0da3523333bf16e84cafcb10daa36ebcb4c869f95a4b0640"
   [admin]="ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985"
   [public]="ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8"
   [garage]="dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690"
