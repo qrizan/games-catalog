@@ -6,86 +6,6 @@ CATATAN: POSTGRES_USER POSTGRES_DB GF_SECURITY_ADMIN_USER dilewati karena <8 kar
 ### 1. cleanup ###
 Deleting cluster "games-catalog" ...
 Deleted nodes: ["games-catalog-control-plane"]
- Container compose-proxy-1 Stopping 
- Container compose-proxy-1 Stopped 
- Container compose-proxy-1 Removing 
- Container compose-proxy-1 Removed 
- Container compose-garage-1 Stopping 
- Container compose-admin-1 Stopping 
- Container compose-public-1 Stopping 
- Container compose-public-1 Stopped 
- Container compose-public-1 Removing 
- Container compose-public-1 Removed 
- Container compose-api-1 Stopping 
- Container compose-admin-1 Stopped 
- Container compose-admin-1 Removing 
- Container compose-admin-1 Removed 
- Container compose-garage-1 Stopped 
- Container compose-garage-1 Removing 
- Container compose-garage-1 Removed 
- Container compose-api-1 Stopped 
- Container compose-api-1 Removing 
- Container compose-api-1 Removed 
- Container compose-migrate-1 Stopping 
- Container compose-migrate-1 Stopped 
- Container compose-migrate-1 Removing 
- Container compose-migrate-1 Removed 
- Container compose-postgres-1 Stopping 
- Container compose-postgres-1 Stopped 
- Container compose-postgres-1 Removing 
- Container compose-postgres-1 Removed 
- Volume compose_postgres-data Removing 
- Volume compose_garage-data Removing 
- Network compose_catalog Removing 
- Volume compose_postgres-data Removed 
- Volume compose_garage-data Removed 
- Network compose_catalog Removed 
-Untagged: ghcr.io/qrizan/nestjs-swagger-prisma:0.0.1-rc.4@sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870
-Deleted: sha256:a82199b28a742c4b1d9441eb49aca2b95f1533438a54f2afc832f687676921a8
-Deleted: sha256:49a8999eac6ef870fa6681f488ec4cb395315e5a7acbfc3c3911f168ab8ebc90
-Deleted: sha256:30759468f142f3b444cdddc3a5255627551bc2ee767015a2c10dc4790325e7d4
-Deleted: sha256:3c90f17d13377e69a3110af9a9a8933e8ab5dffd60f1d8344f92fdeba0fce4eb
-Deleted: sha256:a036bd8d6211fe438b0a808ba72ddae350aca3172b57ffad0bc843f9d1d43aa5
-Deleted: sha256:0c455da8e401286331be2a6fdb4d910c516806ee36cbaad80d85ff848aa5b538
-Deleted: sha256:c39b9b9c17d6b96ec78d9e327d00c16d070c90b298b7c6d78863633a2d8e65d7
-Deleted: sha256:29d7e87561634f383bd99cf205cd553cd276ab490f49a5e89b12361e0f6bcb4d
-Deleted: sha256:8384a110cfbd25a4e1683ea847603369c0cd87f4b6b30143d0ef9baa0f53335b
-Untagged: ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985
-Deleted: sha256:b3b3778cc801423a5c0276ada26ea9bcc9a35a908cc32e83fb1d15dda668f2a5
-Deleted: sha256:4a13e82d0895b916218ad751cb1a1b21d1f8cf5d853ca6de467565d547c1aed6
-Deleted: sha256:5a1b670a1ca88c210a0c12738e9bfe8c77ec5ed6e7c17c72dbc0f2056091ed10
-Deleted: sha256:20b9aa1100e8b554a678fc5a472d608a74a54077721647db0c8265bb9f62a1d0
-Deleted: sha256:e9027d49be97929365ee363a27f01a5ea20302fb406a3b1045eaa1f523ec7113
-Deleted: sha256:2721450aa1f4317394e1ab579dfc56fa9fd89570cbc72e80cbff184cf24eab2c
-Untagged: ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8
-Deleted: sha256:dd665175ba7e52d63734c00ab3579226272c20388b90ce5b53fd1eb38dc4d08c
-Deleted: sha256:e7d58b2c49d942c1b4e6ab8f2943afced9b3b7e39afc8584e5de6c833be12230
-Deleted: sha256:4ede11fe5f02ee327a784e574e3a685ae762e348faa629787d875a4a122407f4
-Deleted: sha256:afafaa6c357bfa3b5545b806fc3c9bda7fdd5a2860d140addd410fcd2fbe416c
-Deleted: sha256:d048c3e9b0eebafe626951f5a6998e93a4c216e556b230149224378fe4274bbc
-Deleted: sha256:7760a9582037b4bf500eb6bdf3e8c5a6d6cc949cb31ba9555b4b3ce1198f3979
-Deleted: sha256:2b6bc08204bcac2687f87632bbcac7eb94f1cc286939e46c15953c103c026c9e
-Deleted: sha256:1b694b7cd74109c35460894fbf9dc381b5281513a6169a837fbd9fdf8486dfb4
-Untagged: postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15
-Deleted: sha256:bd1890816ae0b8ad4644f05728570d4be774e1f1490d7232f5084b52ea335183
-Deleted: sha256:26c306e27276d2c2b7b564f43c29140f99dc5fe1b0b0b14f1ae8b0ec28f4d532
-Deleted: sha256:7a16ca44a97ba47036c1521c780118c0f7b33160f3ac16ae913bed120bf14127
-Deleted: sha256:0e9bce5d1948048ad1133afb4e7fb7c47e8e0c268e6e486ce7af1683260b4954
-Deleted: sha256:0a507d0cbaaaa460f3a72b43d7914603d771d6c6863dfa07b6cee8bb853be0ee
-Deleted: sha256:0762ee217c4c0e30c8db123762a2627ebbf3114718993640ee0f59c7480c5140
-Deleted: sha256:e7d0fab2572a880278e3da8a5bacafad532a2d484071567e68ff5354ae580c12
-Deleted: sha256:8cedfaf12d47f0c2940576b457c6762aac433dac24728ba2af0a1bd5806b8264
-Deleted: sha256:4a43f44199365afc4de3695367b47cacf593ddd689ac53be138c8256bd6c1fbd
-Untagged: nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de
-Deleted: sha256:812d47f806db497c53f9b47e76bdab38bcf5d724c69d3986df5ee4336c210559
-Deleted: sha256:27169268e599542a8efe40bc98eec72801e56c7eec6974fe72287429b5a56a88
-Deleted: sha256:7e21891e773c24466c13d24a8f0fd9cdcc0310c88dfb9cfd5bd2a0480b48bd3e
-Deleted: sha256:198fb1785a3693e2164fcfa5cccfed50c1ec233877f44a78189521a39a7c36e0
-Deleted: sha256:cccb2672fed3544941cbd10edcd30161ce0abeec1ac6d02e9a7e758b2dd0eb50
-Deleted: sha256:1d9a0e936fac6798e368a505eeb532babea0f78a88ccf678f7a7f6119d6af92a
-Deleted: sha256:3f1f2c7545807c52541c2414015214c10174d63181a6a6dea381caf2386b23fe
-Deleted: sha256:cbd8d5f3f17376aa3b25a5b2361749140b1ec2785fa186b3ad473675a341c218
-Untagged: dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690
 ### 2. cluster kind ###
 Creating cluster "games-catalog" ...
  • Ensuring node image (kindest/node:v1.34.8) 🖼  ...
@@ -105,10 +25,10 @@ You can now use your cluster with:
 
 kubectl cluster-info --context kind-games-catalog
 
-Have a nice day! 👋
+Not sure what to do next? 😅  Check out https://kind.sigs.k8s.io/docs/user/quick-start/
 kind-games-catalog
-Kubernetes control plane is running at https://127.0.0.1:43091
-CoreDNS is running at https://127.0.0.1:43091/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
+Kubernetes control plane is running at https://127.0.0.1:33273
+CoreDNS is running at https://127.0.0.1:33273/api/v1/namespaces/kube-system/services/kube-dns:dns/proxy
 
 To further debug and diagnose cluster problems, use 'kubectl cluster-info dump'.
 NODE                          CPU   MEM
@@ -116,34 +36,34 @@ games-catalog-control-plane   8     16139784Ki
 ### 3. pre-pull image ke node, sequential ###
 --- pull: ingress-controller ---
 Image is up to date for sha256:895ddb49053a9b80e1c97354a933f59cc94fba4b6f831615687151c9b178218d
-OK: ingress-controller (596s)
+OK: ingress-controller (588s)
 --- pull: webhook-certgen ---
 Image is up to date for sha256:1442d220fcdde0a4eb5344ef0ad24df4673d78c8a71cab38e3b051af46c87a86
-OK: webhook-certgen (146s)
+OK: webhook-certgen (159s)
 --- pull: metrics-server ---
 Image is up to date for sha256:d7b01abacd67fcd2cd2f61b87cb46c850c4f090e77d3d5ae0878b9894e0fcd0f
-OK: metrics-server (129s)
+OK: metrics-server (112s)
 --- pull: postgres ---
 Image is up to date for sha256:bd1890816ae0b8ad4644f05728570d4be774e1f1490d7232f5084b52ea335183
-OK: postgres (562s)
+OK: postgres (710s)
 --- pull: api ---
-Image is up to date for sha256:a82199b28a742c4b1d9441eb49aca2b95f1533438a54f2afc832f687676921a8
-OK: api (772s)
+Image is up to date for sha256:5227de934d98b36fe00817a047bd118ff0de9a418b8edf53c3936296142c32c0
+OK: api (776s)
 --- pull: admin ---
 Image is up to date for sha256:b3b3778cc801423a5c0276ada26ea9bcc9a35a908cc32e83fb1d15dda668f2a5
-OK: admin (129s)
+OK: admin (178s)
 --- pull: public ---
 Image is up to date for sha256:dd665175ba7e52d63734c00ab3579226272c20388b90ce5b53fd1eb38dc4d08c
-OK: public (43s)
+OK: public (68s)
 --- pull: garage ---
 Image is up to date for sha256:5eda3acb72a0b6c3432233d19b07dffabd9ee7eb93be90031bae75e4b81e6324
-OK: garage (146s)
+OK: garage (169s)
 --- pull: prometheus ---
 Image is up to date for sha256:8da6d95a8747c08872fbffa86d35a9c39433cbe908ce8e5939ad34087cceac86
-OK: prometheus (562s)
+OK: prometheus (489s)
 --- pull: grafana ---
 Image is up to date for sha256:8b5e93ab63f515a9d1d0eea03d99e5896b09074996164c6a500fc713c1d2d451
-OK: grafana (1866s)
+OK: grafana (1819s)
 ### 4. namespace PSA, imagePullSecrets, ingress-nginx, NetworkPolicy ###
 Warning: resource namespaces/default is missing the kubectl.kubernetes.io/last-applied-configuration annotation which is required by kubectl apply. kubectl apply should only be used on resources created declaratively by either kubectl create --save-config or kubectl apply. The missing annotation will be patched automatically.
 namespace/default configured
@@ -185,7 +105,7 @@ secret/grafana-credentials created
 ### 6. helm bootstrap dua tahap ###
 Release "games-catalog" does not exist. Installing it now.
 NAME: games-catalog
-LAST DEPLOYED: Tue Aug 11 17:47:44 2026
+LAST DEPLOYED: Wed Aug 12 13:13:18 2026
 NAMESPACE: default
 STATUS: deployed
 REVISION: 1
@@ -195,7 +115,7 @@ pod/postgres-0 condition met
 /var/run/postgresql:5432 - accepting connections
 Release "games-catalog" has been upgraded. Happy Helming!
 NAME: games-catalog
-LAST DEPLOYED: Tue Aug 11 17:47:57 2026
+LAST DEPLOYED: Wed Aug 12 13:13:31 2026
 NAMESPACE: default
 STATUS: deployed
 REVISION: 2
@@ -205,11 +125,11 @@ USER-SUPPLIED VALUES:
 bootstrapOnly: false
 ### 6b. bootstrap manual Garage: aktifkan website endpoint bucket assets ###
 pod/garage-0 condition met
-[2m2026-08-11T10:48:28.288584Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connected to 10.244.0.17:3901, negotiating handshake...
-[2m2026-08-11T10:48:28.331158Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connection established to 3f89c9d4cce7c99c
+[2m2026-08-12T06:14:00.988674Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connected to 10.244.0.17:3901, negotiating handshake...
+[2m2026-08-12T06:14:01.031083Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connection established to 23e9aac8609edb08
 ==== BUCKET INFORMATION ====
-Bucket:            fe0936b9686ad6e79862b0918fa81866532d3aecd0737f82d899849dc7a4ea82
-Created:           2026-08-11 10:48:22.959 +00:00
+Bucket:            6fdddbf9627b55e2c83f75dcd12dacba822dacc42be4b0f50c7abcb526990ce3
+Created:           2026-08-12 06:13:55.224 +00:00
 
 Size:              0 B (0 B)
 Objects:           0
@@ -231,29 +151,31 @@ Waiting for deployment "grafana" rollout to finish: 0 of 1 updated replicas are 
 deployment "grafana" successfully rolled out
 deployment "prometheus" successfully rolled out
 NAME                              READY   STATUS    RESTARTS   AGE
-pod/admin-68687cfbf6-kvjg4        1/1     Running   0          61s
-pod/api-77fb6dbb84-zm9ns          1/1     Running   0          61s
-pod/garage-0                      1/1     Running   0          61s
-pod/grafana-85c9cb745c-qfnv4      1/1     Running   0          61s
-pod/postgres-0                    1/1     Running   0          93s
-pod/prometheus-5bc79b5fc8-wxq26   1/1     Running   0          61s
-pod/public-59d748984-w8nc4        1/1     Running   0          61s
+pod/admin-68687cfbf6-6bcrk        1/1     Running   0          46s
+pod/api-667585c58f-fc492          1/1     Running   0          46s
+pod/garage-0                      1/1     Running   0          46s
+pod/grafana-85c9cb745c-8w2q6      1/1     Running   0          46s
+pod/postgres-0                    1/1     Running   0          76s
+pod/prometheus-5bc79b5fc8-l8ppd   1/1     Running   0          46s
+pod/public-59d748984-j96kh        1/1     Running   0          46s
 
 NAME                                      REFERENCE        TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
-horizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: <unknown>/60%   1         5         1          61s
+horizontalpodautoscaler.autoscaling/api   Deployment/api   cpu: <unknown>/60%   1         5         1          46s
 
 NAME                                CLASS   HOSTS                               ADDRESS     PORTS   AGE
-ingress.networking.k8s.io/admin     nginx   admin.localhost                     localhost   80      61s
-ingress.networking.k8s.io/api       nginx   admin.localhost,catalog.localhost   localhost   80      61s
-ingress.networking.k8s.io/garage    nginx   assets.localhost                    localhost   80      61s
-ingress.networking.k8s.io/grafana   nginx   grafana.localhost                   localhost   80      61s
-ingress.networking.k8s.io/public    nginx   catalog.localhost                   localhost   80      61s
+ingress.networking.k8s.io/admin     nginx   admin.localhost                     localhost   80      46s
+ingress.networking.k8s.io/api       nginx   admin.localhost,catalog.localhost   localhost   80      46s
+ingress.networking.k8s.io/garage    nginx   assets.localhost                    localhost   80      46s
+ingress.networking.k8s.io/grafana   nginx   grafana.localhost                   localhost   80      46s
+ingress.networking.k8s.io/public    nginx   catalog.localhost                   localhost   80      46s
 OK: admin.localhost/ -> 200
 OK: admin.localhost/api/health/ready -> 200
 OK: catalog.localhost/ -> 200
 OK: catalog.localhost/api/health/ready -> 200
 OK: grafana.localhost/api/health -> 200
-OK: assets.localhost/ -> 404 (bucket kosong)
+OK: assets.localhost/ -> 404 (tidak ada index.html)
+OK: register -> 201
+OK: assets.localhost/avatar/default.png -> 200
 ### 8. metrics-server ###
 serviceaccount/metrics-server created
 clusterrole.rbac.authorization.k8s.io/system:aggregated-metrics-reader created
@@ -270,17 +192,17 @@ Waiting for deployment "metrics-server" rollout to finish: 1 old replicas are pe
 Waiting for deployment "metrics-server" rollout to finish: 1 old replicas are pending termination...
 deployment "metrics-server" successfully rolled out
 NAME                          CPU(cores)   MEMORY(bytes)   
-admin-68687cfbf6-kvjg4        1m           7Mi             
-api-77fb6dbb84-zm9ns          11m          56Mi            
-garage-0                      1m           4Mi             
-grafana-85c9cb745c-qfnv4      51m          172Mi           
-postgres-0                    69m          39Mi            
-prometheus-5bc79b5fc8-wxq26   6m           33Mi            
-public-59d748984-w8nc4        3m           60Mi            
+admin-68687cfbf6-6bcrk        1m           13Mi            
+api-667585c58f-fc492          12m          67Mi            
+garage-0                      2m           44Mi            
+grafana-85c9cb745c-8w2q6      42m          167Mi           
+postgres-0                    46m          64Mi            
+prometheus-5bc79b5fc8-l8ppd   7m           97Mi            
+public-59d748984-j96kh        2m           62Mi            
 OK: metrics-server mengembalikan data untuk semua 7 pod
 ### 8b. load test k6 + respons HPA ###
-NAME   REFERENCE        TARGETS        MINPODS   MAXPODS   REPLICAS   AGE
-api    Deployment/api   cpu: 12%/60%   1         5         1          110s
+NAME   REFERENCE        TARGETS              MINPODS   MAXPODS   REPLICAS   AGE
+api    Deployment/api   cpu: <unknown>/60%   1         5         1          91s
 
          /\      Grafana   /‾‾/  
     /\  /  \     |\  __   /  /   
@@ -309,532 +231,532 @@ ramp_up   [   2% ] 001/100 VUs  0m03.0s/3m00.0s
 running (0m04.0s), 002/100 VUs, 30 complete and 0 interrupted iterations
 ramp_up   [   2% ] 002/100 VUs  0m04.0s/3m00.0s
 
-running (0m05.0s), 003/100 VUs, 51 complete and 0 interrupted iterations
+running (0m05.0s), 003/100 VUs, 52 complete and 0 interrupted iterations
 ramp_up   [   3% ] 003/100 VUs  0m05.0s/3m00.0s
 
-running (0m06.0s), 003/100 VUs, 78 complete and 0 interrupted iterations
+running (0m06.0s), 003/100 VUs, 79 complete and 0 interrupted iterations
 ramp_up   [   3% ] 003/100 VUs  0m06.0s/3m00.0s
 
-running (0m07.0s), 004/100 VUs, 113 complete and 0 interrupted iterations
+running (0m07.0s), 004/100 VUs, 116 complete and 0 interrupted iterations
 ramp_up   [   4% ] 004/100 VUs  0m07.0s/3m00.0s
 
-running (0m08.0s), 005/100 VUs, 153 complete and 0 interrupted iterations
+running (0m08.0s), 005/100 VUs, 156 complete and 0 interrupted iterations
 ramp_up   [   4% ] 005/100 VUs  0m08.0s/3m00.0s
 
-running (0m09.0s), 005/100 VUs, 196 complete and 0 interrupted iterations
+running (0m09.0s), 005/100 VUs, 192 complete and 0 interrupted iterations
 ramp_up   [   5% ] 005/100 VUs  0m09.0s/3m00.0s
 
-running (0m10.0s), 006/100 VUs, 247 complete and 0 interrupted iterations
+running (0m10.0s), 006/100 VUs, 246 complete and 0 interrupted iterations
 ramp_up   [   6% ] 006/100 VUs  0m10.0s/3m00.0s
 
-running (0m11.0s), 007/100 VUs, 274 complete and 0 interrupted iterations
+running (0m11.0s), 007/100 VUs, 302 complete and 0 interrupted iterations
 ramp_up   [   6% ] 007/100 VUs  0m11.0s/3m00.0s
 
-running (0m12.0s), 007/100 VUs, 335 complete and 0 interrupted iterations
+running (0m12.0s), 007/100 VUs, 365 complete and 0 interrupted iterations
 ramp_up   [   7% ] 007/100 VUs  0m12.0s/3m00.0s
 
-running (0m13.0s), 008/100 VUs, 396 complete and 0 interrupted iterations
+running (0m13.0s), 008/100 VUs, 438 complete and 0 interrupted iterations
 ramp_up   [   7% ] 008/100 VUs  0m13.0s/3m00.0s
 
-running (0m14.0s), 009/100 VUs, 474 complete and 0 interrupted iterations
+running (0m14.0s), 009/100 VUs, 512 complete and 0 interrupted iterations
 ramp_up   [   8% ] 009/100 VUs  0m14.0s/3m00.0s
 
-running (0m15.0s), 009/100 VUs, 553 complete and 0 interrupted iterations
+running (0m15.0s), 009/100 VUs, 590 complete and 0 interrupted iterations
 ramp_up   [   8% ] 009/100 VUs  0m15.0s/3m00.0s
 
-running (0m16.0s), 010/100 VUs, 608 complete and 0 interrupted iterations
+running (0m16.0s), 010/100 VUs, 679 complete and 0 interrupted iterations
 ramp_up   [   9% ] 010/100 VUs  0m16.0s/3m00.0s
 
-running (0m17.0s), 011/100 VUs, 694 complete and 0 interrupted iterations
+running (0m17.0s), 011/100 VUs, 731 complete and 0 interrupted iterations
 ramp_up   [   9% ] 011/100 VUs  0m17.0s/3m00.0s
 
-running (0m18.0s), 011/100 VUs, 770 complete and 0 interrupted iterations
+running (0m18.0s), 011/100 VUs, 818 complete and 0 interrupted iterations
 ramp_up   [  10% ] 011/100 VUs  0m18.0s/3m00.0s
 
-running (0m19.0s), 012/100 VUs, 819 complete and 0 interrupted iterations
+running (0m19.0s), 012/100 VUs, 911 complete and 0 interrupted iterations
 ramp_up   [  11% ] 012/100 VUs  0m19.0s/3m00.0s
 
-running (0m20.0s), 013/100 VUs, 899 complete and 0 interrupted iterations
+running (0m20.0s), 013/100 VUs, 999 complete and 0 interrupted iterations
 ramp_up   [  11% ] 013/100 VUs  0m20.0s/3m00.0s
 
-running (0m21.0s), 013/100 VUs, 971 complete and 0 interrupted iterations
+running (0m21.0s), 013/100 VUs, 1093 complete and 0 interrupted iterations
 ramp_up   [  12% ] 013/100 VUs  0m21.0s/3m00.0s
 
-running (0m22.0s), 014/100 VUs, 1060 complete and 0 interrupted iterations
+running (0m22.0s), 014/100 VUs, 1212 complete and 0 interrupted iterations
 ramp_up   [  12% ] 014/100 VUs  0m22.0s/3m00.0s
 
-running (0m23.0s), 015/100 VUs, 1144 complete and 0 interrupted iterations
+running (0m23.0s), 015/100 VUs, 1311 complete and 0 interrupted iterations
 ramp_up   [  13% ] 015/100 VUs  0m23.0s/3m00.0s
 
-running (0m24.0s), 015/100 VUs, 1227 complete and 0 interrupted iterations
+running (0m24.0s), 015/100 VUs, 1403 complete and 0 interrupted iterations
 ramp_up   [  13% ] 015/100 VUs  0m24.0s/3m00.0s
 
-running (0m25.0s), 016/100 VUs, 1330 complete and 0 interrupted iterations
+running (0m25.0s), 016/100 VUs, 1496 complete and 0 interrupted iterations
 ramp_up   [  14% ] 016/100 VUs  0m25.0s/3m00.0s
 
-running (0m26.0s), 017/100 VUs, 1425 complete and 0 interrupted iterations
+running (0m26.0s), 017/100 VUs, 1589 complete and 0 interrupted iterations
 ramp_up   [  14% ] 017/100 VUs  0m26.0s/3m00.0s
 
-running (0m27.0s), 017/100 VUs, 1555 complete and 0 interrupted iterations
+running (0m27.0s), 017/100 VUs, 1691 complete and 0 interrupted iterations
 ramp_up   [  15% ] 017/100 VUs  0m27.0s/3m00.0s
 
-running (0m28.0s), 018/100 VUs, 1691 complete and 0 interrupted iterations
+running (0m28.0s), 018/100 VUs, 1823 complete and 0 interrupted iterations
 ramp_up   [  16% ] 018/100 VUs  0m28.0s/3m00.0s
 
-running (0m29.0s), 019/100 VUs, 1781 complete and 0 interrupted iterations
+running (0m29.0s), 019/100 VUs, 1915 complete and 0 interrupted iterations
 ramp_up   [  16% ] 019/100 VUs  0m29.0s/3m00.0s
 
-running (0m30.0s), 019/100 VUs, 1936 complete and 0 interrupted iterations
+running (0m30.0s), 019/100 VUs, 2080 complete and 0 interrupted iterations
 ramp_up   [  17% ] 019/100 VUs  0m30.0s/3m00.0s
 
-running (0m31.0s), 020/100 VUs, 2115 complete and 0 interrupted iterations
+running (0m31.0s), 020/100 VUs, 2274 complete and 0 interrupted iterations
 ramp_up   [  17% ] 020/100 VUs  0m31.0s/3m00.0s
 
-running (0m32.0s), 021/100 VUs, 2216 complete and 0 interrupted iterations
+running (0m32.0s), 021/100 VUs, 2470 complete and 0 interrupted iterations
 ramp_up   [  18% ] 021/100 VUs  0m32.0s/3m00.0s
 
-running (0m33.0s), 022/100 VUs, 2318 complete and 0 interrupted iterations
+running (0m33.0s), 022/100 VUs, 2671 complete and 0 interrupted iterations
 ramp_up   [  18% ] 022/100 VUs  0m33.0s/3m00.0s
 
-running (0m34.0s), 023/100 VUs, 2410 complete and 0 interrupted iterations
+running (0m34.0s), 023/100 VUs, 2795 complete and 0 interrupted iterations
 ramp_up   [  19% ] 023/100 VUs  0m34.0s/3m00.0s
 
-running (0m35.0s), 024/100 VUs, 2566 complete and 0 interrupted iterations
+running (0m35.0s), 024/100 VUs, 2911 complete and 0 interrupted iterations
 ramp_up   [  19% ] 024/100 VUs  0m35.0s/3m00.0s
 
-running (0m36.0s), 025/100 VUs, 2782 complete and 0 interrupted iterations
+running (0m36.0s), 025/100 VUs, 2957 complete and 0 interrupted iterations
 ramp_up   [  20% ] 025/100 VUs  0m36.0s/3m00.0s
 
-running (0m37.0s), 026/100 VUs, 2985 complete and 0 interrupted iterations
+running (0m37.0s), 026/100 VUs, 3113 complete and 0 interrupted iterations
 ramp_up   [  21% ] 026/100 VUs  0m37.0s/3m00.0s
 
-running (0m38.0s), 027/100 VUs, 3150 complete and 0 interrupted iterations
+running (0m38.0s), 027/100 VUs, 3246 complete and 0 interrupted iterations
 ramp_up   [  21% ] 027/100 VUs  0m38.0s/3m00.0s
 
-running (0m39.0s), 028/100 VUs, 3409 complete and 0 interrupted iterations
+running (0m39.0s), 028/100 VUs, 3454 complete and 0 interrupted iterations
 ramp_up   [  22% ] 028/100 VUs  0m39.0s/3m00.0s
 
-running (0m40.0s), 029/100 VUs, 3607 complete and 0 interrupted iterations
+running (0m40.0s), 029/100 VUs, 3633 complete and 0 interrupted iterations
 ramp_up   [  22% ] 029/100 VUs  0m40.0s/3m00.0s
 
-running (0m41.0s), 030/100 VUs, 3878 complete and 0 interrupted iterations
+running (0m41.0s), 030/100 VUs, 3862 complete and 0 interrupted iterations
 ramp_up   [  23% ] 030/100 VUs  0m41.0s/3m00.0s
 
-running (0m42.0s), 031/100 VUs, 4167 complete and 0 interrupted iterations
+running (0m42.0s), 031/100 VUs, 4078 complete and 0 interrupted iterations
 ramp_up   [  23% ] 031/100 VUs  0m42.0s/3m00.0s
 
-running (0m43.0s), 032/100 VUs, 4467 complete and 0 interrupted iterations
+running (0m43.0s), 032/100 VUs, 4222 complete and 0 interrupted iterations
 ramp_up   [  24% ] 032/100 VUs  0m43.0s/3m00.0s
 
-running (0m44.0s), 033/100 VUs, 4750 complete and 0 interrupted iterations
+running (0m44.0s), 033/100 VUs, 4531 complete and 0 interrupted iterations
 ramp_up   [  24% ] 033/100 VUs  0m44.0s/3m00.0s
 
-running (0m45.0s), 034/100 VUs, 5058 complete and 0 interrupted iterations
+running (0m45.0s), 034/100 VUs, 4863 complete and 0 interrupted iterations
 ramp_up   [  25% ] 034/100 VUs  0m45.0s/3m00.0s
 
-running (0m46.0s), 035/100 VUs, 5367 complete and 0 interrupted iterations
+running (0m46.0s), 035/100 VUs, 5195 complete and 0 interrupted iterations
 ramp_up   [  26% ] 035/100 VUs  0m46.0s/3m00.0s
 
-running (0m47.0s), 036/100 VUs, 5608 complete and 0 interrupted iterations
+running (0m47.0s), 036/100 VUs, 5541 complete and 0 interrupted iterations
 ramp_up   [  26% ] 036/100 VUs  0m47.0s/3m00.0s
 
-running (0m48.0s), 037/100 VUs, 5948 complete and 0 interrupted iterations
+running (0m48.0s), 037/100 VUs, 5823 complete and 0 interrupted iterations
 ramp_up   [  27% ] 037/100 VUs  0m48.0s/3m00.0s
 
-running (0m49.0s), 038/100 VUs, 6257 complete and 0 interrupted iterations
+running (0m49.0s), 038/100 VUs, 6159 complete and 0 interrupted iterations
 ramp_up   [  27% ] 038/100 VUs  0m49.0s/3m00.0s
 
-running (0m50.0s), 039/100 VUs, 6585 complete and 0 interrupted iterations
+running (0m50.0s), 039/100 VUs, 6519 complete and 0 interrupted iterations
 ramp_up   [  28% ] 039/100 VUs  0m50.0s/3m00.0s
 
-running (0m51.0s), 040/100 VUs, 6950 complete and 0 interrupted iterations
+running (0m51.0s), 040/100 VUs, 6894 complete and 0 interrupted iterations
 ramp_up   [  28% ] 040/100 VUs  0m51.0s/3m00.0s
 
-running (0m52.0s), 041/100 VUs, 7325 complete and 0 interrupted iterations
+running (0m52.0s), 041/100 VUs, 7266 complete and 0 interrupted iterations
 ramp_up   [  29% ] 041/100 VUs  0m52.0s/3m00.0s
 
-running (0m53.0s), 042/100 VUs, 7704 complete and 0 interrupted iterations
+running (0m53.0s), 042/100 VUs, 7616 complete and 0 interrupted iterations
 ramp_up   [  29% ] 042/100 VUs  0m53.0s/3m00.0s
 
-running (0m54.0s), 043/100 VUs, 8112 complete and 0 interrupted iterations
+running (0m54.0s), 043/100 VUs, 7997 complete and 0 interrupted iterations
 ramp_up   [  30% ] 043/100 VUs  0m54.0s/3m00.0s
 
-running (0m55.0s), 044/100 VUs, 8507 complete and 0 interrupted iterations
+running (0m55.0s), 044/100 VUs, 8346 complete and 0 interrupted iterations
 ramp_up   [  31% ] 044/100 VUs  0m55.0s/3m00.0s
 
-running (0m56.0s), 045/100 VUs, 8927 complete and 0 interrupted iterations
+running (0m56.0s), 045/100 VUs, 8744 complete and 0 interrupted iterations
 ramp_up   [  31% ] 045/100 VUs  0m56.0s/3m00.0s
 
-running (0m57.0s), 046/100 VUs, 9355 complete and 0 interrupted iterations
+running (0m57.0s), 046/100 VUs, 9163 complete and 0 interrupted iterations
 ramp_up   [  32% ] 046/100 VUs  0m57.0s/3m00.0s
 
-running (0m58.0s), 047/100 VUs, 9784 complete and 0 interrupted iterations
+running (0m58.0s), 047/100 VUs, 9608 complete and 0 interrupted iterations
 ramp_up   [  32% ] 047/100 VUs  0m58.0s/3m00.0s
 
-running (0m59.0s), 048/100 VUs, 10170 complete and 0 interrupted iterations
+running (0m59.0s), 048/100 VUs, 10059 complete and 0 interrupted iterations
 ramp_up   [  33% ] 048/100 VUs  0m59.0s/3m00.0s
 
-running (1m00.0s), 049/100 VUs, 10576 complete and 0 interrupted iterations
+running (1m00.0s), 049/100 VUs, 10526 complete and 0 interrupted iterations
 ramp_up   [  33% ] 049/100 VUs  1m00.0s/3m00.0s
 
-running (1m01.0s), 050/100 VUs, 10995 complete and 0 interrupted iterations
+running (1m01.0s), 050/100 VUs, 11006 complete and 0 interrupted iterations
 ramp_up   [  34% ] 050/100 VUs  1m01.0s/3m00.0s
 
-running (1m02.0s), 051/100 VUs, 11446 complete and 0 interrupted iterations
+running (1m02.0s), 051/100 VUs, 11470 complete and 0 interrupted iterations
 ramp_up   [  34% ] 051/100 VUs  1m02.0s/3m00.0s
 
-running (1m03.0s), 052/100 VUs, 11932 complete and 0 interrupted iterations
+running (1m03.0s), 052/100 VUs, 11970 complete and 0 interrupted iterations
 ramp_up   [  35% ] 052/100 VUs  1m03.0s/3m00.0s
 
-running (1m04.0s), 053/100 VUs, 12382 complete and 0 interrupted iterations
+running (1m04.0s), 053/100 VUs, 12465 complete and 0 interrupted iterations
 ramp_up   [  36% ] 053/100 VUs  1m04.0s/3m00.0s
 
-running (1m05.0s), 054/100 VUs, 12874 complete and 0 interrupted iterations
+running (1m05.0s), 054/100 VUs, 12948 complete and 0 interrupted iterations
 ramp_up   [  36% ] 054/100 VUs  1m05.0s/3m00.0s
 
-running (1m06.0s), 054/100 VUs, 13390 complete and 0 interrupted iterations
+running (1m06.0s), 054/100 VUs, 13375 complete and 0 interrupted iterations
 ramp_up   [  37% ] 054/100 VUs  1m06.0s/3m00.0s
 
-running (1m07.0s), 055/100 VUs, 13867 complete and 0 interrupted iterations
+running (1m07.0s), 055/100 VUs, 13904 complete and 0 interrupted iterations
 ramp_up   [  37% ] 055/100 VUs  1m07.0s/3m00.0s
 
-running (1m08.0s), 056/100 VUs, 14372 complete and 0 interrupted iterations
+running (1m08.0s), 056/100 VUs, 14444 complete and 0 interrupted iterations
 ramp_up   [  38% ] 056/100 VUs  1m08.0s/3m00.0s
 
-running (1m09.0s), 057/100 VUs, 14747 complete and 0 interrupted iterations
+running (1m09.0s), 057/100 VUs, 14980 complete and 0 interrupted iterations
 ramp_up   [  38% ] 057/100 VUs  1m09.0s/3m00.0s
 
-running (1m10.0s), 058/100 VUs, 15121 complete and 0 interrupted iterations
+running (1m10.0s), 058/100 VUs, 15477 complete and 0 interrupted iterations
 ramp_up   [  39% ] 058/100 VUs  1m10.0s/3m00.0s
 
-running (1m11.0s), 059/100 VUs, 15598 complete and 0 interrupted iterations
+running (1m11.0s), 059/100 VUs, 15986 complete and 0 interrupted iterations
 ramp_up   [  39% ] 059/100 VUs  1m11.0s/3m00.0s
 
-running (1m12.0s), 059/100 VUs, 16011 complete and 0 interrupted iterations
+running (1m12.0s), 059/100 VUs, 16530 complete and 0 interrupted iterations
 ramp_up   [  40% ] 059/100 VUs  1m12.0s/3m00.0s
 
-running (1m13.0s), 060/100 VUs, 16285 complete and 0 interrupted iterations
+running (1m13.0s), 060/100 VUs, 17070 complete and 0 interrupted iterations
 ramp_up   [  41% ] 060/100 VUs  1m13.0s/3m00.0s
 
-running (1m14.0s), 061/100 VUs, 16573 complete and 0 interrupted iterations
+running (1m14.0s), 061/100 VUs, 17476 complete and 0 interrupted iterations
 ramp_up   [  41% ] 061/100 VUs  1m14.0s/3m00.0s
 
-running (1m15.0s), 062/100 VUs, 16993 complete and 0 interrupted iterations
+running (1m15.0s), 062/100 VUs, 18004 complete and 0 interrupted iterations
 ramp_up   [  42% ] 062/100 VUs  1m15.0s/3m00.0s
 
-running (1m16.0s), 063/100 VUs, 17505 complete and 0 interrupted iterations
+running (1m16.0s), 063/100 VUs, 18555 complete and 0 interrupted iterations
 ramp_up   [  42% ] 063/100 VUs  1m16.0s/3m00.0s
 
-running (1m17.0s), 064/100 VUs, 18069 complete and 0 interrupted iterations
+running (1m17.0s), 064/100 VUs, 19099 complete and 0 interrupted iterations
 ramp_up   [  43% ] 064/100 VUs  1m17.0s/3m00.0s
 
-running (1m18.0s), 064/100 VUs, 18675 complete and 0 interrupted iterations
+running (1m18.0s), 064/100 VUs, 19674 complete and 0 interrupted iterations
 ramp_up   [  43% ] 064/100 VUs  1m18.0s/3m00.0s
 
-running (1m19.0s), 065/100 VUs, 19261 complete and 0 interrupted iterations
+running (1m19.0s), 065/100 VUs, 20248 complete and 0 interrupted iterations
 ramp_up   [  44% ] 065/100 VUs  1m19.0s/3m00.0s
 
-running (1m20.0s), 066/100 VUs, 19805 complete and 0 interrupted iterations
+running (1m20.0s), 066/100 VUs, 20869 complete and 0 interrupted iterations
 ramp_up   [  44% ] 066/100 VUs  1m20.0s/3m00.0s
 
-running (1m21.0s), 067/100 VUs, 20312 complete and 0 interrupted iterations
+running (1m21.0s), 067/100 VUs, 21343 complete and 0 interrupted iterations
 ramp_up   [  45% ] 067/100 VUs  1m21.0s/3m00.0s
 
-running (1m22.0s), 068/100 VUs, 20683 complete and 0 interrupted iterations
+running (1m22.0s), 068/100 VUs, 21889 complete and 0 interrupted iterations
 ramp_up   [  46% ] 068/100 VUs  1m22.0s/3m00.0s
 
-running (1m23.0s), 069/100 VUs, 21201 complete and 0 interrupted iterations
+running (1m23.0s), 069/100 VUs, 22468 complete and 0 interrupted iterations
 ramp_up   [  46% ] 069/100 VUs  1m23.0s/3m00.0s
 
-running (1m24.0s), 069/100 VUs, 21815 complete and 0 interrupted iterations
+running (1m24.0s), 069/100 VUs, 23051 complete and 0 interrupted iterations
 ramp_up   [  47% ] 069/100 VUs  1m24.0s/3m00.0s
 
-running (1m25.0s), 070/100 VUs, 22464 complete and 0 interrupted iterations
+running (1m25.0s), 070/100 VUs, 23668 complete and 0 interrupted iterations
 ramp_up   [  47% ] 070/100 VUs  1m25.0s/3m00.0s
 
-running (1m26.0s), 071/100 VUs, 23091 complete and 0 interrupted iterations
+running (1m26.0s), 071/100 VUs, 24283 complete and 0 interrupted iterations
 ramp_up   [  48% ] 071/100 VUs  1m26.0s/3m00.0s
 
-running (1m27.0s), 072/100 VUs, 23784 complete and 0 interrupted iterations
+running (1m27.0s), 072/100 VUs, 24948 complete and 0 interrupted iterations
 ramp_up   [  48% ] 072/100 VUs  1m27.0s/3m00.0s
 
-running (1m28.0s), 073/100 VUs, 24265 complete and 0 interrupted iterations
+running (1m28.0s), 073/100 VUs, 25586 complete and 0 interrupted iterations
 ramp_up   [  49% ] 073/100 VUs  1m28.0s/3m00.0s
 
-running (1m29.0s), 074/100 VUs, 24850 complete and 0 interrupted iterations
+running (1m29.0s), 074/100 VUs, 26265 complete and 0 interrupted iterations
 ramp_up   [  49% ] 074/100 VUs  1m29.0s/3m00.0s
 
-running (1m30.0s), 074/100 VUs, 25435 complete and 0 interrupted iterations
+running (1m30.0s), 074/100 VUs, 26813 complete and 0 interrupted iterations
 ramp_up   [  50% ] 074/100 VUs  1m30.0s/3m00.0s
 
-running (1m31.0s), 075/100 VUs, 26154 complete and 0 interrupted iterations
+running (1m31.0s), 075/100 VUs, 27444 complete and 0 interrupted iterations
 ramp_up   [  51% ] 075/100 VUs  1m31.0s/3m00.0s
 
-running (1m32.0s), 076/100 VUs, 26820 complete and 0 interrupted iterations
+running (1m32.0s), 076/100 VUs, 28090 complete and 0 interrupted iterations
 ramp_up   [  51% ] 076/100 VUs  1m32.0s/3m00.0s
 
-running (1m33.0s), 077/100 VUs, 27486 complete and 0 interrupted iterations
+running (1m33.0s), 077/100 VUs, 28748 complete and 0 interrupted iterations
 ramp_up   [  52% ] 077/100 VUs  1m33.0s/3m00.0s
 
-running (1m34.0s), 078/100 VUs, 28189 complete and 0 interrupted iterations
+running (1m34.0s), 078/100 VUs, 29441 complete and 0 interrupted iterations
 ramp_up   [  52% ] 078/100 VUs  1m34.0s/3m00.0s
 
-running (1m35.0s), 079/100 VUs, 28819 complete and 0 interrupted iterations
+running (1m35.0s), 079/100 VUs, 30202 complete and 0 interrupted iterations
 ramp_up   [  53% ] 079/100 VUs  1m35.0s/3m00.0s
 
-running (1m36.0s), 079/100 VUs, 29497 complete and 0 interrupted iterations
+running (1m36.0s), 079/100 VUs, 30919 complete and 0 interrupted iterations
 ramp_up   [  53% ] 079/100 VUs  1m36.0s/3m00.0s
 
-running (1m37.0s), 080/100 VUs, 30212 complete and 0 interrupted iterations
+running (1m37.0s), 080/100 VUs, 31704 complete and 0 interrupted iterations
 ramp_up   [  54% ] 080/100 VUs  1m37.0s/3m00.0s
 
-running (1m38.0s), 081/100 VUs, 30974 complete and 0 interrupted iterations
+running (1m38.0s), 081/100 VUs, 32462 complete and 0 interrupted iterations
 ramp_up   [  54% ] 081/100 VUs  1m38.0s/3m00.0s
 
-running (1m39.0s), 082/100 VUs, 31668 complete and 0 interrupted iterations
+running (1m39.0s), 082/100 VUs, 33219 complete and 0 interrupted iterations
 ramp_up   [  55% ] 082/100 VUs  1m39.0s/3m00.0s
 
-running (1m40.0s), 083/100 VUs, 32447 complete and 0 interrupted iterations
+running (1m40.0s), 083/100 VUs, 33975 complete and 0 interrupted iterations
 ramp_up   [  56% ] 083/100 VUs  1m40.0s/3m00.0s
 
-running (1m41.0s), 084/100 VUs, 33202 complete and 0 interrupted iterations
+running (1m41.0s), 084/100 VUs, 34751 complete and 0 interrupted iterations
 ramp_up   [  56% ] 084/100 VUs  1m41.0s/3m00.0s
 
-running (1m42.0s), 084/100 VUs, 33840 complete and 0 interrupted iterations
+running (1m42.0s), 084/100 VUs, 35557 complete and 0 interrupted iterations
 ramp_up   [  57% ] 084/100 VUs  1m42.0s/3m00.0s
 
-running (1m43.0s), 085/100 VUs, 34475 complete and 0 interrupted iterations
+running (1m43.0s), 085/100 VUs, 36373 complete and 0 interrupted iterations
 ramp_up   [  57% ] 085/100 VUs  1m43.0s/3m00.0s
 
-running (1m44.0s), 086/100 VUs, 35240 complete and 0 interrupted iterations
+running (1m44.0s), 086/100 VUs, 37190 complete and 0 interrupted iterations
 ramp_up   [  58% ] 086/100 VUs  1m44.0s/3m00.0s
 
-running (1m45.0s), 087/100 VUs, 36000 complete and 0 interrupted iterations
+running (1m45.0s), 087/100 VUs, 37991 complete and 0 interrupted iterations
 ramp_up   [  58% ] 087/100 VUs  1m45.0s/3m00.0s
 
-running (1m46.0s), 088/100 VUs, 36719 complete and 0 interrupted iterations
+running (1m46.0s), 088/100 VUs, 38778 complete and 0 interrupted iterations
 ramp_up   [  59% ] 088/100 VUs  1m46.0s/3m00.0s
 
-running (1m47.0s), 089/100 VUs, 37516 complete and 0 interrupted iterations
+running (1m47.0s), 089/100 VUs, 39628 complete and 0 interrupted iterations
 ramp_up   [  59% ] 089/100 VUs  1m47.0s/3m00.0s
 
-running (1m48.0s), 089/100 VUs, 38255 complete and 0 interrupted iterations
+running (1m48.0s), 089/100 VUs, 40421 complete and 0 interrupted iterations
 ramp_up   [  60% ] 089/100 VUs  1m48.0s/3m00.0s
 
-running (1m49.0s), 090/100 VUs, 38807 complete and 0 interrupted iterations
+running (1m49.0s), 090/100 VUs, 41255 complete and 0 interrupted iterations
 ramp_up   [  61% ] 090/100 VUs  1m49.0s/3m00.0s
 
-running (1m50.0s), 091/100 VUs, 39581 complete and 0 interrupted iterations
+running (1m50.0s), 091/100 VUs, 42050 complete and 0 interrupted iterations
 ramp_up   [  61% ] 091/100 VUs  1m50.0s/3m00.0s
 
-running (1m51.0s), 092/100 VUs, 40426 complete and 0 interrupted iterations
+running (1m51.0s), 092/100 VUs, 42833 complete and 0 interrupted iterations
 ramp_up   [  62% ] 092/100 VUs  1m51.0s/3m00.0s
 
-running (1m52.0s), 093/100 VUs, 41300 complete and 0 interrupted iterations
+running (1m52.0s), 093/100 VUs, 43629 complete and 0 interrupted iterations
 ramp_up   [  62% ] 093/100 VUs  1m52.0s/3m00.0s
 
-running (1m53.0s), 094/100 VUs, 42177 complete and 0 interrupted iterations
+running (1m53.0s), 094/100 VUs, 44421 complete and 0 interrupted iterations
 ramp_up   [  63% ] 094/100 VUs  1m53.0s/3m00.0s
 
-running (1m54.0s), 094/100 VUs, 43021 complete and 0 interrupted iterations
+running (1m54.0s), 094/100 VUs, 45285 complete and 0 interrupted iterations
 ramp_up   [  63% ] 094/100 VUs  1m54.0s/3m00.0s
 
-running (1m55.0s), 095/100 VUs, 43631 complete and 0 interrupted iterations
+running (1m55.0s), 095/100 VUs, 46132 complete and 0 interrupted iterations
 ramp_up   [  64% ] 095/100 VUs  1m55.0s/3m00.0s
 
-running (1m56.0s), 096/100 VUs, 44257 complete and 0 interrupted iterations
+running (1m56.0s), 096/100 VUs, 46880 complete and 0 interrupted iterations
 ramp_up   [  64% ] 096/100 VUs  1m56.0s/3m00.0s
 
-running (1m57.0s), 097/100 VUs, 45116 complete and 0 interrupted iterations
+running (1m57.0s), 097/100 VUs, 47751 complete and 0 interrupted iterations
 ramp_up   [  65% ] 097/100 VUs  1m57.0s/3m00.0s
 
-running (1m58.0s), 098/100 VUs, 45993 complete and 0 interrupted iterations
+running (1m58.0s), 098/100 VUs, 48658 complete and 0 interrupted iterations
 ramp_up   [  66% ] 098/100 VUs  1m58.0s/3m00.0s
 
-running (1m59.0s), 099/100 VUs, 46863 complete and 0 interrupted iterations
+running (1m59.0s), 099/100 VUs, 49509 complete and 0 interrupted iterations
 ramp_up   [  66% ] 099/100 VUs  1m59.0s/3m00.0s
 
-running (2m00.0s), 099/100 VUs, 47746 complete and 0 interrupted iterations
+running (2m00.0s), 099/100 VUs, 50339 complete and 0 interrupted iterations
 ramp_up   [  67% ] 099/100 VUs  2m00.0s/3m00.0s
 
-running (2m01.0s), 100/100 VUs, 48595 complete and 0 interrupted iterations
+running (2m01.0s), 100/100 VUs, 51260 complete and 0 interrupted iterations
 ramp_up   [  67% ] 100/100 VUs  2m01.0s/3m00.0s
 
-running (2m02.0s), 100/100 VUs, 49330 complete and 0 interrupted iterations
+running (2m02.0s), 100/100 VUs, 52144 complete and 0 interrupted iterations
 ramp_up   [  68% ] 100/100 VUs  2m02.0s/3m00.0s
 
-running (2m03.0s), 100/100 VUs, 50169 complete and 0 interrupted iterations
+running (2m03.0s), 100/100 VUs, 52980 complete and 0 interrupted iterations
 ramp_up   [  68% ] 100/100 VUs  2m03.0s/3m00.0s
 
-running (2m04.0s), 100/100 VUs, 50984 complete and 0 interrupted iterations
+running (2m04.0s), 100/100 VUs, 53862 complete and 0 interrupted iterations
 ramp_up   [  69% ] 100/100 VUs  2m04.0s/3m00.0s
 
-running (2m05.0s), 100/100 VUs, 51814 complete and 0 interrupted iterations
+running (2m05.0s), 100/100 VUs, 54676 complete and 0 interrupted iterations
 ramp_up   [  69% ] 100/100 VUs  2m05.0s/3m00.0s
 
-running (2m06.0s), 100/100 VUs, 52565 complete and 0 interrupted iterations
+running (2m06.0s), 100/100 VUs, 55599 complete and 0 interrupted iterations
 ramp_up   [  70% ] 100/100 VUs  2m06.0s/3m00.0s
 
-running (2m07.0s), 100/100 VUs, 53337 complete and 0 interrupted iterations
+running (2m07.0s), 100/100 VUs, 56533 complete and 0 interrupted iterations
 ramp_up   [  71% ] 100/100 VUs  2m07.0s/3m00.0s
 
-running (2m08.0s), 100/100 VUs, 54039 complete and 0 interrupted iterations
+running (2m08.0s), 100/100 VUs, 57483 complete and 0 interrupted iterations
 ramp_up   [  71% ] 100/100 VUs  2m08.0s/3m00.0s
 
-running (2m09.0s), 100/100 VUs, 54896 complete and 0 interrupted iterations
+running (2m09.0s), 100/100 VUs, 58422 complete and 0 interrupted iterations
 ramp_up   [  72% ] 100/100 VUs  2m09.0s/3m00.0s
 
-running (2m10.0s), 100/100 VUs, 55770 complete and 0 interrupted iterations
+running (2m10.0s), 100/100 VUs, 59319 complete and 0 interrupted iterations
 ramp_up   [  72% ] 100/100 VUs  2m10.0s/3m00.0s
 
-running (2m11.0s), 100/100 VUs, 56609 complete and 0 interrupted iterations
+running (2m11.0s), 100/100 VUs, 60144 complete and 0 interrupted iterations
 ramp_up   [  73% ] 100/100 VUs  2m11.0s/3m00.0s
 
-running (2m12.0s), 100/100 VUs, 57577 complete and 0 interrupted iterations
+running (2m12.0s), 100/100 VUs, 60963 complete and 0 interrupted iterations
 ramp_up   [  73% ] 100/100 VUs  2m12.0s/3m00.0s
 
-running (2m13.0s), 100/100 VUs, 58369 complete and 0 interrupted iterations
+running (2m13.0s), 100/100 VUs, 61933 complete and 0 interrupted iterations
 ramp_up   [  74% ] 100/100 VUs  2m13.0s/3m00.0s
 
-running (2m14.0s), 100/100 VUs, 59134 complete and 0 interrupted iterations
+running (2m14.0s), 100/100 VUs, 62883 complete and 0 interrupted iterations
 ramp_up   [  74% ] 100/100 VUs  2m14.0s/3m00.0s
 
-running (2m15.0s), 100/100 VUs, 60012 complete and 0 interrupted iterations
+running (2m15.0s), 100/100 VUs, 63809 complete and 0 interrupted iterations
 ramp_up   [  75% ] 100/100 VUs  2m15.0s/3m00.0s
 
-running (2m16.0s), 100/100 VUs, 60916 complete and 0 interrupted iterations
+running (2m16.0s), 100/100 VUs, 64749 complete and 0 interrupted iterations
 ramp_up   [  76% ] 100/100 VUs  2m16.0s/3m00.0s
 
-running (2m17.0s), 100/100 VUs, 61882 complete and 0 interrupted iterations
+running (2m17.0s), 100/100 VUs, 65636 complete and 0 interrupted iterations
 ramp_up   [  76% ] 100/100 VUs  2m17.0s/3m00.0s
 
-running (2m18.0s), 100/100 VUs, 62752 complete and 0 interrupted iterations
+running (2m18.0s), 100/100 VUs, 66577 complete and 0 interrupted iterations
 ramp_up   [  77% ] 100/100 VUs  2m18.0s/3m00.0s
 
-running (2m19.0s), 100/100 VUs, 63465 complete and 0 interrupted iterations
+running (2m19.0s), 100/100 VUs, 67503 complete and 0 interrupted iterations
 ramp_up   [  77% ] 100/100 VUs  2m19.0s/3m00.0s
 
-running (2m20.0s), 100/100 VUs, 64295 complete and 0 interrupted iterations
+running (2m20.0s), 100/100 VUs, 68468 complete and 0 interrupted iterations
 ramp_up   [  78% ] 100/100 VUs  2m20.0s/3m00.0s
 
-running (2m21.0s), 100/100 VUs, 65218 complete and 0 interrupted iterations
+running (2m21.0s), 100/100 VUs, 69393 complete and 0 interrupted iterations
 ramp_up   [  78% ] 100/100 VUs  2m21.0s/3m00.0s
 
-running (2m22.0s), 100/100 VUs, 66031 complete and 0 interrupted iterations
+running (2m22.0s), 100/100 VUs, 70326 complete and 0 interrupted iterations
 ramp_up   [  79% ] 100/100 VUs  2m22.0s/3m00.0s
 
-running (2m23.0s), 100/100 VUs, 66980 complete and 0 interrupted iterations
+running (2m23.0s), 100/100 VUs, 71223 complete and 0 interrupted iterations
 ramp_up   [  79% ] 100/100 VUs  2m23.0s/3m00.0s
 
-running (2m24.0s), 100/100 VUs, 67887 complete and 0 interrupted iterations
+running (2m24.0s), 100/100 VUs, 72169 complete and 0 interrupted iterations
 ramp_up   [  80% ] 100/100 VUs  2m24.0s/3m00.0s
 
-running (2m25.0s), 100/100 VUs, 68655 complete and 0 interrupted iterations
+running (2m25.0s), 100/100 VUs, 73131 complete and 0 interrupted iterations
 ramp_up   [  81% ] 100/100 VUs  2m25.0s/3m00.0s
 
-running (2m26.0s), 100/100 VUs, 69516 complete and 0 interrupted iterations
+running (2m26.0s), 100/100 VUs, 74034 complete and 0 interrupted iterations
 ramp_up   [  81% ] 100/100 VUs  2m26.0s/3m00.0s
 
-running (2m27.0s), 100/100 VUs, 70438 complete and 0 interrupted iterations
+running (2m27.0s), 100/100 VUs, 74903 complete and 0 interrupted iterations
 ramp_up   [  82% ] 100/100 VUs  2m27.0s/3m00.0s
 
-running (2m28.0s), 100/100 VUs, 71267 complete and 0 interrupted iterations
+running (2m28.0s), 100/100 VUs, 75799 complete and 0 interrupted iterations
 ramp_up   [  82% ] 100/100 VUs  2m28.0s/3m00.0s
 
-running (2m29.0s), 100/100 VUs, 72177 complete and 0 interrupted iterations
+running (2m29.0s), 100/100 VUs, 76673 complete and 0 interrupted iterations
 ramp_up   [  83% ] 100/100 VUs  2m29.0s/3m00.0s
 
-running (2m30.0s), 100/100 VUs, 72981 complete and 0 interrupted iterations
+running (2m30.0s), 100/100 VUs, 77618 complete and 0 interrupted iterations
 ramp_up   [  83% ] 100/100 VUs  2m30.0s/3m00.0s
 
-running (2m31.0s), 100/100 VUs, 73836 complete and 0 interrupted iterations
+running (2m31.0s), 100/100 VUs, 78466 complete and 0 interrupted iterations
 ramp_up   [  84% ] 100/100 VUs  2m31.0s/3m00.0s
 
-running (2m32.0s), 100/100 VUs, 74775 complete and 0 interrupted iterations
+running (2m32.0s), 100/100 VUs, 79438 complete and 0 interrupted iterations
 ramp_up   [  84% ] 100/100 VUs  2m32.0s/3m00.0s
 
-running (2m33.0s), 100/100 VUs, 75666 complete and 0 interrupted iterations
+running (2m33.0s), 100/100 VUs, 80298 complete and 0 interrupted iterations
 ramp_up   [  85% ] 100/100 VUs  2m33.0s/3m00.0s
 
-running (2m34.0s), 100/100 VUs, 76599 complete and 0 interrupted iterations
+running (2m34.0s), 100/100 VUs, 81177 complete and 0 interrupted iterations
 ramp_up   [  86% ] 100/100 VUs  2m34.0s/3m00.0s
 
-running (2m35.0s), 100/100 VUs, 77520 complete and 0 interrupted iterations
+running (2m35.0s), 100/100 VUs, 82085 complete and 0 interrupted iterations
 ramp_up   [  86% ] 100/100 VUs  2m35.0s/3m00.0s
 
-running (2m36.0s), 100/100 VUs, 78198 complete and 0 interrupted iterations
+running (2m36.0s), 100/100 VUs, 83035 complete and 0 interrupted iterations
 ramp_up   [  87% ] 100/100 VUs  2m36.0s/3m00.0s
 
-running (2m37.0s), 100/100 VUs, 79044 complete and 0 interrupted iterations
+running (2m37.0s), 100/100 VUs, 83983 complete and 0 interrupted iterations
 ramp_up   [  87% ] 100/100 VUs  2m37.0s/3m00.0s
 
-running (2m38.0s), 100/100 VUs, 80005 complete and 0 interrupted iterations
+running (2m38.0s), 100/100 VUs, 84803 complete and 0 interrupted iterations
 ramp_up   [  88% ] 100/100 VUs  2m38.0s/3m00.0s
 
-running (2m39.0s), 100/100 VUs, 80839 complete and 0 interrupted iterations
+running (2m39.0s), 100/100 VUs, 85757 complete and 0 interrupted iterations
 ramp_up   [  88% ] 100/100 VUs  2m39.0s/3m00.0s
 
-running (2m40.0s), 100/100 VUs, 81803 complete and 0 interrupted iterations
+running (2m40.0s), 100/100 VUs, 86666 complete and 0 interrupted iterations
 ramp_up   [  89% ] 100/100 VUs  2m40.0s/3m00.0s
 
-running (2m41.0s), 100/100 VUs, 82710 complete and 0 interrupted iterations
+running (2m41.0s), 100/100 VUs, 87497 complete and 0 interrupted iterations
 ramp_up   [  89% ] 100/100 VUs  2m41.0s/3m00.0s
 
-running (2m42.0s), 100/100 VUs, 83539 complete and 0 interrupted iterations
+running (2m42.0s), 100/100 VUs, 88436 complete and 0 interrupted iterations
 ramp_up   [  90% ] 100/100 VUs  2m42.0s/3m00.0s
 
-running (2m43.0s), 100/100 VUs, 84361 complete and 0 interrupted iterations
+running (2m43.0s), 100/100 VUs, 89336 complete and 0 interrupted iterations
 ramp_up   [  91% ] 100/100 VUs  2m43.0s/3m00.0s
 
-running (2m44.0s), 100/100 VUs, 85277 complete and 0 interrupted iterations
+running (2m44.0s), 100/100 VUs, 90228 complete and 0 interrupted iterations
 ramp_up   [  91% ] 100/100 VUs  2m44.0s/3m00.0s
 
-running (2m45.0s), 100/100 VUs, 86173 complete and 0 interrupted iterations
+running (2m45.0s), 100/100 VUs, 91164 complete and 0 interrupted iterations
 ramp_up   [  92% ] 100/100 VUs  2m45.0s/3m00.0s
 
-running (2m46.0s), 100/100 VUs, 87141 complete and 0 interrupted iterations
+running (2m46.0s), 100/100 VUs, 92000 complete and 0 interrupted iterations
 ramp_up   [  92% ] 100/100 VUs  2m46.0s/3m00.0s
 
-running (2m47.0s), 100/100 VUs, 87779 complete and 0 interrupted iterations
+running (2m47.0s), 100/100 VUs, 92833 complete and 0 interrupted iterations
 ramp_up   [  93% ] 100/100 VUs  2m47.0s/3m00.0s
 
-running (2m48.0s), 100/100 VUs, 88625 complete and 0 interrupted iterations
+running (2m48.0s), 100/100 VUs, 93756 complete and 0 interrupted iterations
 ramp_up   [  93% ] 100/100 VUs  2m48.0s/3m00.0s
 
-running (2m49.0s), 100/100 VUs, 89587 complete and 0 interrupted iterations
+running (2m49.0s), 100/100 VUs, 94683 complete and 0 interrupted iterations
 ramp_up   [  94% ] 100/100 VUs  2m49.0s/3m00.0s
 
-running (2m50.0s), 100/100 VUs, 90533 complete and 0 interrupted iterations
+running (2m50.0s), 100/100 VUs, 95582 complete and 0 interrupted iterations
 ramp_up   [  94% ] 100/100 VUs  2m50.0s/3m00.0s
 
-running (2m51.0s), 100/100 VUs, 91502 complete and 0 interrupted iterations
+running (2m51.0s), 100/100 VUs, 96548 complete and 0 interrupted iterations
 ramp_up   [  95% ] 100/100 VUs  2m51.0s/3m00.0s
 
-running (2m52.0s), 100/100 VUs, 92453 complete and 0 interrupted iterations
+running (2m52.0s), 100/100 VUs, 97383 complete and 0 interrupted iterations
 ramp_up   [  96% ] 100/100 VUs  2m52.0s/3m00.0s
 
-running (2m53.0s), 100/100 VUs, 93079 complete and 0 interrupted iterations
+running (2m53.0s), 100/100 VUs, 98339 complete and 0 interrupted iterations
 ramp_up   [  96% ] 100/100 VUs  2m53.0s/3m00.0s
 
-running (2m54.0s), 100/100 VUs, 93841 complete and 0 interrupted iterations
+running (2m54.0s), 100/100 VUs, 99303 complete and 0 interrupted iterations
 ramp_up   [  97% ] 100/100 VUs  2m54.0s/3m00.0s
 
-running (2m55.0s), 100/100 VUs, 94781 complete and 0 interrupted iterations
+running (2m55.0s), 100/100 VUs, 100256 complete and 0 interrupted iterations
 ramp_up   [  97% ] 100/100 VUs  2m55.0s/3m00.0s
 
-running (2m56.0s), 100/100 VUs, 95635 complete and 0 interrupted iterations
+running (2m56.0s), 100/100 VUs, 101177 complete and 0 interrupted iterations
 ramp_up   [  98% ] 100/100 VUs  2m56.0s/3m00.0s
 
-running (2m57.0s), 100/100 VUs, 96590 complete and 0 interrupted iterations
+running (2m57.0s), 100/100 VUs, 102055 complete and 0 interrupted iterations
 ramp_up   [  98% ] 100/100 VUs  2m57.0s/3m00.0s
 
-running (2m58.0s), 100/100 VUs, 97445 complete and 0 interrupted iterations
+running (2m58.0s), 100/100 VUs, 102941 complete and 0 interrupted iterations
 ramp_up   [  99% ] 100/100 VUs  2m58.0s/3m00.0s
 
-running (2m59.0s), 100/100 VUs, 98159 complete and 0 interrupted iterations
+running (2m59.0s), 100/100 VUs, 103895 complete and 0 interrupted iterations
 ramp_up   [  99% ] 100/100 VUs  2m59.0s/3m00.0s
 
-running (3m00.0s), 100/100 VUs, 99132 complete and 0 interrupted iterations
+running (3m00.0s), 100/100 VUs, 104854 complete and 0 interrupted iterations
 ramp_up   [ 100% ] 100/100 VUs  3m00.0s/3m00.0s
 
 
@@ -846,76 +768,71 @@ ramp_up   [ 100% ] 100/100 VUs  3m00.0s/3m00.0s
 
   █ TOTAL RESULTS 
 
-    checks_total.......: 99249   551.061482/s
-    checks_succeeded...: 100.00% 99249 out of 99249
-    checks_failed......: 0.00%   0 out of 99249
+    checks_total.......: 104967 582.806348/s
+    checks_succeeded...: 99.99% 104962 out of 104967
+    checks_failed......: 0.00%  5 out of 104967
 
-    ✓ status 200
+    ✗ status 200
+      ↳  99% — ✓ 104962 / ✗ 5
 
     HTTP
-    http_req_duration..............: avg=18.07ms  min=1.33ms   med=4.32ms   max=1.12s p(90)=43.35ms  p(95)=87.58ms
-      { expected_response:true }...: avg=18.07ms  min=1.33ms   med=4.32ms   max=1.12s p(90)=43.35ms  p(95)=87.58ms
-    http_req_failed................: 0.00%  0 out of 99249
-    http_reqs......................: 99249  551.061482/s
+    http_req_duration..............: avg=11.62ms  min=1.22ms   med=3.55ms   max=5.37s p(90)=22ms     p(95)=56.99ms 
+      { expected_response:true }...: avg=11.37ms  min=1.22ms   med=3.55ms   max=1.08s p(90)=21.98ms  p(95)=56.98ms 
+    http_req_failed................: 0.00%  5 out of 104967
+    http_reqs......................: 104967 582.806348/s
 
     EXECUTION
-    iteration_duration.............: avg=118.79ms min=101.48ms med=105.02ms max=1.22s p(90)=144.18ms p(95)=188.7ms
-    iterations.....................: 99249  551.061482/s
-    vus............................: 100    min=0          max=100
-    vus_max........................: 100    min=100        max=100
+    iteration_duration.............: avg=112.32ms min=101.53ms med=104.24ms max=5.47s p(90)=122.97ms p(95)=158.06ms
+    iterations.....................: 104967 582.806348/s
+    vus............................: 100    min=0           max=100
+    vus_max........................: 100    min=100         max=100
 
     NETWORK
-    data_received..................: 26 MB  142 kB/s
-    data_sent......................: 9.8 MB 55 kB/s
+    data_received..................: 27 MB  150 kB/s
+    data_sent......................: 10 MB  58 kB/s
 
 
 
 
-running (3m00.1s), 000/100 VUs, 99249 complete and 0 interrupted iterations
+running (3m00.1s), 000/100 VUs, 104967 complete and 0 interrupted iterations
 ramp_up ✓ [ 100% ] 000/100 VUs  3m0s
 NAME   REFERENCE        TARGETS         MINPODS   MAXPODS   REPLICAS   AGE
-api    Deployment/api   cpu: 421%/60%   1         5         5          4m51s
+api    Deployment/api   cpu: 368%/60%   1         5         5          4m35s
 OK: replica api 5 setelah beban
 ### 9. compose/ ###
- Image dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690 Pulling 
  Image postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15 Pulling 
- Image ghcr.io/qrizan/nestjs-swagger-prisma:0.0.1-rc.4@sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870 Pulling 
- Image nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de Pulling 
  Image ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985 Pulling 
+ Image nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de Pulling 
+ Image dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690 Pulling 
  Image ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8 Pulling 
+ Image ghcr.io/qrizan/nestjs-swagger-prisma:0.0.2@sha256:5d4e2db57864f8ab0da3523333bf16e84cafcb10daa36ebcb4c869f95a4b0640 Pulling 
  Image dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690 Pulled 
- 039e6f9f9752 Already exists 0B
- 5404bc2cc13c Already exists 0B
- 555d35074583 Already exists 0B
- 8f99eb9866f3 Already exists 0B
- c0ed9f2d0e0e Already exists 0B
- 889c0b87d4a2 Pulling fs layer 0B
- e4c1cddf8a28 Pulling fs layer 0B
- 586583a8f7b6 Pulling fs layer 0B
- 109614fa76e1 Pulling fs layer 0B
- ce9709510868 Pulling fs layer 0B
- 2cde3ff64063 Pulling fs layer 0B
- 5c31e8d46e54 Pulling fs layer 0B
- 24f908150917 Pulling fs layer 0B
- 109614fa76e1 Waiting 0B
- ce9709510868 Waiting 0B
- 2cde3ff64063 Waiting 0B
- 5c31e8d46e54 Waiting 0B
- 24f908150917 Waiting 0B
  f18232174bc9 Already exists 0B
  576fe098e846 Already exists 0B
  945f5aaec3d7 Already exists 0B
  513bae533eb2 Already exists 0B
- 039e6f9f9752 Already exists 0B
  048c29a61317 Already exists 0B
  8f7ead5f2dc0 Already exists 0B
- 5404bc2cc13c Already exists 0B
- 555d35074583 Already exists 0B
  b16687ec2b7b Already exists 0B
  f79056b7935e Already exists 0B
+ 400c1de759f4 Already exists 0B
+ 91e7a994d5d9 Pulling fs layer 0B
+ 815c187a63e1 Pulling fs layer 0B
+ 42edb72eb570 Pulling fs layer 0B
+ d1012136fa39 Pulling fs layer 0B
+ 8ec4a45f679a Pulling fs layer 0B
+ d1012136fa39 Waiting 0B
+ 8ec4a45f679a Waiting 0B
+ 039e6f9f9752 Already exists 0B
+ 039e6f9f9752 Already exists 0B
+ 5404bc2cc13c Already exists 0B
+ 5404bc2cc13c Already exists 0B
+ 555d35074583 Already exists 0B
+ 555d35074583 Already exists 0B
+ 8f99eb9866f3 Already exists 0B
  8f99eb9866f3 Already exists 0B
  c0ed9f2d0e0e Already exists 0B
- 400c1de759f4 Already exists 0B
+ c0ed9f2d0e0e Already exists 0B
  fcd700f932d0 Pulling fs layer 0B
  e4829758072a Pulling fs layer 0B
  2ae52837819d Pulling fs layer 0B
@@ -923,38 +840,109 @@ OK: replica api 5 setelah beban
  848d5188fd84 Pulling fs layer 0B
  b11b0beee0c9 Pulling fs layer 0B
  86f656396646 Pulling fs layer 0B
+ b11b0beee0c9 Waiting 0B
  2ae52837819d Waiting 0B
+ 86f656396646 Waiting 0B
  ea2774db19fa Waiting 0B
  848d5188fd84 Waiting 0B
- b11b0beee0c9 Waiting 0B
- 86f656396646 Waiting 0B
  fcd700f932d0 Waiting 0B
  e4829758072a Waiting 0B
- 91e7a994d5d9 Pulling fs layer 0B
- 815c187a63e1 Pulling fs layer 0B
- 42edb72eb570 Pulling fs layer 0B
- d1012136fa39 Pulling fs layer 0B
- 8ec4a45f679a Pulling fs layer 0B
- 91e7a994d5d9 Waiting 0B
- 815c187a63e1 Waiting 0B
- 42edb72eb570 Waiting 0B
- 8ec4a45f679a Waiting 0B
- d1012136fa39 Waiting 0B
- e4c1cddf8a28 Downloading 276B
- e4c1cddf8a28 Verifying Checksum 0B
- e4c1cddf8a28 Download complete 0B
- 586583a8f7b6 Downloading 93B
- 586583a8f7b6 Download complete 0B
- 889c0b87d4a2 Downloading 28.94kB
- 889c0b87d4a2 Downloading 57.48kB
- 889c0b87d4a2 Downloading 129.8kB
- 889c0b87d4a2 Downloading 162.5kB
- 889c0b87d4a2 Downloading 195.3kB
- 889c0b87d4a2 Downloading 228.1kB
- 889c0b87d4a2 Downloading 260.8kB
- 889c0b87d4a2 Downloading 293.6kB
+ c3d81b031706 Pulling fs layer 0B
+ 38473b395a0c Pulling fs layer 0B
+ a8bdc7a16c7c Pulling fs layer 0B
+ 227453fba3da Pulling fs layer 0B
+ 7514b89df490 Pulling fs layer 0B
+ c7431a9e5612 Pulling fs layer 0B
+ 38d912d9f275 Pulling fs layer 0B
+ 131e0b8ce827 Pulling fs layer 0B
+ c3d81b031706 Waiting 0B
+ 227453fba3da Waiting 0B
+ 7514b89df490 Waiting 0B
+ 38473b395a0c Waiting 0B
+ c7431a9e5612 Waiting 0B
+ a8bdc7a16c7c Waiting 0B
+ 131e0b8ce827 Waiting 0B
+ 38d912d9f275 Waiting 0B
+ 815c187a63e1 Downloading 297B
+ 815c187a63e1 Verifying Checksum 0B
+ 815c187a63e1 Download complete 0B
+ 91e7a994d5d9 Downloading 80.6kB
+ 91e7a994d5d9 Downloading 162.5kB
+ 91e7a994d5d9 Downloading 244.4kB
+ 91e7a994d5d9 Downloading 326.4kB
+ 91e7a994d5d9 Downloading 408.3kB
+ 91e7a994d5d9 Downloading 490.2kB
+ 91e7a994d5d9 Downloading 572.1kB
+ 91e7a994d5d9 Downloading 654kB
+ 42edb72eb570 Downloading 460B
+ 42edb72eb570 Downloading 460B
+ 42edb72eb570 Verifying Checksum 0B
+ 42edb72eb570 Download complete 0B
+ 91e7a994d5d9 Downloading 736kB
+ 91e7a994d5d9 Downloading 817.9kB
+ 91e7a994d5d9 Downloading 899.8kB
+ 55afa1ecc21d Already exists 0B
+ d5392b8b2486 Pulling fs layer 0B
+ c789cfcee1a8 Pulling fs layer 0B
+ 8c4cf0b70797 Pulling fs layer 0B
+ d5c3772878da Pulling fs layer 0B
+ d5392b8b2486 Waiting 0B
+ 8c4cf0b70797 Waiting 0B
+ 76b8b44efa5a Pulling fs layer 0B
+ c789cfcee1a8 Waiting 0B
+ d5c3772878da Waiting 0B
+ 9530417d1dbb Pulling fs layer 0B
+ c24407d2ec97 Pulling fs layer 0B
+ 21225587b6ee Pulling fs layer 0B
+ 76b8b44efa5a Waiting 0B
+ 9530417d1dbb Waiting 0B
+ 21225587b6ee Waiting 0B
+ 91e7a994d5d9 Downloading 981.7kB
+ 91e7a994d5d9 Downloading 1.064MB
+ 91e7a994d5d9 Downloading 1.146MB
+ 91e7a994d5d9 Downloading 1.227MB
+ d1012136fa39 Downloading 456B
+ d1012136fa39 Verifying Checksum 0B
+ d1012136fa39 Download complete 0B
+ 91e7a994d5d9 Downloading 1.309MB
+ 91e7a994d5d9 Downloading 1.391MB
+ 91e7a994d5d9 Downloading 1.473MB
+ 8ec4a45f679a Downloading 4.134kB
+ 8ec4a45f679a Downloading 8.268kB
+ 8ec4a45f679a Downloading 36.97kB
+ 8ec4a45f679a Downloading 61.62kB
+ 8ec4a45f679a Downloading 80.61kB
+ 8ec4a45f679a Downloading 113.4kB
+ 91e7a994d5d9 Downloading 1.555MB
+ 8ec4a45f679a Downloading 146.1kB
+ fcd700f932d0 Downloading 276B
+ fcd700f932d0 Verifying Checksum 0B
+ fcd700f932d0 Download complete 0B
+ fcd700f932d0 Extracting 276B
+ fcd700f932d0 Extracting 276B
+ 8ec4a45f679a Downloading 162.5kB
+ fcd700f932d0 Pull complete 0B
+ 8ec4a45f679a Downloading 178.9kB
+ 8ec4a45f679a Downloading 195.3kB
+ 91e7a994d5d9 Downloading 1.637MB
+ 8ec4a45f679a Downloading 211.7kB
+ 8ec4a45f679a Downloading 228.1kB
+ 8ec4a45f679a Downloading 244.4kB
+ 8ec4a45f679a Downloading 260.8kB
+ 8ec4a45f679a Downloading 277.2kB
+ e4829758072a Downloading 93B
+ e4829758072a Verifying Checksum 0B
+ e4829758072a Download complete 0B
+ e4829758072a Extracting 93B
+ e4829758072a Extracting 93B
+ e4829758072a Pull complete 0B
+ 8ec4a45f679a Downloading 293.6kB
+ 8ec4a45f679a Downloading 310kB
+ 8ec4a45f679a Downloading 326.4kB
+ 8ec4a45f679a Downloading 331.9kB
+ 8ec4a45f679a Download complete 0B
+ 91e7a994d5d9 Downloading 1.719MB
  6a0ac1617861 Already exists 0B
- 889c0b87d4a2 Downloading 326.4kB
  82736a35d0e7 Pulling fs layer 0B
  583599bb7d38 Pulling fs layer 0B
  aee4e54b3865 Pulling fs layer 0B
@@ -962,379 +950,293 @@ OK: replica api 5 setelah beban
  453da7dbc73e Pulling fs layer 0B
  4a8b0b2a5b19 Pulling fs layer 0B
  612c0c1df4c5 Pulling fs layer 0B
- 4a8b0b2a5b19 Waiting 0B
- 612c0c1df4c5 Waiting 0B
  aee4e54b3865 Waiting 0B
  781ff50d2644 Waiting 0B
  453da7dbc73e Waiting 0B
  82736a35d0e7 Waiting 0B
+ 612c0c1df4c5 Waiting 0B
+ 4a8b0b2a5b19 Waiting 0B
  583599bb7d38 Waiting 0B
- 889c0b87d4a2 Downloading 359.1kB
- 889c0b87d4a2 Downloading 391.9kB
- 889c0b87d4a2 Downloading 424.7kB
- 889c0b87d4a2 Downloading 457.4kB
- 55afa1ecc21d Already exists 0B
- d5392b8b2486 Pulling fs layer 0B
- c789cfcee1a8 Pulling fs layer 0B
- 8c4cf0b70797 Pulling fs layer 0B
- d5c3772878da Pulling fs layer 0B
- 76b8b44efa5a Pulling fs layer 0B
- 9530417d1dbb Pulling fs layer 0B
- c24407d2ec97 Pulling fs layer 0B
- c789cfcee1a8 Waiting 0B
- 8c4cf0b70797 Waiting 0B
- d5392b8b2486 Waiting 0B
- d5c3772878da Waiting 0B
- 9530417d1dbb Waiting 0B
- 76b8b44efa5a Waiting 0B
- 21225587b6ee Pulling fs layer 0B
- c24407d2ec97 Waiting 0B
- 21225587b6ee Waiting 0B
- 889c0b87d4a2 Downloading 490.2kB
- ce9709510868 Downloading 1.378kB
- ce9709510868 Downloading 4.134kB
- 889c0b87d4a2 Downloading 523kB
- ce9709510868 Download complete 0B
- 889c0b87d4a2 Downloading 555.7kB
- 889c0b87d4a2 Downloading 594.8kB
- 889c0b87d4a2 Downloading 631.3kB
- 2cde3ff64063 Downloading 1.378kB
- 2cde3ff64063 Downloading 1.411kB
- 2cde3ff64063 Verifying Checksum 0B
- 2cde3ff64063 Download complete 0B
- 889c0b87d4a2 Downloading 664.1kB
- 109614fa76e1 Downloading 523kB
- 889c0b87d4a2 Downloading 696.9kB
- 889c0b87d4a2 Downloading 729.6kB
- 889c0b87d4a2 Downloading 762.4kB
- 889c0b87d4a2 Downloading 795.2kB
- 889c0b87d4a2 Downloading 827.9kB
- 889c0b87d4a2 Downloading 860.7kB
- 5c31e8d46e54 Downloading 1.378kB
- 5c31e8d46e54 Verifying Checksum 0B
- 5c31e8d46e54 Download complete 0B
- 889c0b87d4a2 Downloading 893.5kB
- 889c0b87d4a2 Downloading 926.2kB
- 889c0b87d4a2 Downloading 959kB
- 889c0b87d4a2 Downloading 991.8kB
- 889c0b87d4a2 Downloading 1.025MB
- 889c0b87d4a2 Downloading 1.053MB
- 889c0b87d4a2 Downloading 1.086MB
- 889c0b87d4a2 Downloading 1.119MB
- 889c0b87d4a2 Downloading 1.152MB
- 889c0b87d4a2 Downloading 1.185MB
- 889c0b87d4a2 Downloading 1.217MB
- 889c0b87d4a2 Downloading 1.25MB
- 889c0b87d4a2 Downloading 1.283MB
- 109614fa76e1 Downloading 1.047MB
- 889c0b87d4a2 Downloading 1.326MB
- 889c0b87d4a2 Downloading 1.358MB
- 889c0b87d4a2 Downloading 1.391MB
- 889c0b87d4a2 Downloading 1.424MB
- 889c0b87d4a2 Downloading 1.457MB
- 889c0b87d4a2 Downloading 1.489MB
- 889c0b87d4a2 Downloading 1.522MB
- 889c0b87d4a2 Downloading 1.555MB
- 889c0b87d4a2 Downloading 1.598MB
- 889c0b87d4a2 Downloading 1.631MB
- 889c0b87d4a2 Downloading 1.663MB
- 889c0b87d4a2 Downloading 1.696MB
- 889c0b87d4a2 Downloading 1.729MB
- 889c0b87d4a2 Downloading 1.762MB
- 889c0b87d4a2 Downloading 1.794MB
- 889c0b87d4a2 Downloading 1.837MB
- 109614fa76e1 Downloading 1.572MB
- 889c0b87d4a2 Downloading 1.87MB
- 889c0b87d4a2 Downloading 1.903MB
- 889c0b87d4a2 Downloading 1.936MB
- 889c0b87d4a2 Downloading 1.968MB
- 889c0b87d4a2 Downloading 2.001MB
- 889c0b87d4a2 Downloading 2.034MB
- 889c0b87d4a2 Downloading 2.067MB
- 889c0b87d4a2 Downloading 2.109MB
- 889c0b87d4a2 Downloading 2.142MB
- 889c0b87d4a2 Downloading 2.175MB
- 889c0b87d4a2 Downloading 2.208MB
- 889c0b87d4a2 Downloading 2.241MB
- 889c0b87d4a2 Downloading 2.273MB
- 24f908150917 Downloading 1.378kB
- 24f908150917 Downloading 5.512kB
- 889c0b87d4a2 Downloading 2.306MB
- 24f908150917 Downloading 6.89kB
- 24f908150917 Downloading 17.76kB
- 24f908150917 Downloading 58.87kB
- 889c0b87d4a2 Downloading 2.339MB
- 24f908150917 Downloading 80.62kB
- 24f908150917 Downloading 84.99kB
- 24f908150917 Verifying Checksum 0B
- 24f908150917 Download complete 0B
- 109614fa76e1 Downloading 2.096MB
- 889c0b87d4a2 Downloading 2.372MB
- 889c0b87d4a2 Downloading 2.404MB
- 889c0b87d4a2 Downloading 2.437MB
- 889c0b87d4a2 Downloading 2.47MB
- 889c0b87d4a2 Downloading 2.503MB
- 889c0b87d4a2 Downloading 2.535MB
- 889c0b87d4a2 Downloading 2.568MB
- fcd700f932d0 Downloading 276B
- fcd700f932d0 Verifying Checksum 0B
- fcd700f932d0 Extracting 276B
- fcd700f932d0 Extracting 276B
- 889c0b87d4a2 Downloading 2.601MB
- fcd700f932d0 Pull complete 0B
- 889c0b87d4a2 Downloading 2.634MB
- 889c0b87d4a2 Downloading 2.667MB
- 889c0b87d4a2 Downloading 2.699MB
- 889c0b87d4a2 Downloading 2.735MB
- 889c0b87d4a2 Downloading 2.768MB
- 889c0b87d4a2 Downloading 2.8MB
- 889c0b87d4a2 Verifying Checksum 0B
- 889c0b87d4a2 Download complete 0B
- 889c0b87d4a2 Extracting 32.77kB
- 889c0b87d4a2 Extracting 2.827MB
- 889c0b87d4a2 Pull complete 0B
- e4c1cddf8a28 Extracting 276B
- e4c1cddf8a28 Extracting 276B
- e4c1cddf8a28 Pull complete 0B
- 586583a8f7b6 Extracting 93B
- 586583a8f7b6 Extracting 93B
- 586583a8f7b6 Pull complete 0B
- e4829758072a Downloading 93B
- e4829758072a Verifying Checksum 0B
- e4829758072a Download complete 0B
- e4829758072a Extracting 93B
- e4829758072a Extracting 93B
- e4829758072a Pull complete 0B
+ 91e7a994d5d9 Downloading 1.801MB
  2ae52837819d Downloading 80.6kB
- ea2774db19fa Downloading 4.134kB
- ea2774db19fa Downloading 45.23kB
- ea2774db19fa Downloading 57.48kB
+ 91e7a994d5d9 Downloading 1.883MB
  2ae52837819d Downloading 162.5kB
- ea2774db19fa Downloading 96.99kB
- ea2774db19fa Downloading 113.4kB
+ 2ae52837819d Downloading 244.4kB
+ 2ae52837819d Downloading 326.4kB
+ 91e7a994d5d9 Downloading 1.965MB
+ 91e7a994d5d9 Downloading 2.047MB
+ 2ae52837819d Downloading 408.3kB
+ 91e7a994d5d9 Downloading 2.129MB
+ 2ae52837819d Downloading 490.2kB
+ ea2774db19fa Downloading 4.134kB
+ ea2774db19fa Downloading 12.4kB
+ ea2774db19fa Downloading 28.94kB
+ ea2774db19fa Downloading 64.22kB
+ ea2774db19fa Downloading 80.61kB
  ea2774db19fa Downloading 129.8kB
- ea2774db19fa Downloading 146.1kB
+ 91e7a994d5d9 Downloading 2.211MB
+ ea2774db19fa Downloading 162.5kB
  ea2774db19fa Downloading 178.9kB
- ea2774db19fa Downloading 211.7kB
- 109614fa76e1 Downloading 2.619MB
+ ea2774db19fa Downloading 195.3kB
  ea2774db19fa Downloading 228.1kB
+ ea2774db19fa Downloading 244.4kB
  ea2774db19fa Downloading 260.8kB
+ 2ae52837819d Downloading 572.1kB
+ ea2774db19fa Downloading 277.2kB
  ea2774db19fa Downloading 293.6kB
  ea2774db19fa Downloading 310kB
  ea2774db19fa Verifying Checksum 0B
  ea2774db19fa Download complete 0B
- 2ae52837819d Downloading 244.4kB
- 2ae52837819d Downloading 326.4kB
- 2ae52837819d Downloading 408.3kB
+ 91e7a994d5d9 Downloading 2.292MB
+ 2ae52837819d Downloading 654kB
+ 2ae52837819d Downloading 736kB
+ 2ae52837819d Downloading 817.9kB
+ 2ae52837819d Downloading 899.8kB
+ 91e7a994d5d9 Downloading 2.374MB
+ 2ae52837819d Downloading 981.7kB
+ 91e7a994d5d9 Downloading 2.456MB
+ 2ae52837819d Downloading 1.064MB
+ 91e7a994d5d9 Downloading 2.538MB
+ 91e7a994d5d9 Downloading 2.62MB
+ 2ae52837819d Downloading 1.146MB
+ 91e7a994d5d9 Downloading 2.702MB
+ 2ae52837819d Downloading 1.227MB
+ 91e7a994d5d9 Downloading 2.784MB
+ 2ae52837819d Downloading 1.309MB
+ 91e7a994d5d9 Downloading 2.866MB
+ 2ae52837819d Downloading 1.391MB
+ 91e7a994d5d9 Downloading 2.948MB
+ 2ae52837819d Downloading 1.473MB
+ 91e7a994d5d9 Downloading 3.03MB
+ 2ae52837819d Downloading 1.555MB
+ 91e7a994d5d9 Downloading 3.112MB
+ 2ae52837819d Downloading 1.637MB
+ 91e7a994d5d9 Downloading 3.194MB
+ 2ae52837819d Downloading 1.719MB
+ 91e7a994d5d9 Downloading 3.275MB
+ 2ae52837819d Downloading 1.801MB
+ 2ae52837819d Downloading 1.883MB
+ 91e7a994d5d9 Downloading 3.357MB
+ 91e7a994d5d9 Downloading 3.439MB
+ 2ae52837819d Downloading 1.965MB
+ 2ae52837819d Downloading 2.047MB
+ 91e7a994d5d9 Downloading 3.535MB
  848d5188fd84 Downloading 6.89kB
- 848d5188fd84 Downloading 21.9kB
- 848d5188fd84 Downloading 51.97kB
+ 848d5188fd84 Downloading 35.68kB
+ 848d5188fd84 Downloading 57.49kB
  848d5188fd84 Downloading 80.61kB
- 848d5188fd84 Downloading 113.4kB
- 848d5188fd84 Downloading 129.8kB
  848d5188fd84 Downloading 162.5kB
- 2ae52837819d Downloading 490.2kB
  848d5188fd84 Downloading 178.9kB
- 848d5188fd84 Downloading 195.3kB
  848d5188fd84 Downloading 211.7kB
  848d5188fd84 Downloading 228.1kB
- 848d5188fd84 Downloading 244.4kB
- 848d5188fd84 Downloading 260.8kB
+ 2ae52837819d Downloading 2.129MB
  848d5188fd84 Downloading 277.2kB
- 2ae52837819d Downloading 572.1kB
  848d5188fd84 Downloading 293.6kB
  848d5188fd84 Downloading 310kB
  848d5188fd84 Downloading 326.4kB
+ 91e7a994d5d9 Downloading 3.617MB
+ 2ae52837819d Downloading 2.211MB
  848d5188fd84 Downloading 342.8kB
  848d5188fd84 Downloading 359.1kB
- 109614fa76e1 Downloading 3.153MB
  848d5188fd84 Downloading 375.5kB
- 2ae52837819d Downloading 654kB
+ 2ae52837819d Downloading 2.292MB
+ 91e7a994d5d9 Downloading 3.699MB
  848d5188fd84 Downloading 391.9kB
  848d5188fd84 Downloading 408.3kB
  848d5188fd84 Downloading 424.7kB
  848d5188fd84 Downloading 441.1kB
- 2ae52837819d Downloading 736kB
+ 2ae52837819d Downloading 2.374MB
  848d5188fd84 Downloading 457.4kB
+ 91e7a994d5d9 Downloading 3.781MB
  848d5188fd84 Downloading 473.8kB
  848d5188fd84 Downloading 490.2kB
- 2ae52837819d Downloading 817.9kB
  848d5188fd84 Downloading 506.6kB
+ 2ae52837819d Downloading 2.456MB
  848d5188fd84 Downloading 523kB
- 2ae52837819d Downloading 899.8kB
+ 91e7a994d5d9 Downloading 3.863MB
  848d5188fd84 Downloading 539.4kB
  848d5188fd84 Downloading 555.7kB
+ 2ae52837819d Downloading 2.538MB
  848d5188fd84 Downloading 572.1kB
  848d5188fd84 Downloading 588.5kB
- 2ae52837819d Downloading 981.7kB
  848d5188fd84 Downloading 604.9kB
  848d5188fd84 Downloading 621.3kB
+ 2ae52837819d Downloading 2.62MB
+ 91e7a994d5d9 Downloading 3.945MB
+ 2ae52837819d Downloading 2.702MB
  848d5188fd84 Downloading 637.7kB
  848d5188fd84 Downloading 654kB
+ 2ae52837819d Downloading 2.784MB
  848d5188fd84 Downloading 670.4kB
- 109614fa76e1 Downloading 3.678MB
  848d5188fd84 Downloading 686.7kB
  848d5188fd84 Verifying Checksum 0B
  848d5188fd84 Download complete 0B
- 2ae52837819d Downloading 1.064MB
- b11b0beee0c9 Downloading 402B
+ 2ae52837819d Downloading 2.866MB
+ 91e7a994d5d9 Downloading 4.027MB
+ 2ae52837819d Downloading 2.948MB
+ 2ae52837819d Downloading 3.03MB
+ 2ae52837819d Downloading 3.112MB
+ 2ae52837819d Downloading 3.194MB
+ 91e7a994d5d9 Downloading 4.113MB
+ 2ae52837819d Downloading 3.275MB
+ 91e7a994d5d9 Downloading 4.195MB
+ 2ae52837819d Downloading 3.357MB
+ 91e7a994d5d9 Downloading 4.277MB
+ 2ae52837819d Downloading 3.439MB
+ 2ae52837819d Downloading 3.521MB
+ 91e7a994d5d9 Downloading 4.359MB
+ 2ae52837819d Downloading 3.603MB
+ 2ae52837819d Downloading 3.685MB
+ 2ae52837819d Downloading 3.767MB
+ 91e7a994d5d9 Downloading 4.441MB
+ 2ae52837819d Downloading 3.849MB
+ 2ae52837819d Downloading 3.931MB
+ 91e7a994d5d9 Downloading 4.522MB
+ 2ae52837819d Downloading 4.013MB
+ 2ae52837819d Downloading 4.095MB
+ 91e7a994d5d9 Downloading 4.604MB
+ 2ae52837819d Downloading 4.177MB
+ 91e7a994d5d9 Downloading 4.686MB
+ 2ae52837819d Downloading 4.259MB
+ 2ae52837819d Downloading 4.34MB
+ 91e7a994d5d9 Downloading 4.768MB
+ 2ae52837819d Downloading 4.422MB
+ 91e7a994d5d9 Downloading 4.85MB
+ 2ae52837819d Downloading 4.504MB
+ 91e7a994d5d9 Downloading 4.932MB
+ 2ae52837819d Downloading 4.586MB
+ 2ae52837819d Downloading 4.668MB
+ 91e7a994d5d9 Downloading 5.014MB
  b11b0beee0c9 Verifying Checksum 0B
  b11b0beee0c9 Download complete 0B
- 2ae52837819d Downloading 1.146MB
- 2ae52837819d Downloading 1.227MB
- 2ae52837819d Downloading 1.309MB
- 2ae52837819d Downloading 1.391MB
- 2ae52837819d Downloading 1.473MB
- 109614fa76e1 Downloading 4.202MB
- 2ae52837819d Downloading 1.555MB
- 2ae52837819d Downloading 1.637MB
- 2ae52837819d Downloading 1.719MB
- 2ae52837819d Downloading 1.801MB
- 2ae52837819d Downloading 1.883MB
- 2ae52837819d Downloading 1.965MB
+ 91e7a994d5d9 Downloading 5.095MB
+ 2ae52837819d Downloading 4.75MB
+ 91e7a994d5d9 Downloading 5.177MB
+ 2ae52837819d Downloading 4.832MB
+ 91e7a994d5d9 Downloading 5.259MB
+ 91e7a994d5d9 Downloading 5.341MB
+ 2ae52837819d Downloading 4.914MB
+ 91e7a994d5d9 Downloading 5.423MB
+ 2ae52837819d Downloading 4.996MB
+ 91e7a994d5d9 Downloading 5.505MB
+ 91e7a994d5d9 Downloading 5.587MB
+ 2ae52837819d Downloading 5.078MB
+ 2ae52837819d Downloading 5.16MB
+ 91e7a994d5d9 Downloading 5.669MB
+ 2ae52837819d Downloading 5.242MB
+ 2ae52837819d Downloading 5.323MB
+ 91e7a994d5d9 Downloading 5.751MB
  86f656396646 Downloading 399B
  86f656396646 Verifying Checksum 0B
  86f656396646 Download complete 0B
- 2ae52837819d Downloading 2.047MB
- 109614fa76e1 Downloading 4.726MB
- 2ae52837819d Downloading 2.129MB
- 2ae52837819d Downloading 2.211MB
- 91e7a994d5d9 Downloading 80.6kB
- 2ae52837819d Downloading 2.292MB
- 91e7a994d5d9 Downloading 162.5kB
- 91e7a994d5d9 Downloading 244.4kB
- 91e7a994d5d9 Downloading 326.4kB
- 2ae52837819d Downloading 2.374MB
- 109614fa76e1 Downloading 5.25MB
- 91e7a994d5d9 Downloading 408.3kB
- 2ae52837819d Downloading 2.456MB
- 91e7a994d5d9 Downloading 490.2kB
- 2ae52837819d Downloading 2.538MB
- 91e7a994d5d9 Downloading 572.1kB
- 2ae52837819d Downloading 2.62MB
- 2ae52837819d Downloading 2.702MB
- 2ae52837819d Downloading 2.784MB
- 91e7a994d5d9 Downloading 654kB
- 2ae52837819d Downloading 2.866MB
- 91e7a994d5d9 Downloading 736kB
- 2ae52837819d Downloading 2.948MB
- 109614fa76e1 Downloading 5.773MB
- 2ae52837819d Downloading 3.03MB
- 2ae52837819d Downloading 3.112MB
- 91e7a994d5d9 Downloading 817.9kB
- 2ae52837819d Downloading 3.194MB
- 91e7a994d5d9 Downloading 899.8kB
- 2ae52837819d Downloading 3.275MB
- 91e7a994d5d9 Downloading 981.7kB
- 2ae52837819d Downloading 3.357MB
- 2ae52837819d Downloading 3.439MB
- 91e7a994d5d9 Downloading 1.064MB
- 2ae52837819d Downloading 3.521MB
- 2ae52837819d Downloading 3.603MB
- 2ae52837819d Downloading 3.685MB
- 91e7a994d5d9 Downloading 1.146MB
- 2ae52837819d Downloading 3.767MB
- 91e7a994d5d9 Downloading 1.227MB
- 109614fa76e1 Downloading 6.298MB
- 2ae52837819d Downloading 3.849MB
- 91e7a994d5d9 Downloading 1.309MB
- 2ae52837819d Downloading 3.931MB
- 2ae52837819d Downloading 4.013MB
- 91e7a994d5d9 Downloading 1.391MB
- 2ae52837819d Downloading 4.095MB
- 91e7a994d5d9 Downloading 1.473MB
- 2ae52837819d Downloading 4.177MB
- 91e7a994d5d9 Downloading 1.555MB
- 2ae52837819d Downloading 4.259MB
- 2ae52837819d Downloading 4.34MB
- 91e7a994d5d9 Downloading 1.637MB
- 109614fa76e1 Downloading 6.821MB
- 2ae52837819d Downloading 4.422MB
- 91e7a994d5d9 Downloading 1.719MB
- 2ae52837819d Downloading 4.504MB
- 91e7a994d5d9 Downloading 1.811MB
- 2ae52837819d Downloading 4.586MB
- 91e7a994d5d9 Downloading 1.893MB
- 2ae52837819d Downloading 4.668MB
- 91e7a994d5d9 Downloading 1.975MB
- 2ae52837819d Downloading 4.75MB
- 2ae52837819d Downloading 4.832MB
- 91e7a994d5d9 Downloading 2.057MB
- 2ae52837819d Downloading 4.914MB
- 109614fa76e1 Downloading 7.345MB
- 91e7a994d5d9 Downloading 2.139MB
- 2ae52837819d Downloading 4.996MB
- 91e7a994d5d9 Downloading 2.221MB
- 2ae52837819d Downloading 5.078MB
- 91e7a994d5d9 Downloading 2.302MB
- 2ae52837819d Downloading 5.16MB
- 91e7a994d5d9 Downloading 2.384MB
- 2ae52837819d Downloading 5.242MB
- 91e7a994d5d9 Downloading 2.466MB
- 2ae52837819d Downloading 5.323MB
- 91e7a994d5d9 Downloading 2.548MB
  2ae52837819d Downloading 5.405MB
- 91e7a994d5d9 Downloading 2.63MB
+ 91e7a994d5d9 Downloading 5.833MB
+ 91e7a994d5d9 Downloading 5.915MB
  2ae52837819d Downloading 5.487MB
- 91e7a994d5d9 Downloading 2.712MB
+ 91e7a994d5d9 Downloading 5.997MB
  2ae52837819d Downloading 5.569MB
+ 91e7a994d5d9 Downloading 6.078MB
  2ae52837819d Downloading 5.651MB
- 91e7a994d5d9 Downloading 2.794MB
- 91e7a994d5d9 Downloading 2.876MB
- 109614fa76e1 Downloading 7.869MB
- 91e7a994d5d9 Downloading 2.958MB
- 2ae52837819d Downloading 5.733MB
- 91e7a994d5d9 Downloading 3.041MB
- 2ae52837819d Downloading 5.815MB
- 91e7a994d5d9 Downloading 3.123MB
- 2ae52837819d Downloading 5.897MB
- 91e7a994d5d9 Downloading 3.205MB
- 2ae52837819d Downloading 5.979MB
- 91e7a994d5d9 Downloading 3.287MB
- 2ae52837819d Downloading 6.061MB
- 2ae52837819d Downloading 6.143MB
- 91e7a994d5d9 Downloading 3.369MB
- 2ae52837819d Downloading 6.225MB
- 91e7a994d5d9 Downloading 3.462MB
- 2ae52837819d Downloading 6.307MB
- 91e7a994d5d9 Downloading 3.544MB
- 109614fa76e1 Downloading 8.394MB
- 91e7a994d5d9 Downloading 3.626MB
- 91e7a994d5d9 Downloading 3.708MB
- 2ae52837819d Downloading 6.388MB
- 91e7a994d5d9 Downloading 3.79MB
- 2ae52837819d Downloading 6.47MB
- 2ae52837819d Downloading 6.552MB
- 91e7a994d5d9 Downloading 3.871MB
- 2ae52837819d Downloading 6.634MB
- 91e7a994d5d9 Downloading 3.953MB
- 2ae52837819d Downloading 6.716MB
- 91e7a994d5d9 Downloading 4.035MB
- 2ae52837819d Downloading 6.798MB
- 91e7a994d5d9 Downloading 4.117MB
- 2ae52837819d Downloading 6.88MB
- 2ae52837819d Downloading 6.962MB
- 109614fa76e1 Downloading 8.918MB
- 91e7a994d5d9 Downloading 4.199MB
- 2ae52837819d Downloading 7.044MB
- 91e7a994d5d9 Downloading 4.281MB
- 2ae52837819d Downloading 7.126MB
- 2ae52837819d Downloading 7.208MB
- 91e7a994d5d9 Downloading 4.363MB
- 2ae52837819d Downloading 7.29MB
- 91e7a994d5d9 Downloading 4.445MB
- 2ae52837819d Downloading 7.371MB
+ 91e7a994d5d9 Downloading 6.16MB
+ 2ae52837819d Downloading 5.734MB
+ 2ae52837819d Downloading 5.816MB
+ 91e7a994d5d9 Downloading 6.242MB
+ 2ae52837819d Downloading 5.898MB
+ 91e7a994d5d9 Downloading 6.324MB
+ 2ae52837819d Downloading 5.98MB
+ 91e7a994d5d9 Downloading 6.406MB
+ 2ae52837819d Downloading 6.062MB
+ 91e7a994d5d9 Downloading 6.488MB
+ 2ae52837819d Downloading 6.144MB
+ 91e7a994d5d9 Downloading 6.57MB
+ 2ae52837819d Downloading 6.226MB
+ 91e7a994d5d9 Downloading 6.652MB
+ 2ae52837819d Downloading 6.308MB
+ c3d81b031706 Downloading 28.79kB
+ c3d81b031706 Downloading 57.48kB
+ 91e7a994d5d9 Downloading 6.734MB
+ c3d81b031706 Downloading 96.99kB
+ c3d81b031706 Downloading 129.8kB
+ c3d81b031706 Downloading 162.5kB
+ c3d81b031706 Downloading 195.3kB
+ 91e7a994d5d9 Downloading 6.816MB
+ c3d81b031706 Downloading 228.1kB
+ 2ae52837819d Downloading 6.39MB
+ c3d81b031706 Downloading 260.8kB
+ c3d81b031706 Downloading 293.6kB
+ c3d81b031706 Downloading 326.4kB
+ 91e7a994d5d9 Downloading 6.898MB
+ c3d81b031706 Downloading 359.1kB
+ 2ae52837819d Downloading 6.472MB
+ c3d81b031706 Downloading 391.9kB
+ c3d81b031706 Downloading 424.7kB
+ c3d81b031706 Downloading 457.4kB
+ 2ae52837819d Downloading 6.554MB
+ 91e7a994d5d9 Downloading 6.98MB
+ c3d81b031706 Downloading 490.2kB
+ 2ae52837819d Downloading 6.636MB
+ c3d81b031706 Downloading 523kB
+ 2ae52837819d Downloading 6.717MB
+ c3d81b031706 Downloading 555.7kB
+ 91e7a994d5d9 Downloading 7.062MB
+ c3d81b031706 Downloading 588.5kB
+ c3d81b031706 Downloading 621.3kB
+ 2ae52837819d Downloading 6.799MB
+ 91e7a994d5d9 Downloading 7.143MB
+ c3d81b031706 Downloading 654kB
+ c3d81b031706 Downloading 686.8kB
+ 2ae52837819d Downloading 6.881MB
+ c3d81b031706 Downloading 719.6kB
+ 91e7a994d5d9 Downloading 7.225MB
+ c3d81b031706 Downloading 752.3kB
+ 2ae52837819d Downloading 6.963MB
+ c3d81b031706 Downloading 785.1kB
+ c3d81b031706 Downloading 817.9kB
+ 2ae52837819d Downloading 7.045MB
+ c3d81b031706 Downloading 850.6kB
+ 91e7a994d5d9 Downloading 7.307MB
+ c3d81b031706 Downloading 883.4kB
+ 2ae52837819d Downloading 7.127MB
+ c3d81b031706 Downloading 916.2kB
+ c3d81b031706 Downloading 949kB
+ 2ae52837819d Downloading 7.209MB
+ c3d81b031706 Downloading 981.7kB
+ c3d81b031706 Downloading 1.014MB
+ c3d81b031706 Downloading 1.047MB
+ c3d81b031706 Downloading 1.08MB
+ 2ae52837819d Downloading 7.291MB
+ 91e7a994d5d9 Downloading 7.389MB
+ c3d81b031706 Downloading 1.113MB
+ c3d81b031706 Downloading 1.146MB
+ c3d81b031706 Downloading 1.178MB
+ c3d81b031706 Downloading 1.211MB
+ 2ae52837819d Downloading 7.373MB
+ c3d81b031706 Downloading 1.244MB
  2ae52837819d Verifying Checksum 0B
  2ae52837819d Download complete 0B
  2ae52837819d Extracting 98.3kB
+ c3d81b031706 Downloading 1.277MB
+ 2ae52837819d Extracting 589.8kB
  2ae52837819d Extracting 786.4kB
+ c3d81b031706 Downloading 1.309MB
+ 91e7a994d5d9 Downloading 7.471MB
+ 2ae52837819d Extracting 983kB
+ c3d81b031706 Downloading 1.342MB
  2ae52837819d Extracting 1.376MB
+ 2ae52837819d Extracting 1.475MB
+ c3d81b031706 Downloading 1.375MB
  2ae52837819d Extracting 1.868MB
+ 2ae52837819d Extracting 2.064MB
+ c3d81b031706 Downloading 1.408MB
  2ae52837819d Extracting 2.359MB
- 2ae52837819d Extracting 4.522MB
- 91e7a994d5d9 Downloading 4.526MB
- 2ae52837819d Extracting 6.586MB
+ 2ae52837819d Extracting 2.851MB
+ 2ae52837819d Extracting 4.62MB
+ c3d81b031706 Downloading 1.473MB
+ 2ae52837819d Extracting 6.291MB
+ 91e7a994d5d9 Downloading 7.553MB
+ 2ae52837819d Extracting 7.078MB
  2ae52837819d Extracting 7.4MB
+ c3d81b031706 Downloading 1.506MB
  2ae52837819d Pull complete 0B
  ea2774db19fa Extracting 32.77kB
  ea2774db19fa Extracting 312.7kB
@@ -1345,178 +1247,39 @@ OK: replica api 5 setelah beban
  848d5188fd84 Extracting 686.7kB
  848d5188fd84 Pull complete 0B
  b11b0beee0c9 Extracting 402B
- b11b0beee0c9 Extracting 402B
  b11b0beee0c9 Pull complete 0B
  86f656396646 Extracting 399B
  86f656396646 Extracting 399B
  86f656396646 Pull complete 0B
+ c3d81b031706 Downloading 1.539MB
  Image ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8 Pulled 
- 91e7a994d5d9 Downloading 4.608MB
- 109614fa76e1 Downloading 9.455MB
- 91e7a994d5d9 Downloading 4.69MB
- 91e7a994d5d9 Downloading 4.772MB
- 815c187a63e1 Downloading 297B
- 815c187a63e1 Verifying Checksum 0B
- 815c187a63e1 Download complete 0B
- 91e7a994d5d9 Downloading 4.853MB
- 91e7a994d5d9 Downloading 4.935MB
- 42edb72eb570 Downloading 460B
- 42edb72eb570 Verifying Checksum 0B
- 42edb72eb570 Download complete 0B
- 91e7a994d5d9 Downloading 5.017MB
- 109614fa76e1 Downloading 9.979MB
- 91e7a994d5d9 Downloading 5.113MB
- d1012136fa39 Downloading 456B
- d1012136fa39 Verifying Checksum 0B
- d1012136fa39 Download complete 0B
- 91e7a994d5d9 Downloading 5.195MB
- 91e7a994d5d9 Downloading 5.277MB
- 8ec4a45f679a Downloading 4.134kB
- 8ec4a45f679a Downloading 8.268kB
- 91e7a994d5d9 Downloading 5.359MB
- 8ec4a45f679a Downloading 64.22kB
- 8ec4a45f679a Downloading 80.61kB
- 8ec4a45f679a Downloading 96.99kB
- 8ec4a45f679a Downloading 162.5kB
- 8ec4a45f679a Downloading 195.3kB
- 8ec4a45f679a Downloading 228.1kB
- 8ec4a45f679a Downloading 244.4kB
- 8ec4a45f679a Downloading 277.2kB
- 8ec4a45f679a Downloading 293.6kB
- 91e7a994d5d9 Downloading 5.441MB
- 8ec4a45f679a Downloading 310kB
- 8ec4a45f679a Downloading 331.9kB
- 8ec4a45f679a Verifying Checksum 0B
- 8ec4a45f679a Download complete 0B
- 91e7a994d5d9 Downloading 5.523MB
- 91e7a994d5d9 Downloading 5.604MB
- 82736a35d0e7 Downloading 32.77kB
- 91e7a994d5d9 Downloading 5.686MB
- 82736a35d0e7 Downloading 97.01kB
- 109614fa76e1 Downloading 10.51MB
- 82736a35d0e7 Downloading 129.8kB
- 82736a35d0e7 Downloading 195.3kB
- 82736a35d0e7 Downloading 228.1kB
- 82736a35d0e7 Downloading 260.8kB
- 82736a35d0e7 Downloading 293.6kB
- 82736a35d0e7 Downloading 326.4kB
- 82736a35d0e7 Downloading 359.2kB
- 82736a35d0e7 Downloading 391.9kB
- 82736a35d0e7 Downloading 424.7kB
- 82736a35d0e7 Downloading 457.5kB
- 82736a35d0e7 Downloading 490.2kB
- 82736a35d0e7 Downloading 555.8kB
- 82736a35d0e7 Downloading 621.3kB
- 82736a35d0e7 Downloading 650.9kB
- 82736a35d0e7 Downloading 683.6kB
- 82736a35d0e7 Downloading 716.4kB
- 82736a35d0e7 Downloading 749.2kB
- 82736a35d0e7 Downloading 781.9kB
- 82736a35d0e7 Downloading 834.3kB
- 82736a35d0e7 Downloading 867.1kB
- 82736a35d0e7 Downloading 899.8kB
- 82736a35d0e7 Downloading 962.2kB
- 82736a35d0e7 Downloading 995kB
- 82736a35d0e7 Downloading 1.028MB
- 82736a35d0e7 Downloading 1.061MB
- 82736a35d0e7 Downloading 1.093MB
- 82736a35d0e7 Downloading 1.126MB
- 82736a35d0e7 Downloading 1.159MB
- 82736a35d0e7 Downloading 1.224MB
- 82736a35d0e7 Downloading 1.257MB
- 91e7a994d5d9 Downloading 5.768MB
- 82736a35d0e7 Downloading 1.29MB
- 82736a35d0e7 Downloading 1.355MB
- 82736a35d0e7 Downloading 1.388MB
- 82736a35d0e7 Downloading 1.421MB
- 82736a35d0e7 Downloading 1.486MB
- 82736a35d0e7 Downloading 1.552MB
- 82736a35d0e7 Downloading 1.585MB
- 82736a35d0e7 Downloading 1.618MB
- 82736a35d0e7 Downloading 1.65MB
- 82736a35d0e7 Downloading 1.683MB
- 82736a35d0e7 Downloading 1.716MB
- 82736a35d0e7 Downloading 1.749MB
- 82736a35d0e7 Downloading 1.781MB
- 82736a35d0e7 Downloading 1.814MB
- 82736a35d0e7 Downloading 1.871MB
- 82736a35d0e7 Verifying Checksum 0B
- 82736a35d0e7 Extracting 32.77kB
- 82736a35d0e7 Extracting 1.671MB
- 82736a35d0e7 Extracting 1.871MB
- 91e7a994d5d9 Downloading 5.864MB
- 82736a35d0e7 Pull complete 0B
- 91e7a994d5d9 Downloading 5.946MB
- 583599bb7d38 Downloading 627B
- 583599bb7d38 Verifying Checksum 0B
- 583599bb7d38 Download complete 0B
- 583599bb7d38 Extracting 627B
- 583599bb7d38 Extracting 627B
- 583599bb7d38 Pull complete 0B
- 91e7a994d5d9 Downloading 6.028MB
- 91e7a994d5d9 Downloading 6.11MB
- 91e7a994d5d9 Downloading 6.192MB
- 91e7a994d5d9 Downloading 6.274MB
- 91e7a994d5d9 Downloading 6.356MB
- aee4e54b3865 Downloading 956B
- aee4e54b3865 Verifying Checksum 0B
- aee4e54b3865 Download complete 0B
- aee4e54b3865 Extracting 956B
- aee4e54b3865 Extracting 956B
- aee4e54b3865 Pull complete 0B
- 91e7a994d5d9 Downloading 6.437MB
- 109614fa76e1 Downloading 11.04MB
- 91e7a994d5d9 Downloading 6.519MB
- 91e7a994d5d9 Downloading 6.601MB
- 781ff50d2644 Downloading 404B
- 781ff50d2644 Verifying Checksum 0B
- 781ff50d2644 Download complete 0B
- 781ff50d2644 Extracting 404B
- 781ff50d2644 Extracting 404B
- 91e7a994d5d9 Downloading 6.683MB
- 781ff50d2644 Pull complete 0B
- 91e7a994d5d9 Downloading 6.765MB
- 91e7a994d5d9 Downloading 6.847MB
- 91e7a994d5d9 Downloading 6.929MB
- 91e7a994d5d9 Downloading 7.011MB
- 91e7a994d5d9 Downloading 7.093MB
- 91e7a994d5d9 Downloading 7.175MB
- 109614fa76e1 Downloading 11.57MB
- 453da7dbc73e Downloading 1.21kB
- 453da7dbc73e Verifying Checksum 0B
- 453da7dbc73e Download complete 0B
- 453da7dbc73e Extracting 1.21kB
- 453da7dbc73e Extracting 1.21kB
- 453da7dbc73e Pull complete 0B
- 91e7a994d5d9 Downloading 7.257MB
- 91e7a994d5d9 Downloading 7.339MB
- 91e7a994d5d9 Downloading 7.42MB
- 4a8b0b2a5b19 Downloading 1.399kB
- 4a8b0b2a5b19 Verifying Checksum 0B
- 4a8b0b2a5b19 Download complete 0B
- 4a8b0b2a5b19 Extracting 1.399kB
- 4a8b0b2a5b19 Extracting 1.399kB
- 4a8b0b2a5b19 Pull complete 0B
- 91e7a994d5d9 Downloading 7.502MB
- 91e7a994d5d9 Downloading 7.584MB
- 91e7a994d5d9 Downloading 7.666MB
- 91e7a994d5d9 Downloading 7.748MB
- 612c0c1df4c5 Downloading 215.8kB
- 612c0c1df4c5 Downloading 428.6kB
- 109614fa76e1 Downloading 12.09MB
- 612c0c1df4c5 Downloading 637.6kB
- 91e7a994d5d9 Downloading 7.83MB
- 612c0c1df4c5 Downloading 850.5kB
- 612c0c1df4c5 Downloading 1.064MB
- 612c0c1df4c5 Downloading 1.277MB
- 91e7a994d5d9 Downloading 7.912MB
- 612c0c1df4c5 Downloading 1.49MB
- 612c0c1df4c5 Downloading 1.703MB
- 612c0c1df4c5 Downloading 1.915MB
+ c3d81b031706 Downloading 1.572MB
+ 91e7a994d5d9 Downloading 7.635MB
+ c3d81b031706 Downloading 1.604MB
+ c3d81b031706 Downloading 1.637MB
+ 38473b395a0c Downloading 276B
+ 38473b395a0c Verifying Checksum 0B
+ 38473b395a0c Download complete 0B
+ c3d81b031706 Downloading 1.67MB
+ 91e7a994d5d9 Downloading 7.717MB
+ c3d81b031706 Downloading 1.703MB
+ c3d81b031706 Downloading 1.735MB
+ c3d81b031706 Downloading 1.768MB
+ c3d81b031706 Downloading 1.801MB
+ 91e7a994d5d9 Downloading 7.799MB
+ c3d81b031706 Downloading 1.834MB
+ c3d81b031706 Downloading 1.866MB
+ c3d81b031706 Downloading 1.899MB
+ 91e7a994d5d9 Downloading 7.881MB
+ c3d81b031706 Downloading 1.932MB
+ c3d81b031706 Downloading 1.965MB
+ 91e7a994d5d9 Downloading 7.963MB
+ c3d81b031706 Downloading 1.997MB
  91e7a994d5d9 Verifying Checksum 0B
  91e7a994d5d9 Download complete 0B
  91e7a994d5d9 Extracting 98.3kB
- 91e7a994d5d9 Extracting 5.603MB
+ 91e7a994d5d9 Extracting 3.932MB
+ 91e7a994d5d9 Extracting 5.8MB
  91e7a994d5d9 Extracting 7.982MB
  91e7a994d5d9 Pull complete 0B
  815c187a63e1 Extracting 297B
@@ -1533,470 +1296,634 @@ OK: replica api 5 setelah beban
  8ec4a45f679a Extracting 331.9kB
  8ec4a45f679a Pull complete 0B
  Image ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985 Pulled 
- 612c0c1df4c5 Downloading 2.128MB
- 612c0c1df4c5 Downloading 2.341MB
- 612c0c1df4c5 Downloading 2.554MB
- 612c0c1df4c5 Downloading 2.767MB
- 612c0c1df4c5 Downloading 2.98MB
- 612c0c1df4c5 Downloading 3.193MB
+ c3d81b031706 Downloading 2.03MB
+ c3d81b031706 Downloading 2.063MB
+ c3d81b031706 Downloading 2.096MB
+ c3d81b031706 Downloading 2.129MB
+ c3d81b031706 Downloading 2.161MB
+ c3d81b031706 Downloading 2.194MB
+ c3d81b031706 Downloading 2.227MB
+ c3d81b031706 Downloading 2.26MB
+ c3d81b031706 Downloading 2.292MB
+ a8bdc7a16c7c Downloading 93B
+ a8bdc7a16c7c Verifying Checksum 0B
+ a8bdc7a16c7c Download complete 0B
+ c3d81b031706 Downloading 2.325MB
+ c3d81b031706 Downloading 2.358MB
+ c3d81b031706 Downloading 2.391MB
+ c3d81b031706 Downloading 2.423MB
+ c3d81b031706 Downloading 2.456MB
+ 227453fba3da Downloading 539.4kB
+ c3d81b031706 Downloading 2.489MB
+ c3d81b031706 Downloading 2.532MB
+ c3d81b031706 Downloading 2.565MB
+ c3d81b031706 Downloading 2.597MB
+ c3d81b031706 Downloading 2.63MB
+ c3d81b031706 Downloading 2.663MB
+ c3d81b031706 Downloading 2.696MB
+ 7514b89df490 Downloading 1.378kB
+ 7514b89df490 Downloading 6.89kB
+ c3d81b031706 Downloading 2.729MB
+ 7514b89df490 Downloading 34.56kB
+ 7514b89df490 Downloading 37.98kB
+ 7514b89df490 Download complete 0B
+ c3d81b031706 Downloading 2.761MB
+ c3d81b031706 Downloading 2.794MB
+ c3d81b031706 Downloading 2.827MB
+ c3d81b031706 Verifying Checksum 0B
+ c3d81b031706 Download complete 0B
+ c3d81b031706 Extracting 32.77kB
+ c3d81b031706 Extracting 2.827MB
+ c3d81b031706 Pull complete 0B
+ 38473b395a0c Extracting 276B
+ 38473b395a0c Extracting 276B
+ 38473b395a0c Pull complete 0B
+ a8bdc7a16c7c Extracting 93B
+ a8bdc7a16c7c Extracting 93B
+ a8bdc7a16c7c Pull complete 0B
+ 227453fba3da Downloading 1.08MB
+ 227453fba3da Downloading 1.621MB
+ 227453fba3da Downloading 2.161MB
+ 227453fba3da Downloading 2.692MB
+ 38d912d9f275 Downloading 1.378kB
+ 38d912d9f275 Verifying Checksum 0B
+ 38d912d9f275 Download complete 0B
+ c7431a9e5612 Downloading 1.378kB
+ c7431a9e5612 Downloading 1.409kB
+ c7431a9e5612 Verifying Checksum 0B
+ c7431a9e5612 Download complete 0B
+ 227453fba3da Downloading 3.221MB
+ 227453fba3da Downloading 3.757MB
+ 227453fba3da Downloading 4.296MB
  d5392b8b2486 Downloading 971B
+ d5392b8b2486 Verifying Checksum 0B
  d5392b8b2486 Download complete 0B
  d5392b8b2486 Extracting 971B
  d5392b8b2486 Extracting 971B
  d5392b8b2486 Pull complete 0B
- 612c0c1df4c5 Downloading 3.406MB
- 612c0c1df4c5 Downloading 3.619MB
- 612c0c1df4c5 Downloading 3.832MB
- 612c0c1df4c5 Downloading 4.045MB
- 612c0c1df4c5 Downloading 4.258MB
- 612c0c1df4c5 Downloading 4.471MB
- c789cfcee1a8 Downloading 15.75kB
- 612c0c1df4c5 Downloading 4.684MB
- c789cfcee1a8 Downloading 48.51kB
- c789cfcee1a8 Downloading 97.67kB
- c789cfcee1a8 Downloading 114kB
- c789cfcee1a8 Downloading 146.8kB
- 612c0c1df4c5 Downloading 4.897MB
+ 227453fba3da Downloading 4.824MB
+ c789cfcee1a8 Downloading 15.79kB
+ c789cfcee1a8 Downloading 81.32kB
+ c789cfcee1a8 Downloading 114.1kB
+ c789cfcee1a8 Downloading 146.9kB
  c789cfcee1a8 Downloading 163.2kB
  c789cfcee1a8 Downloading 179.6kB
- c789cfcee1a8 Downloading 196kB
  c789cfcee1a8 Downloading 212.4kB
- c789cfcee1a8 Downloading 228.7kB
- 109614fa76e1 Downloading 12.61MB
- c789cfcee1a8 Downloading 245.1kB
+ c789cfcee1a8 Downloading 245.2kB
  c789cfcee1a8 Downloading 261.5kB
+ c789cfcee1a8 Downloading 277.9kB
  c789cfcee1a8 Downloading 294.3kB
- 612c0c1df4c5 Downloading 5.11MB
  c789cfcee1a8 Downloading 310.7kB
- c789cfcee1a8 Downloading 327kB
- c789cfcee1a8 Downloading 343.4kB
- c789cfcee1a8 Downloading 376.2kB
+ c789cfcee1a8 Downloading 327.1kB
+ c789cfcee1a8 Downloading 359.9kB
  c789cfcee1a8 Downloading 392.6kB
- c789cfcee1a8 Downloading 425.3kB
- c789cfcee1a8 Downloading 441.7kB
- c789cfcee1a8 Downloading 458.1kB
+ c789cfcee1a8 Downloading 425.4kB
+ c789cfcee1a8 Downloading 441.8kB
  c789cfcee1a8 Downloading 474.5kB
- 612c0c1df4c5 Downloading 5.323MB
  c789cfcee1a8 Downloading 490.9kB
- c789cfcee1a8 Downloading 507.3kB
- c789cfcee1a8 Downloading 540kB
- c789cfcee1a8 Downloading 556.4kB
- c789cfcee1a8 Downloading 572.8kB
+ c789cfcee1a8 Downloading 523.7kB
+ c789cfcee1a8 Downloading 556.5kB
  c789cfcee1a8 Downloading 589.2kB
  c789cfcee1a8 Downloading 605.6kB
  c789cfcee1a8 Downloading 622kB
- 612c0c1df4c5 Downloading 5.536MB
- c789cfcee1a8 Downloading 638.3kB
- c789cfcee1a8 Downloading 654.7kB
- c789cfcee1a8 Downloading 671.1kB
+ c789cfcee1a8 Downloading 654.8kB
  c789cfcee1a8 Downloading 687.5kB
- c789cfcee1a8 Downloading 703.9kB
+ 227453fba3da Downloading 5.365MB
  c789cfcee1a8 Downloading 720.3kB
- c789cfcee1a8 Downloading 753kB
- c789cfcee1a8 Downloading 769.4kB
+ c789cfcee1a8 Downloading 753.1kB
  c789cfcee1a8 Downloading 785.8kB
- 612c0c1df4c5 Downloading 5.749MB
- c789cfcee1a8 Downloading 802.2kB
  c789cfcee1a8 Downloading 818.6kB
- c789cfcee1a8 Downloading 834.9kB
- c789cfcee1a8 Downloading 851.3kB
- c789cfcee1a8 Downloading 884.1kB
+ c789cfcee1a8 Downloading 851.4kB
  c789cfcee1a8 Downloading 900.3kB
  c789cfcee1a8 Verifying Checksum 0B
  c789cfcee1a8 Download complete 0B
  c789cfcee1a8 Extracting 32.77kB
+ c789cfcee1a8 Extracting 819.2kB
  c789cfcee1a8 Extracting 900.3kB
  c789cfcee1a8 Extracting 900.3kB
  c789cfcee1a8 Pull complete 0B
- 612c0c1df4c5 Downloading 5.962MB
- 612c0c1df4c5 Downloading 6.175MB
- 612c0c1df4c5 Downloading 6.388MB
+ 131e0b8ce827 Downloading 1.378kB
+ 131e0b8ce827 Downloading 8.89kB
+ 131e0b8ce827 Download complete 0B
+ 8c4cf0b70797 Downloading 116B
+ 8c4cf0b70797 Verifying Checksum 0B
  8c4cf0b70797 Download complete 0B
  8c4cf0b70797 Extracting 116B
  8c4cf0b70797 Extracting 116B
  8c4cf0b70797 Pull complete 0B
- 612c0c1df4c5 Downloading 6.601MB
- 612c0c1df4c5 Downloading 6.814MB
- 612c0c1df4c5 Downloading 7.027MB
- 612c0c1df4c5 Downloading 7.24MB
- 612c0c1df4c5 Downloading 7.453MB
- 612c0c1df4c5 Downloading 7.666MB
- 612c0c1df4c5 Downloading 7.879MB
- 612c0c1df4c5 Downloading 8.092MB
- 612c0c1df4c5 Downloading 8.305MB
- 612c0c1df4c5 Downloading 8.518MB
- 109614fa76e1 Downloading 13.14MB
- 612c0c1df4c5 Downloading 8.731MB
- d5c3772878da Downloading 537.5kB
- 612c0c1df4c5 Downloading 8.944MB
- 612c0c1df4c5 Downloading 9.157MB
- 612c0c1df4c5 Downloading 9.37MB
- 612c0c1df4c5 Downloading 9.583MB
- d5c3772878da Downloading 1.072MB
- 612c0c1df4c5 Downloading 9.796MB
- 612c0c1df4c5 Downloading 10.01MB
- 612c0c1df4c5 Downloading 10.22MB
- d5c3772878da Downloading 1.612MB
- 612c0c1df4c5 Downloading 10.44MB
- 612c0c1df4c5 Downloading 10.65MB
- 612c0c1df4c5 Downloading 10.86MB
- d5c3772878da Downloading 2.153MB
- 612c0c1df4c5 Downloading 11.07MB
- 612c0c1df4c5 Downloading 11.29MB
- 612c0c1df4c5 Downloading 11.5MB
- d5c3772878da Downloading 2.694MB
- 612c0c1df4c5 Downloading 11.71MB
- d5c3772878da Downloading 3.234MB
- 612c0c1df4c5 Downloading 11.93MB
- 612c0c1df4c5 Downloading 12.14MB
- 612c0c1df4c5 Downloading 12.35MB
- d5c3772878da Downloading 3.775MB
- 612c0c1df4c5 Downloading 12.57MB
- 612c0c1df4c5 Downloading 12.78MB
- d5c3772878da Downloading 4.316MB
- 612c0c1df4c5 Downloading 12.99MB
- 109614fa76e1 Downloading 13.67MB
- 612c0c1df4c5 Downloading 13.2MB
- 612c0c1df4c5 Downloading 13.42MB
- d5c3772878da Downloading 4.856MB
- 612c0c1df4c5 Downloading 13.63MB
- 612c0c1df4c5 Downloading 13.84MB
- 612c0c1df4c5 Downloading 14.06MB
- 612c0c1df4c5 Downloading 14.27MB
- d5c3772878da Downloading 5.397MB
- 612c0c1df4c5 Downloading 14.48MB
- 612c0c1df4c5 Downloading 14.7MB
- 612c0c1df4c5 Downloading 14.91MB
- d5c3772878da Downloading 5.938MB
- 612c0c1df4c5 Downloading 15.12MB
- 612c0c1df4c5 Downloading 15.33MB
- 612c0c1df4c5 Downloading 15.55MB
- d5c3772878da Downloading 6.478MB
- 612c0c1df4c5 Downloading 15.76MB
- 109614fa76e1 Downloading 14.19MB
- 612c0c1df4c5 Downloading 15.97MB
- d5c3772878da Downloading 7.019MB
- 612c0c1df4c5 Downloading 16.19MB
- 612c0c1df4c5 Downloading 16.4MB
- 612c0c1df4c5 Downloading 16.61MB
- d5c3772878da Downloading 7.56MB
- 612c0c1df4c5 Downloading 16.82MB
- 612c0c1df4c5 Downloading 17.04MB
- 612c0c1df4c5 Downloading 17.25MB
- 612c0c1df4c5 Downloading 17.46MB
- d5c3772878da Downloading 8.1MB
- 612c0c1df4c5 Downloading 17.68MB
- 612c0c1df4c5 Downloading 17.89MB
- 612c0c1df4c5 Downloading 18.1MB
- 612c0c1df4c5 Downloading 18.32MB
- 612c0c1df4c5 Downloading 18.53MB
- 612c0c1df4c5 Downloading 18.74MB
- d5c3772878da Downloading 8.641MB
- 109614fa76e1 Downloading 14.72MB
- 612c0c1df4c5 Downloading 18.95MB
- 612c0c1df4c5 Downloading 19.17MB
- d5c3772878da Downloading 9.182MB
- 612c0c1df4c5 Downloading 19.38MB
- 612c0c1df4c5 Downloading 19.59MB
- d5c3772878da Downloading 9.722MB
- 612c0c1df4c5 Downloading 19.81MB
- 612c0c1df4c5 Downloading 20.02MB
- 612c0c1df4c5 Downloading 20.23MB
+ 76b8b44efa5a Downloading 3.501kB
+ 76b8b44efa5a Downloading 18.92kB
+ 76b8b44efa5a Download complete 0B
+ d5c3772878da Downloading 531.5kB
+ d5c3772878da Downloading 1.06MB
+ 9530417d1dbb Downloading 128B
+ 9530417d1dbb Verifying Checksum 0B
+ 9530417d1dbb Download complete 0B
+ d5c3772878da Downloading 1.6MB
+ 227453fba3da Downloading 5.897MB
+ d5c3772878da Downloading 2.141MB
+ c24407d2ec97 Downloading 3.502kB
+ c24407d2ec97 Download complete 0B
+ d5c3772878da Downloading 2.682MB
+ d5c3772878da Downloading 3.222MB
+ d5c3772878da Downloading 3.763MB
+ 21225587b6ee Download complete 0B
+ d5c3772878da Downloading 4.304MB
+ 82736a35d0e7 Downloading 32.77kB
+ d5c3772878da Downloading 4.844MB
+ 82736a35d0e7 Downloading 63.96kB
+ 82736a35d0e7 Downloading 128.2kB
+ 82736a35d0e7 Downloading 149kB
+ 82736a35d0e7 Downloading 168.2kB
+ 82736a35d0e7 Downloading 187.3kB
+ 82736a35d0e7 Downloading 206.5kB
+ 82736a35d0e7 Downloading 244.9kB
+ 82736a35d0e7 Downloading 264.1kB
+ 82736a35d0e7 Downloading 308.9kB
+ 82736a35d0e7 Downloading 328.1kB
+ 82736a35d0e7 Downloading 347.2kB
+ 82736a35d0e7 Downloading 385.6kB
+ 82736a35d0e7 Downloading 404.8kB
+ 82736a35d0e7 Downloading 424kB
+ 82736a35d0e7 Downloading 443.2kB
+ 82736a35d0e7 Downloading 462.4kB
+ 82736a35d0e7 Downloading 481.6kB
+ d5c3772878da Downloading 5.385MB
+ 82736a35d0e7 Downloading 500.7kB
+ 82736a35d0e7 Downloading 519.9kB
+ 82736a35d0e7 Downloading 539.1kB
+ 82736a35d0e7 Downloading 577.5kB
+ 82736a35d0e7 Downloading 596.7kB
+ 82736a35d0e7 Downloading 615.9kB
+ 82736a35d0e7 Downloading 635.1kB
+ 82736a35d0e7 Downloading 660.6kB
+ 82736a35d0e7 Downloading 679.8kB
+ 82736a35d0e7 Downloading 699kB
+ 82736a35d0e7 Downloading 718.2kB
+ 82736a35d0e7 Downloading 737.4kB
+ 82736a35d0e7 Downloading 756.6kB
+ 82736a35d0e7 Downloading 775.8kB
+ 82736a35d0e7 Downloading 795kB
+ 82736a35d0e7 Downloading 814.1kB
+ 82736a35d0e7 Downloading 833.3kB
+ d5c3772878da Downloading 5.926MB
+ 227453fba3da Downloading 6.425MB
+ 82736a35d0e7 Downloading 852.5kB
+ 82736a35d0e7 Downloading 878.1kB
+ 82736a35d0e7 Downloading 897.3kB
+ 82736a35d0e7 Downloading 916.5kB
+ 82736a35d0e7 Downloading 942.1kB
+ 82736a35d0e7 Downloading 961.3kB
+ 82736a35d0e7 Downloading 980.4kB
+ 82736a35d0e7 Downloading 1.026MB
+ 82736a35d0e7 Downloading 1.059MB
+ 82736a35d0e7 Downloading 1.092MB
+ 82736a35d0e7 Downloading 1.124MB
+ 82736a35d0e7 Downloading 1.157MB
+ 82736a35d0e7 Downloading 1.19MB
+ 82736a35d0e7 Downloading 1.223MB
+ 82736a35d0e7 Downloading 1.255MB
+ 82736a35d0e7 Downloading 1.278MB
+ 82736a35d0e7 Downloading 1.311MB
+ d5c3772878da Downloading 6.466MB
+ 82736a35d0e7 Downloading 1.344MB
+ 82736a35d0e7 Downloading 1.376MB
+ 82736a35d0e7 Downloading 1.409MB
+ 82736a35d0e7 Downloading 1.442MB
+ 82736a35d0e7 Downloading 1.475MB
+ 82736a35d0e7 Downloading 1.508MB
+ 82736a35d0e7 Downloading 1.54MB
+ 82736a35d0e7 Downloading 1.573MB
+ 82736a35d0e7 Downloading 1.606MB
+ 82736a35d0e7 Downloading 1.639MB
+ 82736a35d0e7 Downloading 1.671MB
+ 82736a35d0e7 Downloading 1.704MB
+ 82736a35d0e7 Downloading 1.737MB
+ 82736a35d0e7 Downloading 1.77MB
+ d5c3772878da Downloading 7.007MB
+ 82736a35d0e7 Downloading 1.802MB
+ 82736a35d0e7 Downloading 1.835MB
+ 82736a35d0e7 Downloading 1.868MB
+ 82736a35d0e7 Verifying Checksum 0B
+ 82736a35d0e7 Download complete 0B
+ 82736a35d0e7 Extracting 32.77kB
+ 82736a35d0e7 Extracting 884.7kB
+ 82736a35d0e7 Extracting 1.871MB
+ 82736a35d0e7 Pull complete 0B
+ d5c3772878da Downloading 7.548MB
+ d5c3772878da Downloading 8.088MB
+ 583599bb7d38 Downloading 627B
+ 583599bb7d38 Verifying Checksum 0B
+ 583599bb7d38 Download complete 0B
+ 583599bb7d38 Extracting 627B
+ 583599bb7d38 Extracting 627B
+ 583599bb7d38 Pull complete 0B
+ d5c3772878da Downloading 8.629MB
+ d5c3772878da Downloading 9.17MB
+ 227453fba3da Downloading 6.965MB
+ d5c3772878da Downloading 9.71MB
+ d5c3772878da Downloading 10.25MB
+ aee4e54b3865 Downloading 956B
+ aee4e54b3865 Download complete 0B
+ aee4e54b3865 Extracting 956B
+ aee4e54b3865 Extracting 956B
+ aee4e54b3865 Pull complete 0B
+ d5c3772878da Downloading 10.79MB
+ d5c3772878da Downloading 11.33MB
+ d5c3772878da Downloading 11.87MB
+ 227453fba3da Downloading 7.503MB
+ d5c3772878da Downloading 12.41MB
+ d5c3772878da Downloading 12.95MB
+ d5c3772878da Downloading 13.5MB
+ d5c3772878da Downloading 14.04MB
+ d5c3772878da Downloading 14.58MB
+ 781ff50d2644 Retrying in 5 seconds 0B
+ 781ff50d2644 Retrying in 4 seconds 0B
+ d5c3772878da Downloading 15.12MB
+ 781ff50d2644 Retrying in 3 seconds 0B
+ 781ff50d2644 Retrying in 2 seconds 0B
+ 781ff50d2644 Retrying in 1 second 0B
+ d5c3772878da Downloading 15.66MB
+ 227453fba3da Downloading 8.039MB
+ d5c3772878da Downloading 16.2MB
+ d5c3772878da Downloading 16.74MB
+ d5c3772878da Downloading 17.28MB
+ 227453fba3da Downloading 8.58MB
+ d5c3772878da Downloading 17.82MB
+ d5c3772878da Downloading 18.36MB
+ 227453fba3da Downloading 9.12MB
+ d5c3772878da Downloading 18.9MB
+ d5c3772878da Downloading 19.44MB
+ d5c3772878da Downloading 19.98MB
+ 781ff50d2644 Download complete 0B
+ 781ff50d2644 Extracting 404B
+ 781ff50d2644 Pull complete 0B
+ d5c3772878da Downloading 20.52MB
+ 227453fba3da Downloading 9.651MB
+ d5c3772878da Downloading 21.06MB
+ d5c3772878da Downloading 21.61MB
+ d5c3772878da Downloading 22.15MB
+ 227453fba3da Downloading 10.18MB
+ d5c3772878da Downloading 22.69MB
+ d5c3772878da Downloading 23.23MB
+ 453da7dbc73e Downloading 1.21kB
+ 453da7dbc73e Verifying Checksum 0B
+ 453da7dbc73e Download complete 0B
+ 453da7dbc73e Extracting 1.21kB
+ 453da7dbc73e Extracting 1.21kB
+ 453da7dbc73e Pull complete 0B
+ d5c3772878da Downloading 23.77MB
+ d5c3772878da Downloading 24.31MB
+ d5c3772878da Downloading 24.85MB
+ d5c3772878da Downloading 25.39MB
+ d5c3772878da Downloading 25.93MB
+ d5c3772878da Downloading 26.47MB
+ d5c3772878da Downloading 27.01MB
+ d5c3772878da Downloading 27.55MB
+ 227453fba3da Downloading 10.71MB
+ d5c3772878da Downloading 28.09MB
+ d5c3772878da Downloading 28.63MB
+ d5c3772878da Downloading 29.17MB
+ d5c3772878da Downloading 29.72MB
+ 4a8b0b2a5b19 Verifying Checksum 0B
+ 4a8b0b2a5b19 Download complete 0B
+ 4a8b0b2a5b19 Extracting 1.399kB
+ 4a8b0b2a5b19 Pull complete 0B
+ d5c3772878da Downloading 30.26MB
+ 612c0c1df4c5 Downloading 211.7kB
+ 612c0c1df4c5 Downloading 417.6kB
+ d5c3772878da Downloading 30.8MB
+ 227453fba3da Downloading 11.25MB
+ 612c0c1df4c5 Downloading 628.7kB
+ 612c0c1df4c5 Downloading 839.8kB
+ d5c3772878da Downloading 31.34MB
+ 612c0c1df4c5 Downloading 1.052MB
+ 612c0c1df4c5 Downloading 1.265MB
+ 612c0c1df4c5 Downloading 1.474MB
+ d5c3772878da Downloading 31.88MB
+ 612c0c1df4c5 Downloading 1.687MB
+ 612c0c1df4c5 Downloading 1.9MB
+ 612c0c1df4c5 Downloading 2.113MB
+ d5c3772878da Downloading 32.42MB
+ 612c0c1df4c5 Downloading 2.326MB
+ 612c0c1df4c5 Downloading 2.539MB
+ d5c3772878da Downloading 32.96MB
+ 612c0c1df4c5 Downloading 2.752MB
+ 612c0c1df4c5 Downloading 2.965MB
+ 227453fba3da Downloading 11.8MB
+ d5c3772878da Downloading 33.5MB
+ 612c0c1df4c5 Downloading 3.178MB
+ 612c0c1df4c5 Downloading 3.391MB
+ d5c3772878da Downloading 34.04MB
+ 612c0c1df4c5 Downloading 3.604MB
+ 612c0c1df4c5 Downloading 3.817MB
+ d5c3772878da Downloading 34.58MB
+ 612c0c1df4c5 Downloading 4.03MB
+ 612c0c1df4c5 Downloading 4.243MB
+ 612c0c1df4c5 Downloading 4.456MB
+ d5c3772878da Downloading 35.12MB
+ 612c0c1df4c5 Downloading 4.669MB
+ 612c0c1df4c5 Downloading 4.882MB
+ d5c3772878da Downloading 35.66MB
+ 612c0c1df4c5 Downloading 5.095MB
+ 612c0c1df4c5 Downloading 5.308MB
+ 227453fba3da Downloading 12.34MB
+ 612c0c1df4c5 Downloading 5.521MB
+ d5c3772878da Downloading 36.2MB
+ 612c0c1df4c5 Downloading 5.734MB
+ 612c0c1df4c5 Downloading 5.947MB
+ 612c0c1df4c5 Downloading 6.16MB
+ d5c3772878da Downloading 36.74MB
+ 612c0c1df4c5 Downloading 6.373MB
+ 612c0c1df4c5 Downloading 6.586MB
+ 612c0c1df4c5 Downloading 6.799MB
+ d5c3772878da Downloading 37.28MB
+ 612c0c1df4c5 Downloading 7.012MB
+ 612c0c1df4c5 Downloading 7.225MB
+ d5c3772878da Downloading 37.83MB
+ 612c0c1df4c5 Downloading 7.438MB
+ 227453fba3da Downloading 12.88MB
+ 227453fba3da Downloading 13.42MB
+ 227453fba3da Downloading 13.96MB
+ 227453fba3da Downloading 14.5MB
+ 227453fba3da Downloading 15.02MB
+ 227453fba3da Downloading 15.56MB
+ 227453fba3da Downloading 16.11MB
+ 227453fba3da Downloading 16.65MB
+ 227453fba3da Downloading 17.19MB
+ 227453fba3da Downloading 17.73MB
+ 227453fba3da Downloading 18.27MB
+ 227453fba3da Downloading 18.81MB
+ 227453fba3da Downloading 19.35MB
+ 612c0c1df4c5 Downloading 7.651MB
+ 612c0c1df4c5 Downloading 7.864MB
+ 612c0c1df4c5 Downloading 8.077MB
+ 612c0c1df4c5 Downloading 8.29MB
+ 612c0c1df4c5 Downloading 8.503MB
+ 612c0c1df4c5 Downloading 8.716MB
+ 612c0c1df4c5 Downloading 8.929MB
+ 612c0c1df4c5 Downloading 9.142MB
+ 612c0c1df4c5 Downloading 9.355MB
+ 612c0c1df4c5 Downloading 9.568MB
+ 612c0c1df4c5 Downloading 9.781MB
+ 612c0c1df4c5 Downloading 9.994MB
+ 612c0c1df4c5 Downloading 10.21MB
+ 612c0c1df4c5 Downloading 10.42MB
+ 612c0c1df4c5 Downloading 10.63MB
+ 612c0c1df4c5 Downloading 10.85MB
+ 612c0c1df4c5 Downloading 11.06MB
+ 612c0c1df4c5 Downloading 11.27MB
+ 612c0c1df4c5 Downloading 11.48MB
+ 612c0c1df4c5 Downloading 11.7MB
+ 227453fba3da Downloading 19.89MB
+ 612c0c1df4c5 Downloading 11.91MB
+ 612c0c1df4c5 Downloading 12.12MB
+ 612c0c1df4c5 Downloading 12.34MB
+ 612c0c1df4c5 Downloading 12.55MB
+ 612c0c1df4c5 Downloading 12.76MB
+ 612c0c1df4c5 Downloading 12.98MB
+ 612c0c1df4c5 Downloading 13.19MB
+ 612c0c1df4c5 Downloading 13.4MB
+ 612c0c1df4c5 Downloading 13.61MB
+ 612c0c1df4c5 Downloading 13.83MB
+ d5c3772878da Downloading 38.37MB
+ d5c3772878da Downloading 38.91MB
+ 612c0c1df4c5 Downloading 14.04MB
+ 612c0c1df4c5 Downloading 14.25MB
+ d5c3772878da Downloading 39.45MB
+ 227453fba3da Downloading 20.42MB
+ 612c0c1df4c5 Downloading 14.47MB
+ 612c0c1df4c5 Downloading 14.68MB
+ d5c3772878da Downloading 39.99MB
+ 612c0c1df4c5 Downloading 14.89MB
+ 612c0c1df4c5 Downloading 15.11MB
+ 612c0c1df4c5 Downloading 15.32MB
+ 612c0c1df4c5 Downloading 15.53MB
+ d5c3772878da Downloading 40.53MB
+ 612c0c1df4c5 Downloading 15.74MB
+ 612c0c1df4c5 Downloading 15.96MB
+ 612c0c1df4c5 Downloading 16.17MB
+ 612c0c1df4c5 Downloading 16.38MB
+ 612c0c1df4c5 Downloading 16.6MB
+ d5c3772878da Downloading 41.07MB
+ 612c0c1df4c5 Downloading 16.81MB
+ 612c0c1df4c5 Downloading 17.02MB
+ d5c3772878da Downloading 41.61MB
+ 612c0c1df4c5 Downloading 17.24MB
+ 612c0c1df4c5 Downloading 17.45MB
+ d5c3772878da Downloading 42.15MB
+ 612c0c1df4c5 Downloading 17.66MB
+ d5c3772878da Downloading 42.69MB
+ 612c0c1df4c5 Downloading 17.87MB
+ 227453fba3da Downloading 20.96MB
+ 612c0c1df4c5 Downloading 18.09MB
+ 612c0c1df4c5 Downloading 18.3MB
+ 612c0c1df4c5 Downloading 18.51MB
+ d5c3772878da Downloading 43.23MB
+ 612c0c1df4c5 Downloading 18.73MB
+ 612c0c1df4c5 Downloading 18.94MB
+ 612c0c1df4c5 Downloading 19.15MB
+ d5c3772878da Downloading 43.77MB
+ 612c0c1df4c5 Downloading 19.37MB
+ 612c0c1df4c5 Downloading 19.58MB
+ 612c0c1df4c5 Downloading 19.79MB
+ d5c3772878da Downloading 44.31MB
+ 612c0c1df4c5 Downloading 20MB
+ 612c0c1df4c5 Downloading 20.22MB
  612c0c1df4c5 Verifying Checksum 0B
  612c0c1df4c5 Download complete 0B
  612c0c1df4c5 Extracting 229.4kB
- 612c0c1df4c5 Extracting 1.606MB
- 612c0c1df4c5 Extracting 5.046MB
- 612c0c1df4c5 Extracting 9.404MB
- 612c0c1df4c5 Extracting 15.14MB
+ 612c0c1df4c5 Extracting 5.964MB
+ 612c0c1df4c5 Extracting 12.62MB
  612c0c1df4c5 Extracting 20.25MB
  612c0c1df4c5 Pull complete 0B
  Image nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de Pulled 
- 76b8b44efa5a Downloading 3.501kB
- 76b8b44efa5a Downloading 18.92kB
- 76b8b44efa5a Verifying Checksum 0B
- 76b8b44efa5a Download complete 0B
- 109614fa76e1 Downloading 15.24MB
- d5c3772878da Downloading 10.26MB
- d5c3772878da Downloading 10.8MB
- 9530417d1dbb Download complete 0B
- d5c3772878da Downloading 11.34MB
- 109614fa76e1 Downloading 15.76MB
- d5c3772878da Downloading 11.89MB
- c24407d2ec97 Downloading 6.11kB
- c24407d2ec97 Verifying Checksum 0B
- c24407d2ec97 Download complete 0B
- 109614fa76e1 Downloading 16.29MB
- d5c3772878da Downloading 12.43MB
- d5c3772878da Downloading 12.97MB
- d5c3772878da Downloading 13.51MB
- d5c3772878da Downloading 14.05MB
- 21225587b6ee Downloading 184B
- 21225587b6ee Verifying Checksum 0B
- 21225587b6ee Download complete 0B
- d5c3772878da Downloading 14.59MB
- 109614fa76e1 Downloading 16.81MB
- d5c3772878da Downloading 15.13MB
- d5c3772878da Downloading 15.67MB
- 109614fa76e1 Downloading 17.34MB
- d5c3772878da Downloading 16.21MB
- d5c3772878da Downloading 16.75MB
- d5c3772878da Downloading 17.29MB
- d5c3772878da Downloading 17.83MB
- d5c3772878da Downloading 18.37MB
- 109614fa76e1 Downloading 17.86MB
- 109614fa76e1 Downloading 18.39MB
- d5c3772878da Downloading 18.91MB
- d5c3772878da Downloading 19.45MB
- 109614fa76e1 Downloading 18.92MB
- d5c3772878da Downloading 20MB
- 109614fa76e1 Downloading 19.45MB
- d5c3772878da Downloading 20.54MB
- d5c3772878da Downloading 21.08MB
- d5c3772878da Downloading 21.62MB
- d5c3772878da Downloading 22.16MB
- 109614fa76e1 Downloading 19.98MB
- d5c3772878da Downloading 22.7MB
- d5c3772878da Downloading 23.24MB
- d5c3772878da Downloading 23.78MB
- 109614fa76e1 Downloading 20.5MB
- d5c3772878da Downloading 24.32MB
- d5c3772878da Downloading 24.86MB
- 109614fa76e1 Downloading 21.03MB
- d5c3772878da Downloading 25.4MB
- d5c3772878da Downloading 25.94MB
- d5c3772878da Downloading 26.48MB
- d5c3772878da Downloading 27.02MB
- 109614fa76e1 Downloading 21.56MB
- d5c3772878da Downloading 27.56MB
- d5c3772878da Downloading 28.11MB
- d5c3772878da Downloading 28.65MB
- d5c3772878da Downloading 29.19MB
- 109614fa76e1 Downloading 22.08MB
- d5c3772878da Downloading 29.73MB
- d5c3772878da Downloading 30.27MB
- d5c3772878da Downloading 30.81MB
- 109614fa76e1 Downloading 22.6MB
- d5c3772878da Downloading 31.35MB
- d5c3772878da Downloading 31.89MB
- d5c3772878da Downloading 32.43MB
- 109614fa76e1 Downloading 23.13MB
- d5c3772878da Downloading 32.97MB
- d5c3772878da Downloading 33.51MB
- d5c3772878da Downloading 34.05MB
- d5c3772878da Downloading 34.59MB
- d5c3772878da Downloading 35.13MB
- d5c3772878da Downloading 35.67MB
- d5c3772878da Downloading 36.22MB
- d5c3772878da Downloading 36.76MB
- 109614fa76e1 Downloading 23.66MB
- d5c3772878da Downloading 37.3MB
- d5c3772878da Downloading 37.84MB
- d5c3772878da Downloading 38.38MB
- d5c3772878da Downloading 38.92MB
- d5c3772878da Downloading 39.46MB
- d5c3772878da Downloading 40MB
- 109614fa76e1 Downloading 24.18MB
- d5c3772878da Downloading 40.54MB
- d5c3772878da Downloading 41.08MB
- d5c3772878da Downloading 41.62MB
- d5c3772878da Downloading 42.16MB
- 109614fa76e1 Downloading 24.71MB
- d5c3772878da Downloading 42.7MB
- d5c3772878da Downloading 43.24MB
- d5c3772878da Downloading 43.78MB
- d5c3772878da Downloading 44.33MB
- d5c3772878da Downloading 44.87MB
- 109614fa76e1 Downloading 25.23MB
- d5c3772878da Downloading 45.41MB
- d5c3772878da Downloading 45.95MB
- d5c3772878da Downloading 46.49MB
- d5c3772878da Downloading 47.03MB
- d5c3772878da Downloading 47.57MB
- d5c3772878da Downloading 48.11MB
- 109614fa76e1 Downloading 25.76MB
- d5c3772878da Downloading 48.65MB
- d5c3772878da Downloading 49.19MB
- d5c3772878da Downloading 49.73MB
- d5c3772878da Downloading 50.27MB
- d5c3772878da Downloading 50.81MB
- d5c3772878da Downloading 51.35MB
- 109614fa76e1 Downloading 26.29MB
- d5c3772878da Downloading 51.89MB
- d5c3772878da Downloading 52.44MB
- d5c3772878da Downloading 52.98MB
- d5c3772878da Downloading 53.52MB
- d5c3772878da Downloading 54.06MB
- d5c3772878da Downloading 54.6MB
- 109614fa76e1 Downloading 26.81MB
- d5c3772878da Downloading 55.14MB
- d5c3772878da Downloading 55.68MB
- d5c3772878da Downloading 56.22MB
- d5c3772878da Downloading 56.76MB
- d5c3772878da Downloading 57.3MB
- d5c3772878da Downloading 57.84MB
- 109614fa76e1 Downloading 27.34MB
- d5c3772878da Downloading 58.38MB
- d5c3772878da Downloading 58.92MB
- d5c3772878da Downloading 59.46MB
- 109614fa76e1 Downloading 27.86MB
- d5c3772878da Downloading 60MB
- d5c3772878da Downloading 60.55MB
- d5c3772878da Downloading 61.09MB
- d5c3772878da Downloading 61.63MB
- d5c3772878da Downloading 62.17MB
- d5c3772878da Downloading 62.71MB
- 109614fa76e1 Downloading 28.38MB
- d5c3772878da Downloading 63.25MB
- d5c3772878da Downloading 63.79MB
- d5c3772878da Downloading 64.33MB
- d5c3772878da Downloading 64.87MB
- d5c3772878da Downloading 65.41MB
- 109614fa76e1 Downloading 28.91MB
- d5c3772878da Downloading 65.95MB
- d5c3772878da Downloading 66.49MB
- d5c3772878da Downloading 67.03MB
- d5c3772878da Downloading 67.57MB
- 109614fa76e1 Downloading 29.43MB
- d5c3772878da Downloading 68.12MB
- d5c3772878da Downloading 68.66MB
- d5c3772878da Downloading 69.2MB
- d5c3772878da Downloading 69.74MB
- 109614fa76e1 Downloading 29.97MB
- d5c3772878da Downloading 70.28MB
- d5c3772878da Downloading 70.82MB
- d5c3772878da Downloading 71.36MB
- d5c3772878da Downloading 71.9MB
- 109614fa76e1 Downloading 30.49MB
- d5c3772878da Downloading 72.44MB
- d5c3772878da Downloading 72.98MB
- d5c3772878da Downloading 73.52MB
- d5c3772878da Downloading 74.06MB
- d5c3772878da Downloading 74.6MB
- d5c3772878da Downloading 75.14MB
- d5c3772878da Downloading 75.68MB
- d5c3772878da Downloading 76.23MB
- d5c3772878da Downloading 76.77MB
- 109614fa76e1 Downloading 31.02MB
- d5c3772878da Downloading 77.31MB
- d5c3772878da Downloading 77.85MB
- d5c3772878da Downloading 78.39MB
- d5c3772878da Downloading 78.93MB
- 109614fa76e1 Downloading 52.13MB
- 109614fa76e1 Retrying in 5 seconds 0B
- d5c3772878da Downloading 79.47MB
- 109614fa76e1 Retrying in 4 seconds 0B
- 109614fa76e1 Retrying in 3 seconds 0B
- 109614fa76e1 Retrying in 2 seconds 0B
- 109614fa76e1 Retrying in 1 second 0B
- d5c3772878da Downloading 80.01MB
- d5c3772878da Downloading 80.55MB
- 109614fa76e1 Retrying in 10 seconds 0B
- 109614fa76e1 Retrying in 9 seconds 0B
- 109614fa76e1 Retrying in 8 seconds 0B
- 109614fa76e1 Retrying in 7 seconds 0B
- d5c3772878da Downloading 81.09MB
- 109614fa76e1 Retrying in 6 seconds 0B
- 109614fa76e1 Retrying in 5 seconds 0B
- 109614fa76e1 Retrying in 4 seconds 0B
- d5c3772878da Downloading 81.63MB
- 109614fa76e1 Retrying in 3 seconds 0B
- 109614fa76e1 Retrying in 2 seconds 0B
- 109614fa76e1 Retrying in 1 second 0B
- d5c3772878da Downloading 82.17MB
- d5c3772878da Downloading 82.71MB
- d5c3772878da Downloading 83.25MB
- d5c3772878da Downloading 83.79MB
- d5c3772878da Downloading 84.34MB
- d5c3772878da Downloading 84.88MB
- d5c3772878da Downloading 85.42MB
- 109614fa76e1 Downloading 523kB
- d5c3772878da Downloading 85.96MB
- d5c3772878da Downloading 86.5MB
- 109614fa76e1 Downloading 1.047MB
- d5c3772878da Downloading 87.04MB
- d5c3772878da Downloading 87.58MB
- d5c3772878da Downloading 88.12MB
- d5c3772878da Downloading 88.66MB
- d5c3772878da Downloading 89.2MB
- d5c3772878da Downloading 89.74MB
- d5c3772878da Downloading 90.28MB
- d5c3772878da Downloading 90.82MB
- d5c3772878da Downloading 91.36MB
- d5c3772878da Downloading 91.9MB
- d5c3772878da Downloading 92.45MB
- d5c3772878da Downloading 92.99MB
- d5c3772878da Downloading 93.53MB
- d5c3772878da Downloading 94.07MB
- d5c3772878da Downloading 94.61MB
- d5c3772878da Downloading 95.15MB
- d5c3772878da Downloading 95.69MB
- 109614fa76e1 Downloading 1.572MB
- d5c3772878da Downloading 96.23MB
- d5c3772878da Downloading 96.77MB
- d5c3772878da Downloading 97.31MB
- d5c3772878da Downloading 97.85MB
- d5c3772878da Downloading 98.39MB
- 109614fa76e1 Downloading 2.096MB
- d5c3772878da Downloading 98.93MB
- d5c3772878da Downloading 99.47MB
+ d5c3772878da Downloading 44.85MB
+ 227453fba3da Downloading 21.49MB
+ d5c3772878da Downloading 45.39MB
+ d5c3772878da Downloading 45.94MB
+ d5c3772878da Downloading 46.48MB
+ d5c3772878da Downloading 47.02MB
+ d5c3772878da Downloading 47.56MB
+ d5c3772878da Downloading 48.1MB
+ 227453fba3da Downloading 22.04MB
+ d5c3772878da Downloading 48.64MB
+ d5c3772878da Downloading 49.18MB
+ d5c3772878da Downloading 49.72MB
+ d5c3772878da Downloading 50.26MB
+ d5c3772878da Downloading 50.8MB
+ d5c3772878da Downloading 51.34MB
+ d5c3772878da Downloading 51.88MB
+ d5c3772878da Downloading 52.42MB
+ d5c3772878da Downloading 52.96MB
+ 227453fba3da Downloading 22.58MB
+ d5c3772878da Downloading 53.5MB
+ d5c3772878da Downloading 54.05MB
+ d5c3772878da Downloading 54.59MB
+ 227453fba3da Downloading 23.11MB
+ d5c3772878da Downloading 55.13MB
+ d5c3772878da Downloading 55.67MB
+ d5c3772878da Downloading 56.21MB
+ 227453fba3da Downloading 23.64MB
+ d5c3772878da Downloading 56.75MB
+ d5c3772878da Downloading 57.29MB
+ d5c3772878da Downloading 57.83MB
+ 227453fba3da Downloading 24.18MB
+ d5c3772878da Downloading 58.37MB
+ d5c3772878da Downloading 58.91MB
+ d5c3772878da Downloading 59.45MB
+ d5c3772878da Downloading 59.99MB
+ d5c3772878da Downloading 60.53MB
+ d5c3772878da Downloading 61.07MB
+ 227453fba3da Downloading 24.71MB
+ d5c3772878da Downloading 61.61MB
+ d5c3772878da Downloading 62.16MB
+ 227453fba3da Downloading 25.24MB
+ d5c3772878da Downloading 62.7MB
+ d5c3772878da Downloading 63.24MB
+ d5c3772878da Downloading 63.78MB
+ d5c3772878da Downloading 64.32MB
+ d5c3772878da Downloading 64.86MB
+ 227453fba3da Downloading 25.77MB
+ d5c3772878da Downloading 65.4MB
+ d5c3772878da Downloading 65.94MB
+ d5c3772878da Downloading 66.48MB
+ d5c3772878da Downloading 67.02MB
+ 227453fba3da Downloading 26.31MB
+ d5c3772878da Downloading 67.56MB
+ d5c3772878da Downloading 68.1MB
+ d5c3772878da Downloading 68.64MB
+ d5c3772878da Downloading 69.18MB
+ d5c3772878da Downloading 69.72MB
+ d5c3772878da Downloading 70.27MB
+ d5c3772878da Downloading 70.81MB
+ 227453fba3da Downloading 26.85MB
+ d5c3772878da Downloading 71.35MB
+ d5c3772878da Downloading 71.89MB
+ d5c3772878da Downloading 72.43MB
+ d5c3772878da Downloading 72.97MB
+ d5c3772878da Downloading 73.51MB
+ d5c3772878da Downloading 74.05MB
+ 227453fba3da Downloading 27.39MB
+ d5c3772878da Downloading 74.59MB
+ d5c3772878da Downloading 75.13MB
+ d5c3772878da Downloading 75.67MB
+ d5c3772878da Downloading 76.21MB
+ d5c3772878da Downloading 76.75MB
+ 227453fba3da Downloading 27.93MB
+ d5c3772878da Downloading 77.29MB
+ d5c3772878da Downloading 77.83MB
+ d5c3772878da Downloading 78.38MB
+ d5c3772878da Downloading 78.92MB
+ d5c3772878da Downloading 79.46MB
+ 227453fba3da Downloading 28.47MB
+ d5c3772878da Downloading 80MB
+ d5c3772878da Downloading 80.54MB
+ d5c3772878da Downloading 81.08MB
+ d5c3772878da Downloading 81.62MB
+ d5c3772878da Downloading 82.16MB
+ d5c3772878da Downloading 82.7MB
+ d5c3772878da Downloading 83.24MB
+ 227453fba3da Downloading 29.01MB
+ d5c3772878da Downloading 83.78MB
+ d5c3772878da Downloading 84.32MB
+ d5c3772878da Downloading 84.86MB
+ d5c3772878da Downloading 85.4MB
+ d5c3772878da Downloading 85.95MB
+ d5c3772878da Downloading 86.49MB
+ 227453fba3da Downloading 29.55MB
+ d5c3772878da Downloading 87.03MB
+ d5c3772878da Downloading 87.57MB
+ d5c3772878da Downloading 88.11MB
+ d5c3772878da Downloading 88.65MB
+ d5c3772878da Downloading 89.19MB
+ d5c3772878da Downloading 89.73MB
+ d5c3772878da Downloading 90.27MB
+ d5c3772878da Downloading 90.81MB
+ 227453fba3da Downloading 30.09MB
+ d5c3772878da Downloading 91.35MB
+ d5c3772878da Downloading 91.89MB
+ d5c3772878da Downloading 92.43MB
+ d5c3772878da Downloading 92.97MB
+ d5c3772878da Downloading 93.51MB
+ d5c3772878da Downloading 94.06MB
+ 227453fba3da Downloading 30.62MB
+ d5c3772878da Downloading 94.6MB
+ d5c3772878da Downloading 95.14MB
+ d5c3772878da Downloading 95.68MB
+ d5c3772878da Downloading 96.22MB
+ d5c3772878da Downloading 96.76MB
+ d5c3772878da Downloading 97.3MB
+ d5c3772878da Downloading 97.84MB
+ 227453fba3da Downloading 31.15MB
+ d5c3772878da Downloading 98.38MB
+ d5c3772878da Downloading 98.92MB
+ d5c3772878da Downloading 99.46MB
  d5c3772878da Downloading 100MB
- d5c3772878da Downloading 100.6MB
+ 227453fba3da Downloading 53.56MB
+ 227453fba3da Retrying in 5 seconds 0B
+ 227453fba3da Retrying in 4 seconds 0B
+ 227453fba3da Retrying in 3 seconds 0B
+ d5c3772878da Downloading 100.5MB
+ 227453fba3da Retrying in 2 seconds 0B
+ 227453fba3da Retrying in 1 second 0B
  d5c3772878da Downloading 101.1MB
- 109614fa76e1 Downloading 2.62MB
  d5c3772878da Downloading 101.6MB
  d5c3772878da Downloading 102.2MB
  d5c3772878da Downloading 102.7MB
- d5c3772878da Downloading 103.3MB
+ d5c3772878da Downloading 103.2MB
  d5c3772878da Downloading 103.8MB
- 109614fa76e1 Downloading 3.144MB
  d5c3772878da Downloading 104.3MB
+ 227453fba3da Downloading 228kB
  d5c3772878da Downloading 104.9MB
  d5c3772878da Downloading 105.4MB
- d5c3772878da Downloading 106MB
- 109614fa76e1 Downloading 3.669MB
+ d5c3772878da Downloading 105.9MB
+ 227453fba3da Downloading 457.4kB
  d5c3772878da Downloading 106.5MB
  d5c3772878da Downloading 107MB
  d5c3772878da Downloading 107.6MB
+ 227453fba3da Downloading 686.8kB
  d5c3772878da Downloading 108.1MB
- 109614fa76e1 Downloading 4.193MB
  d5c3772878da Downloading 108.7MB
  d5c3772878da Downloading 109.2MB
+ 227453fba3da Downloading 916.2kB
  d5c3772878da Downloading 109.7MB
  d5c3772878da Downloading 110.3MB
- 109614fa76e1 Downloading 4.717MB
  d5c3772878da Downloading 110.8MB
+ 227453fba3da Downloading 1.146MB
  d5c3772878da Downloading 111.4MB
  d5c3772878da Downloading 111.9MB
- d5c3772878da Downloading 112.5MB
+ d5c3772878da Downloading 112.4MB
+ 227453fba3da Downloading 1.375MB
  d5c3772878da Downloading 113MB
  d5c3772878da Downloading 113.5MB
  d5c3772878da Downloading 114.1MB
  d5c3772878da Downloading 114.6MB
- 109614fa76e1 Downloading 5.242MB
- d5c3772878da Downloading 115.2MB
+ 227453fba3da Downloading 1.604MB
+ d5c3772878da Downloading 115.1MB
  d5c3772878da Verifying Checksum 0B
  d5c3772878da Download complete 0B
  d5c3772878da Extracting 557.1kB
  d5c3772878da Extracting 1.114MB
- d5c3772878da Extracting 3.899MB
- d5c3772878da Extracting 9.47MB
- d5c3772878da Extracting 20.61MB
- d5c3772878da Extracting 30.64MB
- d5c3772878da Extracting 40.11MB
- d5c3772878da Extracting 50.69MB
- d5c3772878da Extracting 56.26MB
- d5c3772878da Extracting 61.28MB
- d5c3772878da Extracting 69.63MB
- d5c3772878da Extracting 77.99MB
- d5c3772878da Extracting 84.12MB
- d5c3772878da Extracting 87.46MB
- d5c3772878da Extracting 94.14MB
- d5c3772878da Extracting 100.3MB
- d5c3772878da Extracting 105.8MB
- d5c3772878da Extracting 114.8MB
+ d5c3772878da Extracting 2.228MB
+ d5c3772878da Extracting 5.571MB
+ d5c3772878da Extracting 16.15MB
+ d5c3772878da Extracting 26.74MB
+ d5c3772878da Extracting 36.77MB
+ d5c3772878da Extracting 46.24MB
+ d5c3772878da Extracting 55.15MB
+ d5c3772878da Extracting 59.6MB
+ d5c3772878da Extracting 67.4MB
+ d5c3772878da Extracting 76.87MB
+ d5c3772878da Extracting 83.56MB
+ d5c3772878da Extracting 85.23MB
+ d5c3772878da Extracting 90.8MB
+ d5c3772878da Extracting 97.48MB
+ d5c3772878da Extracting 103.1MB
+ d5c3772878da Extracting 112.5MB
  d5c3772878da Extracting 115.2MB
  d5c3772878da Pull complete 0B
+ 227453fba3da Downloading 1.834MB
  76b8b44efa5a Extracting 18.92kB
  76b8b44efa5a Extracting 18.92kB
  76b8b44efa5a Pull complete 0B
@@ -2010,234 +1937,133 @@ OK: replica api 5 setelah beban
  21225587b6ee Extracting 184B
  21225587b6ee Pull complete 0B
  Image postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15 Pulled 
- 109614fa76e1 Downloading 5.766MB
- 109614fa76e1 Downloading 6.29MB
- 109614fa76e1 Downloading 6.822MB
- 109614fa76e1 Downloading 7.346MB
- 109614fa76e1 Downloading 7.871MB
- 109614fa76e1 Downloading 8.395MB
- 109614fa76e1 Downloading 8.919MB
- 109614fa76e1 Downloading 9.441MB
- 109614fa76e1 Downloading 9.965MB
- 109614fa76e1 Downloading 52.13MB
- 109614fa76e1 Retrying in 15 seconds 0B
- 109614fa76e1 Retrying in 14 seconds 0B
- 109614fa76e1 Retrying in 13 seconds 0B
- 109614fa76e1 Retrying in 12 seconds 0B
- 109614fa76e1 Retrying in 11 seconds 0B
- 109614fa76e1 Retrying in 10 seconds 0B
- 109614fa76e1 Retrying in 9 seconds 0B
- 109614fa76e1 Retrying in 8 seconds 0B
- 109614fa76e1 Retrying in 7 seconds 0B
- 109614fa76e1 Retrying in 6 seconds 0B
- 109614fa76e1 Retrying in 5 seconds 0B
- 109614fa76e1 Retrying in 4 seconds 0B
- 109614fa76e1 Retrying in 3 seconds 0B
- 109614fa76e1 Retrying in 2 seconds 0B
- 109614fa76e1 Retrying in 1 second 0B
- 109614fa76e1 Downloading 426kB
- 109614fa76e1 Downloading 852kB
- 109614fa76e1 Downloading 1.278MB
- 109614fa76e1 Downloading 1.704MB
- 109614fa76e1 Downloading 2.128MB
- 109614fa76e1 Downloading 2.554MB
- 109614fa76e1 Downloading 2.98MB
- 109614fa76e1 Downloading 3.406MB
- 109614fa76e1 Downloading 3.832MB
- 109614fa76e1 Downloading 4.258MB
- 109614fa76e1 Downloading 4.684MB
- 109614fa76e1 Downloading 5.11MB
- 109614fa76e1 Downloading 5.536MB
- 109614fa76e1 Downloading 5.962MB
- 109614fa76e1 Downloading 6.388MB
- 109614fa76e1 Downloading 6.814MB
- 109614fa76e1 Downloading 7.24MB
- 109614fa76e1 Downloading 7.666MB
- 109614fa76e1 Downloading 8.092MB
- 109614fa76e1 Downloading 8.52MB
- 109614fa76e1 Downloading 8.946MB
- 109614fa76e1 Downloading 9.372MB
- 109614fa76e1 Downloading 9.798MB
- 109614fa76e1 Downloading 10.22MB
- 109614fa76e1 Downloading 10.65MB
- 109614fa76e1 Downloading 11.08MB
- 109614fa76e1 Downloading 11.5MB
- 109614fa76e1 Downloading 11.93MB
- 109614fa76e1 Downloading 12.36MB
- 109614fa76e1 Downloading 12.78MB
- 109614fa76e1 Downloading 13.21MB
- 109614fa76e1 Downloading 13.63MB
- 109614fa76e1 Downloading 14.06MB
- 109614fa76e1 Downloading 14.49MB
- 109614fa76e1 Downloading 14.91MB
- 109614fa76e1 Downloading 15.34MB
- 109614fa76e1 Downloading 15.76MB
- 109614fa76e1 Downloading 16.19MB
- 109614fa76e1 Downloading 16.62MB
- 109614fa76e1 Downloading 17.04MB
- 109614fa76e1 Downloading 17.47MB
- 109614fa76e1 Downloading 17.89MB
- 109614fa76e1 Downloading 18.32MB
- 109614fa76e1 Downloading 18.74MB
- 109614fa76e1 Downloading 19.17MB
- 109614fa76e1 Downloading 19.59MB
- 109614fa76e1 Downloading 20.02MB
- 109614fa76e1 Downloading 20.45MB
- 109614fa76e1 Downloading 20.87MB
- 109614fa76e1 Downloading 41.65MB
- 109614fa76e1 Retrying in 20 seconds 0B
- 109614fa76e1 Retrying in 19 seconds 0B
- 109614fa76e1 Retrying in 18 seconds 0B
- 109614fa76e1 Retrying in 17 seconds 0B
- 109614fa76e1 Retrying in 16 seconds 0B
- 109614fa76e1 Retrying in 15 seconds 0B
- 109614fa76e1 Retrying in 14 seconds 0B
- 109614fa76e1 Retrying in 13 seconds 0B
- 109614fa76e1 Retrying in 12 seconds 0B
- 109614fa76e1 Retrying in 11 seconds 0B
- 109614fa76e1 Retrying in 10 seconds 0B
- 109614fa76e1 Retrying in 9 seconds 0B
- 109614fa76e1 Retrying in 8 seconds 0B
- 109614fa76e1 Retrying in 7 seconds 0B
- 109614fa76e1 Retrying in 6 seconds 0B
- 109614fa76e1 Retrying in 5 seconds 0B
- 109614fa76e1 Retrying in 4 seconds 0B
- 109614fa76e1 Retrying in 3 seconds 0B
- 109614fa76e1 Retrying in 2 seconds 0B
- 109614fa76e1 Retrying in 1 second 0B
- 109614fa76e1 Downloading 211.7kB
- 109614fa76e1 Downloading 424.7kB
- 109614fa76e1 Downloading 637.6kB
- 109614fa76e1 Downloading 850.6kB
- 109614fa76e1 Downloading 1.064MB
- 109614fa76e1 Downloading 1.277MB
- 109614fa76e1 Downloading 1.49MB
- 109614fa76e1 Downloading 1.703MB
- 109614fa76e1 Downloading 1.916MB
- 109614fa76e1 Downloading 2.129MB
- 109614fa76e1 Downloading 2.342MB
- 109614fa76e1 Downloading 2.556MB
- 109614fa76e1 Downloading 2.769MB
- 109614fa76e1 Downloading 2.982MB
- 109614fa76e1 Downloading 3.195MB
- 109614fa76e1 Downloading 3.408MB
- 109614fa76e1 Downloading 3.621MB
- 109614fa76e1 Downloading 3.834MB
- 109614fa76e1 Downloading 4.047MB
- 109614fa76e1 Downloading 4.26MB
- 109614fa76e1 Downloading 4.473MB
- 109614fa76e1 Downloading 4.686MB
- 109614fa76e1 Downloading 4.899MB
- 109614fa76e1 Downloading 5.112MB
- 109614fa76e1 Downloading 5.325MB
- 109614fa76e1 Downloading 5.538MB
- 109614fa76e1 Downloading 5.751MB
- 109614fa76e1 Downloading 5.964MB
- 109614fa76e1 Downloading 6.177MB
- 109614fa76e1 Downloading 6.39MB
- 109614fa76e1 Downloading 6.603MB
- 109614fa76e1 Downloading 6.816MB
- 109614fa76e1 Downloading 7.027MB
- 109614fa76e1 Downloading 7.235MB
- 109614fa76e1 Downloading 7.448MB
- 109614fa76e1 Downloading 7.661MB
- 109614fa76e1 Downloading 7.874MB
- 109614fa76e1 Downloading 8.085MB
- 109614fa76e1 Downloading 8.298MB
- 109614fa76e1 Downloading 8.511MB
- 109614fa76e1 Downloading 8.724MB
- 109614fa76e1 Downloading 8.937MB
- 109614fa76e1 Downloading 9.152MB
- 109614fa76e1 Downloading 9.365MB
- 109614fa76e1 Downloading 9.579MB
- 109614fa76e1 Downloading 9.792MB
- 109614fa76e1 Downloading 10.01MB
- 109614fa76e1 Downloading 10.22MB
- 109614fa76e1 Downloading 10.43MB
- 109614fa76e1 Downloading 10.65MB
- 109614fa76e1 Downloading 10.86MB
- 109614fa76e1 Downloading 11.07MB
- 109614fa76e1 Downloading 11.29MB
- 109614fa76e1 Downloading 11.5MB
- 109614fa76e1 Downloading 11.71MB
- 109614fa76e1 Downloading 11.93MB
- 109614fa76e1 Downloading 12.14MB
- 109614fa76e1 Downloading 12.35MB
- 109614fa76e1 Downloading 12.57MB
- 109614fa76e1 Downloading 12.78MB
- 109614fa76e1 Downloading 12.99MB
- 109614fa76e1 Downloading 13.2MB
- 109614fa76e1 Downloading 13.42MB
- 109614fa76e1 Downloading 13.63MB
- 109614fa76e1 Downloading 13.84MB
- 109614fa76e1 Downloading 14.06MB
- 109614fa76e1 Downloading 14.27MB
- 109614fa76e1 Downloading 14.48MB
- 109614fa76e1 Downloading 14.7MB
- 109614fa76e1 Downloading 14.91MB
- 109614fa76e1 Downloading 15.12MB
- 109614fa76e1 Downloading 15.34MB
- 109614fa76e1 Downloading 15.55MB
- 109614fa76e1 Downloading 15.76MB
- 109614fa76e1 Downloading 15.97MB
- 109614fa76e1 Downloading 16.2MB
- 109614fa76e1 Downloading 16.41MB
- 109614fa76e1 Downloading 16.62MB
- 109614fa76e1 Downloading 16.84MB
- 109614fa76e1 Downloading 17.05MB
- 109614fa76e1 Downloading 17.27MB
- 109614fa76e1 Downloading 17.48MB
- 109614fa76e1 Downloading 17.69MB
- 109614fa76e1 Downloading 17.91MB
- 109614fa76e1 Downloading 18.12MB
- 109614fa76e1 Downloading 18.34MB
- 109614fa76e1 Downloading 18.55MB
- 109614fa76e1 Downloading 18.76MB
- 109614fa76e1 Downloading 18.97MB
- 109614fa76e1 Downloading 19.18MB
- 109614fa76e1 Downloading 19.39MB
- 109614fa76e1 Downloading 19.61MB
- 109614fa76e1 Downloading 19.82MB
- 109614fa76e1 Downloading 20.03MB
- 109614fa76e1 Downloading 20.24MB
- 109614fa76e1 Downloading 20.45MB
- 109614fa76e1 Downloading 20.67MB
- 109614fa76e1 Verifying Checksum 0B
- 109614fa76e1 Download complete 0B
- 109614fa76e1 Extracting 524.3kB
- 109614fa76e1 Extracting 1.049MB
- 109614fa76e1 Extracting 2.097MB
- 109614fa76e1 Extracting 12.06MB
- 109614fa76e1 Extracting 22.54MB
- 109614fa76e1 Extracting 28.84MB
- 109614fa76e1 Extracting 31.46MB
- 109614fa76e1 Extracting 32.51MB
- 109614fa76e1 Extracting 34.6MB
- 109614fa76e1 Extracting 35.13MB
- 109614fa76e1 Extracting 37.22MB
- 109614fa76e1 Extracting 47.71MB
- 109614fa76e1 Extracting 48.23MB
- 109614fa76e1 Extracting 48.76MB
- 109614fa76e1 Extracting 52.13MB
- 109614fa76e1 Pull complete 0B
- ce9709510868 Extracting 32.77kB
- ce9709510868 Extracting 35.74kB
- ce9709510868 Pull complete 0B
- 2cde3ff64063 Extracting 1.411kB
- 2cde3ff64063 Extracting 1.411kB
- 2cde3ff64063 Pull complete 0B
- 5c31e8d46e54 Extracting 1.383kB
- 5c31e8d46e54 Extracting 1.383kB
- 5c31e8d46e54 Pull complete 0B
- 24f908150917 Extracting 32.77kB
- 24f908150917 Extracting 84.99kB
- 24f908150917 Extracting 84.99kB
- 24f908150917 Pull complete 0B
- Image ghcr.io/qrizan/nestjs-swagger-prisma:0.0.1-rc.4@sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870 Pulled 
+ 227453fba3da Downloading 2.063MB
+ 227453fba3da Downloading 2.292MB
+ 227453fba3da Downloading 2.523MB
+ 227453fba3da Downloading 2.753MB
+ 227453fba3da Downloading 2.982MB
+ 227453fba3da Downloading 3.211MB
+ 227453fba3da Downloading 3.441MB
+ 227453fba3da Downloading 3.67MB
+ 227453fba3da Downloading 3.899MB
+ 227453fba3da Downloading 4.135MB
+ 227453fba3da Downloading 4.364MB
+ 227453fba3da Downloading 4.594MB
+ 227453fba3da Downloading 4.823MB
+ 227453fba3da Downloading 5.053MB
+ 227453fba3da Downloading 5.282MB
+ 227453fba3da Downloading 5.511MB
+ 227453fba3da Downloading 5.741MB
+ 227453fba3da Downloading 5.97MB
+ 227453fba3da Downloading 6.199MB
+ 227453fba3da Downloading 6.434MB
+ 227453fba3da Downloading 6.663MB
+ 227453fba3da Downloading 6.892MB
+ 227453fba3da Downloading 7.122MB
+ 227453fba3da Downloading 7.351MB
+ 227453fba3da Downloading 7.587MB
+ 227453fba3da Downloading 7.816MB
+ 227453fba3da Downloading 8.046MB
+ 227453fba3da Downloading 8.275MB
+ 227453fba3da Downloading 8.504MB
+ 227453fba3da Downloading 8.734MB
+ 227453fba3da Downloading 8.963MB
+ 227453fba3da Downloading 9.193MB
+ 227453fba3da Downloading 9.422MB
+ 227453fba3da Downloading 9.65MB
+ 227453fba3da Downloading 9.879MB
+ 227453fba3da Downloading 10.11MB
+ 227453fba3da Downloading 10.34MB
+ 227453fba3da Downloading 10.57MB
+ 227453fba3da Downloading 10.8MB
+ 227453fba3da Downloading 11.03MB
+ 227453fba3da Downloading 11.26MB
+ 227453fba3da Downloading 11.49MB
+ 227453fba3da Downloading 11.71MB
+ 227453fba3da Downloading 11.94MB
+ 227453fba3da Downloading 12.17MB
+ 227453fba3da Downloading 12.4MB
+ 227453fba3da Downloading 12.63MB
+ 227453fba3da Downloading 12.86MB
+ 227453fba3da Downloading 13.09MB
+ 227453fba3da Downloading 13.32MB
+ 227453fba3da Downloading 13.55MB
+ 227453fba3da Downloading 13.78MB
+ 227453fba3da Downloading 14.01MB
+ 227453fba3da Downloading 14.24MB
+ 227453fba3da Downloading 14.47MB
+ 227453fba3da Downloading 14.7MB
+ 227453fba3da Downloading 14.93MB
+ 227453fba3da Downloading 15.16MB
+ 227453fba3da Downloading 15.38MB
+ 227453fba3da Downloading 15.61MB
+ 227453fba3da Downloading 15.84MB
+ 227453fba3da Downloading 16.07MB
+ 227453fba3da Downloading 16.3MB
+ 227453fba3da Downloading 16.53MB
+ 227453fba3da Downloading 16.76MB
+ 227453fba3da Downloading 16.99MB
+ 227453fba3da Downloading 17.22MB
+ 227453fba3da Downloading 17.45MB
+ 227453fba3da Downloading 17.68MB
+ 227453fba3da Downloading 17.91MB
+ 227453fba3da Downloading 18.14MB
+ 227453fba3da Downloading 18.37MB
+ 227453fba3da Downloading 18.6MB
+ 227453fba3da Downloading 18.83MB
+ 227453fba3da Downloading 19.06MB
+ 227453fba3da Downloading 19.29MB
+ 227453fba3da Downloading 19.52MB
+ 227453fba3da Downloading 19.75MB
+ 227453fba3da Downloading 19.98MB
+ 227453fba3da Downloading 20.21MB
+ 227453fba3da Downloading 20.44MB
+ 227453fba3da Downloading 20.67MB
+ 227453fba3da Downloading 20.9MB
+ 227453fba3da Downloading 21.13MB
+ 227453fba3da Downloading 21.35MB
+ 227453fba3da Downloading 21.58MB
+ 227453fba3da Downloading 21.81MB
+ 227453fba3da Downloading 22.04MB
+ 227453fba3da Verifying Checksum 0B
+ 227453fba3da Download complete 0B
+ 227453fba3da Extracting 557.1kB
+ 227453fba3da Extracting 1.114MB
+ 227453fba3da Extracting 1.671MB
+ 227453fba3da Extracting 2.228MB
+ 227453fba3da Extracting 8.913MB
+ 227453fba3da Extracting 18.38MB
+ 227453fba3da Extracting 28.97MB
+ 227453fba3da Extracting 29.52MB
+ 227453fba3da Extracting 30.08MB
+ 227453fba3da Extracting 31.75MB
+ 227453fba3da Extracting 32.87MB
+ 227453fba3da Extracting 33.42MB
+ 227453fba3da Extracting 34.54MB
+ 227453fba3da Extracting 36.21MB
+ 227453fba3da Extracting 36.77MB
+ 227453fba3da Extracting 40.67MB
+ 227453fba3da Extracting 49.58MB
+ 227453fba3da Extracting 50.14MB
+ 227453fba3da Extracting 53.56MB
+ 227453fba3da Pull complete 0B
+ 7514b89df490 Extracting 32.77kB
+ 7514b89df490 Extracting 37.98kB
+ 7514b89df490 Pull complete 0B
+ c7431a9e5612 Extracting 1.409kB
+ c7431a9e5612 Extracting 1.409kB
+ c7431a9e5612 Pull complete 0B
+ 38d912d9f275 Extracting 1.39kB
+ 38d912d9f275 Extracting 1.39kB
+ 38d912d9f275 Pull complete 0B
+ 131e0b8ce827 Extracting 8.89kB
+ 131e0b8ce827 Extracting 8.89kB
+ 131e0b8ce827 Pull complete 0B
+ Image ghcr.io/qrizan/nestjs-swagger-prisma:0.0.2@sha256:5d4e2db57864f8ab0da3523333bf16e84cafcb10daa36ebcb4c869f95a4b0640 Pulled 
 
-real	36m56.189s
-user	0m0.627s
-sys	0m0.310s
+real	18m0.003s
+user	0m0.387s
+sys	0m0.209s
  Network compose_catalog Creating 
  Network compose_catalog Created 
  Volume compose_postgres-data Creating 
@@ -2245,10 +2071,10 @@ sys	0m0.310s
  Volume compose_garage-data Creating 
  Volume compose_garage-data Created 
  Container compose-postgres-1 Creating 
- Container compose-garage-1 Creating 
  Container compose-admin-1 Creating 
- Container compose-garage-1 Created 
+ Container compose-garage-1 Creating 
  Container compose-admin-1 Created 
+ Container compose-garage-1 Created 
  Container compose-postgres-1 Created 
  Container compose-migrate-1 Creating 
  Container compose-migrate-1 Created 
@@ -2258,13 +2084,13 @@ sys	0m0.310s
  Container compose-public-1 Created 
  Container compose-proxy-1 Creating 
  Container compose-proxy-1 Created 
- Container compose-postgres-1 Starting 
  Container compose-admin-1 Starting 
  Container compose-garage-1 Starting 
- Container compose-admin-1 Started 
+ Container compose-postgres-1 Starting 
  Container compose-postgres-1 Started 
  Container compose-postgres-1 Waiting 
  Container compose-garage-1 Started 
+ Container compose-admin-1 Started 
  Container compose-postgres-1 Healthy 
  Container compose-migrate-1 Starting 
  Container compose-migrate-1 Started 
@@ -2278,33 +2104,33 @@ sys	0m0.310s
  Container compose-api-1 Healthy 
  Container compose-public-1 Starting 
  Container compose-public-1 Started 
+ Container compose-public-1 Waiting 
  Container compose-garage-1 Waiting 
  Container compose-api-1 Waiting 
  Container compose-admin-1 Waiting 
- Container compose-public-1 Waiting 
- Container compose-api-1 Healthy 
  Container compose-garage-1 Healthy 
+ Container compose-api-1 Healthy 
  Container compose-admin-1 Healthy 
  Container compose-public-1 Healthy 
  Container compose-proxy-1 Starting 
  Container compose-proxy-1 Started 
 
-real	0m38.084s
-user	0m0.273s
-sys	0m0.092s
+real	0m28.724s
+user	0m0.264s
+sys	0m0.084s
 NAME                 IMAGE                                                                                                                        COMMAND                  SERVICE    CREATED          STATUS                    PORTS
-compose-admin-1      ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985         "/docker-entrypoint.…"   admin      38 seconds ago   Up 37 seconds (healthy)   8080/tcp
-compose-api-1        ghcr.io/qrizan/nestjs-swagger-prisma:0.0.1-rc.4@sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870      "docker-entrypoint.s…"   api        37 seconds ago   Up 21 seconds (healthy)   3000/tcp
-compose-garage-1     dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690                                 "/garage server --si…"   garage     38 seconds ago   Up 37 seconds (healthy)   
-compose-postgres-1   postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15                                   "docker-entrypoint.s…"   postgres   38 seconds ago   Up 37 seconds (healthy)   5432/tcp
-compose-proxy-1      nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de                                    "/docker-entrypoint.…"   proxy      37 seconds ago   Up Less than a second     80/tcp, 0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
-compose-public-1     ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8   "./entrypoint.sh"        public     37 seconds ago   Up 15 seconds (healthy)   8080/tcp
+compose-admin-1      ghcr.io/qrizan/react-shadcn-redux:0.0.1-rc.2@sha256:b456481cb65f1e2d6b066194f8db7f01663a334e0e17faad18c1411ca76f0985         "/docker-entrypoint.…"   admin      28 seconds ago   Up 27 seconds (healthy)   8080/tcp
+compose-api-1        ghcr.io/qrizan/nestjs-swagger-prisma:0.0.2@sha256:5d4e2db57864f8ab0da3523333bf16e84cafcb10daa36ebcb4c869f95a4b0640           "docker-entrypoint.s…"   api        28 seconds ago   Up 12 seconds (healthy)   3000/tcp
+compose-garage-1     dxflrs/garage:v2.3.0@sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690                                 "/garage server --si…"   garage     28 seconds ago   Up 27 seconds (healthy)   127.0.0.1:3900->3900/tcp
+compose-postgres-1   postgres:18-alpine@sha256:9a8afca54e7861fd90fab5fdf4c42477a6b1cb7d293595148e674e0a3181de15                                   "docker-entrypoint.s…"   postgres   28 seconds ago   Up 27 seconds (healthy)   127.0.0.1:5432->5432/tcp
+compose-proxy-1      nginx:1.29-alpine@sha256:5616878291a2eed594aee8db4dade5878cf7edcb475e59193904b198d9b830de                                    "/docker-entrypoint.…"   proxy      28 seconds ago   Up Less than a second     80/tcp, 0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp
+compose-public-1     ghcr.io/qrizan/nextjs-chakra-reactquery:0.0.1-rc.4@sha256:300b04d4792603c857a05fe2cfcbe6ddecb5afa36f9cf362b663e24921d829d8   "./entrypoint.sh"        public     28 seconds ago   Up 6 seconds (healthy)    8080/tcp
 ### 9b. bootstrap manual Garage: aktifkan website endpoint bucket assets (paritas dengan k8s 6b) ###
-[2m2026-08-11T11:30:41.562292Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connected to 172.19.0.4:3901, negotiating handshake...
-[2m2026-08-11T11:30:41.604197Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connection established to 912eb0c56e1e60f0
+[2m2026-08-12T06:36:51.985289Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connected to 172.19.0.3:3901, negotiating handshake...
+[2m2026-08-12T06:36:52.026909Z[0m [32m INFO[0m [2mgarage_net::netapp[0m[2m:[0m Connection established to b65912b6a60af305
 ==== BUCKET INFORMATION ====
-Bucket:            5fae45b2ee607ca64a83857e29f4119019be4336f3e1e677a5ec5f49097a6b46
-Created:           2026-08-11 11:30:05.052 +00:00
+Bucket:            bcf79c391771061fb6ebd303e6b61094bc0dcb0a372ca89943d920726470e9ca
+Created:           2026-08-12 06:36:24.572 +00:00
 
 Size:              0 B (0 B)
 Objects:           0
@@ -2331,5 +2157,7 @@ OK: admin.localhost:8080/ -> 200
 OK: admin.localhost:8080/api/health/ready -> 200
 OK: catalog.localhost:8080/ -> 200
 OK: catalog.localhost:8080/api/health/ready -> 200
-OK: assets.localhost:8080/ -> 404 (bucket kosong)
+OK: assets.localhost:8080/ -> 404 (tidak ada index.html)
+OK: register -> 201
+OK: assets.localhost:8080/avatar/default.png -> 200
 ### compose selesai, semua service terkonfirmasi ###
