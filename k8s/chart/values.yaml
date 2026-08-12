@@ -16,6 +16,7 @@ garage:
     digest: sha256:866bd13ed2038ba7e7190e840482bc27234c4afaf77be8cfa439ae088c1e4690
   credentialsSecretName: garage-credentials
   bucket: assets
+  region: garage   # dipakai garage.toml dan tanda tangan SigV4 di api; keduanya harus sama
   rootDomain: .localhost
   securityContext:
     runAsUser: 1000
@@ -55,6 +56,10 @@ api:
     digest: sha256:c61d246641e8a8cf7401dbce370c25c0c9047bce2dd303a8b05f90eb557f0870
   imagePullSecret: ghcr-pull-secret
   postgresCredentialsSecretName: postgres-credentials
+  s3:
+    endpoint: http://garage:3900
+    # Hanya access key yang diambil dari Secret ini, bukan RPC secret dan admin token.
+    credentialsSecretName: garage-credentials
   securityContext:
     runAsUser: 1000
     runAsGroup: 1000

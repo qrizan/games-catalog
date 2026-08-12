@@ -17,3 +17,10 @@ spec:
       ports:
         - protocol: TCP
           port: 3902
+    - from:
+        - podSelector:
+            matchLabels:
+              app: api
+      ports:
+        - protocol: TCP
+          port: 3900

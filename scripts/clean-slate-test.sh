@@ -234,7 +234,7 @@ for url in "admin.localhost/" "admin.localhost/api/health/ready" "catalog.localh
   fi
   echo "OK: $url -> $code"
 done
-# bucket assets kosong sehabis clean-slate, jadi 404 yang diharapkan
+# tidak ada index.html di bucket, jadi 404 yang diharapkan di root
 code=000
 for i in $(seq 1 10); do
   code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost/") || code=000
@@ -242,10 +242,34 @@ for i in $(seq 1 10); do
   sleep 3
 done
 if [[ "$code" != "404" ]]; then
-  echo "GAGAL: assets.localhost/ -> $code (harus 404, bucket kosong)"
+  echo "GAGAL: assets.localhost/ -> $code (harus 404, tidak ada index.html)"
   exit 1
 fi
-echo "OK: assets.localhost/ -> $code (bucket kosong)"
+echo "OK: assets.localhost/ -> $code (tidak ada index.html)"
+
+# Avatar default diunggah saat registrasi pertama, bukan saat start. Registrasi di sini
+# yang memicunya, lalu pengambilan lewat website endpoint membuktikan jalur tulis
+# api -> garage dan jalur baca browser -> garage sama-sama hidup.
+code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "admin.localhost/api/auth/register" \
+  -H "Content-Type: application/json" \
+  -d "{\"username\":\"cleanslate\",\"email\":\"cleanslate-$(date +%s)@example.com\",\"password\":\"CleanSlate123!\"}") || code=000
+if [[ "$code" != "2"* ]]; then
+  echo "GAGAL: register -> $code (harus 2xx)"
+  exit 1
+fi
+echo "OK: register -> $code"
+
+code=000
+for i in $(seq 1 10); do
+  code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost/avatar/default.png") || code=000
+  [[ "$code" == "200" ]] && break
+  sleep 3
+done
+if [[ "$code" != "200" ]]; then
+  echo "GAGAL: assets.localhost/avatar/default.png -> $code (harus 200)"
+  exit 1
+fi
+echo "OK: assets.localhost/avatar/default.png -> $code"
 
 echo "### 8. metrics-server ###"
 # prasyarat HPA - api-hpa.yaml butuh ini untuk baca metrik CPU pod
@@ -349,9 +373,30 @@ for i in $(seq 1 10); do
   sleep 2
 done
 if [[ "$code" != "404" ]]; then
-  echo "GAGAL: assets.localhost:8080/ -> $code (harus 404, bucket kosong)"
+  echo "GAGAL: assets.localhost:8080/ -> $code (harus 404, tidak ada index.html)"
   exit 1
 fi
-echo "OK: assets.localhost:8080/ -> $code (bucket kosong)"
+echo "OK: assets.localhost:8080/ -> $code (tidak ada index.html)"
+
+code=$(curl -s -o /dev/null -w "%{http_code}" -X POST "admin.localhost:8080/api/auth/register" \
+  -H "Content-Type: application/json" \
+  -d "{\"username\":\"cleanslate\",\"email\":\"cleanslate-$(date +%s)@example.com\",\"password\":\"CleanSlate123!\"}") || code=000
+if [[ "$code" != "2"* ]]; then
+  echo "GAGAL: register -> $code (harus 2xx)"
+  exit 1
+fi
+echo "OK: register -> $code"
+
+code=000
+for i in $(seq 1 10); do
+  code=$(curl -s -o /dev/null -w "%{http_code}" "assets.localhost:8080/avatar/default.png") || code=000
+  [[ "$code" == "200" ]] && break
+  sleep 2
+done
+if [[ "$code" != "200" ]]; then
+  echo "GAGAL: assets.localhost:8080/avatar/default.png -> $code (harus 200)"
+  exit 1
+fi
+echo "OK: assets.localhost:8080/avatar/default.png -> $code"
 
 echo "### compose selesai, semua service terkonfirmasi ###"
