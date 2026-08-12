@@ -12,6 +12,8 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: ${POSTGRES_DB}
+    ports:
+      - "127.0.0.1:5432:5432"   # seed dijalankan dari host, bukan dari image produksi
     volumes:
       - postgres-data:/var/lib/postgresql
     networks:
@@ -52,6 +54,12 @@ services:
       JWT_SECRET: ${JWT_SECRET}
       JWT_EXPIRES_IN: ${JWT_EXPIRES_IN:-3600}
       CORS_ORIGINS: ${CORS_ORIGINS:-}
+      S3_ENDPOINT: http://garage:3900
+      S3_REGION: garage   # sama dengan s3_region di garage.toml, dipakai tanda tangan SigV4
+      S3_BUCKET: assets
+      S3_ACCESS_KEY_ID: ${GARAGE_DEFAULT_ACCESS_KEY}
+      S3_SECRET_ACCESS_KEY: ${GARAGE_DEFAULT_SECRET_KEY}
+      S3_PUBLIC_BASE_URL: http://assets.localhost:8080
     networks:
       - catalog
     depends_on:
@@ -130,6 +138,8 @@ services:
       GARAGE_DEFAULT_ACCESS_KEY: ${GARAGE_DEFAULT_ACCESS_KEY}
       GARAGE_DEFAULT_SECRET_KEY: ${GARAGE_DEFAULT_SECRET_KEY}
       GARAGE_DEFAULT_BUCKET: assets
+    ports:
+      - "127.0.0.1:3900:3900"   # seed dijalankan dari host, bukan dari image produksi
     volumes:
       - ./garage.toml:/etc/garage.toml:ro
       - garage-data:/var/lib/garage
